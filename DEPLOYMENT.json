@@ -1033,5 +1033,27 @@
       "runtimeHash": "0xde17ab8a5ddbccc377b4a39482447c9058c010c48b346b0a492da49a51b7d234",
       "reason": "Separate external-order filler executor; outside the Vault-only source package."
     }
+  ],
+  "standaloneControllers": [
+    {
+      "name": "DeferredTokenBurnAndClaim",
+      "role": "burnController",
+      "kind": "STANDALONE",
+      "source": "contracts/burn/controller/DeferredTokenBurnAndClaim.sol",
+      "buildUnit": "burn-controller",
+      "address": "0x2f7d97d6938ca9ff243240aeb87a35592a5e8cd3",
+      "transactionHash": "0x0e0e8f896ebeef5b2d7521b3d13219a9dc6983cff346ba0c1339183d393f7c8f",
+      "verifiedAtBlock": "0x6e81963",
+      "verifiedAtBlockHash": "0xaa27e494d8236b0dc9b5ebcf5200fae6d2ba4aa2dd3dd45bf0d38fdd88f29543",
+      "runtimeHash": "0xbee9165eeb4e062db6b9e377f24ff0880cd00f496d51145bd8e0536f7ee5ab6f",
+      "pricing": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+      "token": "0x0000000000000000000000000000000000000000",
+      "treasury": "0x0000000000000000000000000000000000000000",
+      "tokenBound": false,
+      "bridgeConfigured": false,
+      "applicationActivated": false,
+      "upgradeable": false,
+      "stateScope": "Observed at deployment verification; token and treasury can each be bound once later."
+    }
   ]
 }

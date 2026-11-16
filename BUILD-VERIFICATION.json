@@ -276,5 +276,17 @@
     "units": 7,
     "targets": 24,
     "passed": true
+  },
+  "burnController": {
+    "compiler": "0.8.30+commit.73712a01.Emscripten.clang",
+    "unit": "burn-controller",
+    "creationBytecodeMatches": true,
+    "runtimeTemplateMatches": true,
+    "abiMatches": true,
+    "sourceSha256": "aaa7293289a5fa943fc8156a73277d9612c086e95064f5901f7fd24e0f26eb56",
+    "creationBytes": 9161,
+    "runtimeBytes": 8498,
+    "dependencyFiles": 4,
+    "scope": "Exact creation bytecode, runtime template and ABI compared with the artifact used for the recorded deployment. No chain transactions or production changes."
   }
 }

@@ -581,6 +581,34 @@
       "package": "@openzeppelin/contracts",
       "version": "5.4.0",
       "sha256": "75704538dcb223239280c6726d9a31cf769a7816718517c997fc7d63bdb70778"
+    },
+    {
+      "unit": "burn-controller",
+      "source": "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+      "package": "@openzeppelin/contracts",
+      "version": "5.4.0",
+      "sha256": "32fbb1c908ec1b4de85cc1bb10091aebd5816ffe80dfdd5ca5e084fbea67a462"
+    },
+    {
+      "unit": "burn-controller",
+      "source": "@openzeppelin/contracts/utils/math/Math.sol",
+      "package": "@openzeppelin/contracts",
+      "version": "5.4.0",
+      "sha256": "92fee281fd46a1b058b190cf21d6b1a528f0433a907850ae1c9bcf36c5c0cd98"
+    },
+    {
+      "unit": "burn-controller",
+      "source": "@openzeppelin/contracts/utils/Panic.sol",
+      "package": "@openzeppelin/contracts",
+      "version": "5.4.0",
+      "sha256": "270fc8401c1a13fae6a7a4a2dd6e381b95d658896701e51f0d3e2688acab3dec"
+    },
+    {
+      "unit": "burn-controller",
+      "source": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+      "package": "@openzeppelin/contracts",
+      "version": "5.4.0",
+      "sha256": "9769274bf53f26a7c7896c526ea1980dc9bea5bf5c2a5fd04870008c4afc1de9"
     }
   ]
 }

@@ -65,3 +65,13 @@ Superseded Limit/Range manager and snapshot deployment targets, earlier aggregat
 ## Licensing
 
 UserVault-authored material is governed by LICENSE. Installed third-party dependencies retain their own upstream licenses; the proprietary license does not replace their notices or ownership.
+
+## Standalone Burn & Claim controller
+
+`DeferredTokenBurnAndClaim` is deployed at `0x2f7d97d6938ca9ff243240aeb87a35592a5e8cd3` on chain 4663. Deployment transaction: `0x0e0e8f896ebeef5b2d7521b3d13219a9dc6983cff346ba0c1339183d393f7c8f`. It uses the existing `CachedTokenPricing` module. At deployment verification, the token and treasury were unset; the reserve bridge and application were not activated. This additional deployment has its own verification block in `DEPLOYMENT.json`; it is not part of the earlier module snapshot.
+
+The administrator can bind the token once and bind a compatible reserve bridge once. These addresses cannot subsequently be replaced. The controller is standalone and is not proxy-upgradeable. Deployment alone does not enable Burn & Claim.
+
+The contract quotes token value using the shared on-chain pricing context and atomically burns tokens for an ETH reserve payout, subject to its policy, reserve capacity, cooldowns, minimum output and deadline. Failed burns or payouts revert the operation. The token must support `burnFrom`; an ERC-20 transfer alone is insufficient.
+
+Compile the controller with `npm run build -- --unit burn-controller`. Its two authored source files contain no comments. Required OpenZeppelin dependencies are installed through the existing pinned npm package, not vendored. `BUILD-VERIFICATION.json` records exact bytecode and ABI comparison with the deployment artifact.

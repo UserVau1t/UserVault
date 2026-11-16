@@ -417,5 +417,32 @@
         "source": "@openzeppelin/contracts/proxy/beacon/UpgradeableBeacon.sol"
       }
     ]
+  },
+  {
+    "id": "burn-controller",
+    "compiler": "0.8.30",
+    "settings": {
+      "viaIR": true,
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "cancun"
+    },
+    "sources": [
+      "contracts/DeferredTokenBurnAndClaim.sol",
+      "contracts/ReferencePriceMath.sol",
+      "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+      "@openzeppelin/contracts/utils/math/Math.sol",
+      "@openzeppelin/contracts/utils/Panic.sol",
+      "@openzeppelin/contracts/utils/math/SafeCast.sol"
+    ],
+    "targets": [
+      {
+        "name": "DeferredTokenBurnAndClaim",
+        "source": "contracts/DeferredTokenBurnAndClaim.sol",
+        "role": "burnController"
+      }
+    ]
   }
 ]

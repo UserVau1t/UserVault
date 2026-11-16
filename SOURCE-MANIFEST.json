@@ -873,6 +873,22 @@
       "sha256": "36e9c30f3674d7f6fbb8213828d08a6ad21cc938798d56d7f69ab7479d9211d6",
       "originalSha256": "6e6d6c5c0660ff7e03ac0e39193e17d6e1c9c5e8daa7e458cf0fef338c24ed0b",
       "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/burn/controller/DeferredTokenBurnAndClaim.sol",
+      "unit": "burn-controller",
+      "source": "contracts/DeferredTokenBurnAndClaim.sol",
+      "sha256": "aaa7293289a5fa943fc8156a73277d9612c086e95064f5901f7fd24e0f26eb56",
+      "originalSha256": "aaa7293289a5fa943fc8156a73277d9612c086e95064f5901f7fd24e0f26eb56",
+      "transformation": "Unmodified deployed source; contains no comments."
+    },
+    {
+      "path": "contracts/burn/controller/ReferencePriceMath.sol",
+      "unit": "burn-controller",
+      "source": "contracts/ReferencePriceMath.sol",
+      "sha256": "09874d00f51d0a134218a9cd93205d6ee7728858cc98ed57860412b459dc6f88",
+      "originalSha256": "09874d00f51d0a134218a9cd93205d6ee7728858cc98ed57860412b459dc6f88",
+      "transformation": "Unmodified deployed source; contains no comments."
     }
   ]
 }
