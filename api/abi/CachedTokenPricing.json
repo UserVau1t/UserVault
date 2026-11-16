@@ -1,0 +1,946 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "chain",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "service",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "predictedConsumer",
+        "type": "address"
+      },
+      {
+        "internalType": "contract SharedPoolReader",
+        "name": "r",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "usd",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "wrapped",
+        "type": "address"
+      },
+      {
+        "internalType": "contract UsdQuoteFeed",
+        "name": "eth",
+        "type": "address"
+      },
+      {
+        "internalType": "contract UsdQuoteFeed",
+        "name": "dollar",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "ContextBusy",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ContextMissing",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ECDSAInvalidSignature",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "length",
+        "type": "uint256"
+      }
+    ],
+    "name": "ECDSAInvalidSignatureLength",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "s",
+        "type": "bytes32"
+      }
+    ],
+    "name": "ECDSAInvalidSignatureS",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidConfiguration",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidRatio",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidShortString",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidSource",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ProjectionPrecisionUnavailable",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "str",
+        "type": "string"
+      }
+    ],
+    "name": "StringTooLong",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Unauthorized",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [],
+    "name": "EIP712DomainChanged",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "SOURCE_TYPEHASH",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "catalogService",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "closeContext",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "configuredChainId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "consumer",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      }
+    ],
+    "name": "conversionSource",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint8",
+            "name": "kind",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "pool",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "quote",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "codeHash",
+            "type": "bytes32"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "currency0",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "currency1",
+                "type": "address"
+              },
+              {
+                "internalType": "uint24",
+                "name": "fee",
+                "type": "uint24"
+              },
+              {
+                "internalType": "int24",
+                "name": "tickSpacing",
+                "type": "int24"
+              },
+              {
+                "internalType": "address",
+                "name": "hooks",
+                "type": "address"
+              }
+            ],
+            "internalType": "struct V4StateReader.PoolKey",
+            "name": "key",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "launchIdentity",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "curveHash",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct SharedPoolReader.Pool",
+        "name": "pool",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "eip712Domain",
+    "outputs": [
+      {
+        "internalType": "bytes1",
+        "name": "fields",
+        "type": "bytes1"
+      },
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "version",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "chainId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "verifyingContract",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "salt",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "extensions",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ethFeed",
+    "outputs": [
+      {
+        "internalType": "contract UsdQuoteFeed",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "quote",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "sell",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minimum",
+        "type": "uint256"
+      }
+    ],
+    "name": "meetsMinimum",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes[]",
+        "name": "proofs",
+        "type": "bytes[]"
+      }
+    ],
+    "name": "openContext",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "quote",
+        "type": "address"
+      }
+    ],
+    "name": "quoteUsd",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "quote",
+        "type": "address"
+      }
+    ],
+    "name": "read",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "quotePerBase",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "usdPerBase",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "reader",
+    "outputs": [
+      {
+        "internalType": "contract SharedPoolReader",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "payer",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "name": "registerFor",
+    "outputs": [],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      }
+    ],
+    "name": "registered",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "selection",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "kind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "address",
+                "name": "pool",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "quote",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "codeHash",
+                "type": "bytes32"
+              },
+              {
+                "components": [
+                  {
+                    "internalType": "address",
+                    "name": "currency0",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "currency1",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint24",
+                    "name": "fee",
+                    "type": "uint24"
+                  },
+                  {
+                    "internalType": "int24",
+                    "name": "tickSpacing",
+                    "type": "int24"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "hooks",
+                    "type": "address"
+                  }
+                ],
+                "internalType": "struct V4StateReader.PoolKey",
+                "name": "key",
+                "type": "tuple"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "launchIdentity",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "curveHash",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct SharedPoolReader.Pool",
+            "name": "pool",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "identity",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bool",
+            "name": "present",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct CachedTokenPricing.Selection",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "tokenCodeHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "decimals",
+            "type": "uint8"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "kind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "address",
+                "name": "pool",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "quote",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "codeHash",
+                "type": "bytes32"
+              },
+              {
+                "components": [
+                  {
+                    "internalType": "address",
+                    "name": "currency0",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "currency1",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint24",
+                    "name": "fee",
+                    "type": "uint24"
+                  },
+                  {
+                    "internalType": "int24",
+                    "name": "tickSpacing",
+                    "type": "int24"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "hooks",
+                    "type": "address"
+                  }
+                ],
+                "internalType": "struct V4StateReader.PoolKey",
+                "name": "key",
+                "type": "tuple"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "launchIdentity",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "curveHash",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct SharedPoolReader.Pool",
+            "name": "pool",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "bytes32",
+                "name": "tokenCodeHash",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint8",
+                "name": "decimals",
+                "type": "uint8"
+              },
+              {
+                "components": [
+                  {
+                    "internalType": "uint8",
+                    "name": "kind",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "pool",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "quote",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "codeHash",
+                    "type": "bytes32"
+                  },
+                  {
+                    "components": [
+                      {
+                        "internalType": "address",
+                        "name": "currency0",
+                        "type": "address"
+                      },
+                      {
+                        "internalType": "address",
+                        "name": "currency1",
+                        "type": "address"
+                      },
+                      {
+                        "internalType": "uint24",
+                        "name": "fee",
+                        "type": "uint24"
+                      },
+                      {
+                        "internalType": "int24",
+                        "name": "tickSpacing",
+                        "type": "int24"
+                      },
+                      {
+                        "internalType": "address",
+                        "name": "hooks",
+                        "type": "address"
+                      }
+                    ],
+                    "internalType": "struct V4StateReader.PoolKey",
+                    "name": "key",
+                    "type": "tuple"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "launchIdentity",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "curveHash",
+                    "type": "bytes32"
+                  }
+                ],
+                "internalType": "struct SharedPoolReader.Pool",
+                "name": "pool",
+                "type": "tuple"
+              }
+            ],
+            "internalType": "struct CachedTokenPricing.Conversion",
+            "name": "conversion",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "revision",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint64",
+            "name": "observedAt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "validUntil",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "selectionDigest",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct CachedTokenPricing.Source",
+        "name": "s",
+        "type": "tuple"
+      }
+    ],
+    "name": "sourceDigest",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      }
+    ],
+    "name": "sourceQuoteUsd",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      }
+    ],
+    "name": "tokens",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint8",
+        "name": "",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "usdg",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "usdgFeed",
+    "outputs": [
+      {
+        "internalType": "contract UsdQuoteFeed",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "wrappedNative",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

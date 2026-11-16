@@ -1,0 +1,1 @@
+UserVault-authored source and documentation are governed by LICENSE. Third-party packages are not vendored. Install the exact dependencies in package-lock.json; those packages retain their own upstream licenses and notices. The UserVault license does not relicense third-party dependencies or revoke previously granted rights.

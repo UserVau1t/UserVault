@@ -1,0 +1,189 @@
+[
+  {
+    "inputs": [],
+    "name": "CapacityExceeded",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidPricing",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidRatio",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[3]",
+        "name": "amounts",
+        "type": "uint256[3]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio[3]",
+        "name": "rates",
+        "type": "tuple[3]"
+      }
+    ],
+    "name": "checkCapacity",
+    "outputs": [],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract PinnedMarketPricing",
+        "name": "pricing",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "usdg",
+        "type": "address"
+      }
+    ],
+    "name": "fingerprint",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "chainId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "baseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "canonicalQuote",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "inputAsset",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IUserVaultExecution.Side",
+            "name": "side",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGrossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minGrossInputFilled",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minNetOutput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowCrossQuote",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IUserVaultExecution.DirectRequest",
+        "name": "q",
+        "type": "tuple"
+      },
+      {
+        "internalType": "uint256",
+        "name": "inventory",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "rate",
+        "type": "tuple"
+      },
+      {
+        "internalType": "uint256",
+        "name": "bps",
+        "type": "uint256"
+      }
+    ],
+    "name": "plan",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "gross",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "net",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "output",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  }
+]

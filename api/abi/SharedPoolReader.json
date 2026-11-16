@@ -1,0 +1,393 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "chain",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "v2",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "v2Hash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "pairHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "v3",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "v3Hash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "manager",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "managerHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "ponsHook",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "ponsHookHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "ponsInspector",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "inspectorHash",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct SharedPoolReader.Roots",
+        "name": "r",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidPool",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidRatio",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidState",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "UnrepresentableRatio",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "UnsupportedHook",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "configuredChainId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint8",
+            "name": "kind",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "pool",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "quote",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "codeHash",
+            "type": "bytes32"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "currency0",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "currency1",
+                "type": "address"
+              },
+              {
+                "internalType": "uint24",
+                "name": "fee",
+                "type": "uint24"
+              },
+              {
+                "internalType": "int24",
+                "name": "tickSpacing",
+                "type": "int24"
+              },
+              {
+                "internalType": "address",
+                "name": "hooks",
+                "type": "address"
+              }
+            ],
+            "internalType": "struct V4StateReader.PoolKey",
+            "name": "key",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "launchIdentity",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "curveHash",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct SharedPoolReader.Pool",
+        "name": "p",
+        "type": "tuple"
+      }
+    ],
+    "name": "identity",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint8",
+            "name": "kind",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "pool",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "quote",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "codeHash",
+            "type": "bytes32"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "currency0",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "currency1",
+                "type": "address"
+              },
+              {
+                "internalType": "uint24",
+                "name": "fee",
+                "type": "uint24"
+              },
+              {
+                "internalType": "int24",
+                "name": "tickSpacing",
+                "type": "int24"
+              },
+              {
+                "internalType": "address",
+                "name": "hooks",
+                "type": "address"
+              }
+            ],
+            "internalType": "struct V4StateReader.PoolKey",
+            "name": "key",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "launchIdentity",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "curveHash",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct SharedPoolReader.Pool",
+        "name": "p",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "usdPerQuote",
+        "type": "tuple"
+      }
+    ],
+    "name": "inspect",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "rate",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "quoteLiquidity",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "roots",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "v2",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "v2Hash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "pairHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "v3",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "v3Hash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "manager",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "managerHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "ponsHook",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "ponsHookHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "ponsInspector",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "inspectorHash",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

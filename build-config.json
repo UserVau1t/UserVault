@@ -1,0 +1,421 @@
+[
+  {
+    "id": "core",
+    "compiler": "0.8.30",
+    "settings": {
+      "viaIR": true,
+      "optimizer": {
+        "enabled": true,
+        "runs": 1
+      },
+      "evmVersion": "cancun"
+    },
+    "sources": [
+      "@openzeppelin/contracts/access/Ownable.sol",
+      "@openzeppelin/contracts/access/Ownable2Step.sol",
+      "@openzeppelin/contracts/interfaces/IERC1363.sol",
+      "@openzeppelin/contracts/interfaces/IERC165.sol",
+      "@openzeppelin/contracts/interfaces/IERC20.sol",
+      "@openzeppelin/contracts/interfaces/IERC5267.sol",
+      "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "@openzeppelin/contracts/utils/Context.sol",
+      "@openzeppelin/contracts/utils/Panic.sol",
+      "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+      "@openzeppelin/contracts/utils/ShortStrings.sol",
+      "@openzeppelin/contracts/utils/StorageSlot.sol",
+      "@openzeppelin/contracts/utils/Strings.sol",
+      "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+      "@openzeppelin/contracts/utils/cryptography/EIP712.sol",
+      "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
+      "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "@openzeppelin/contracts/utils/math/Math.sol",
+      "@openzeppelin/contracts/utils/math/SafeCast.sol",
+      "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "cached/CachedTokenPricing.sol",
+      "cached/PriceContextConsumer.sol",
+      "cached/PriceContextDispatch.sol",
+      "cached/PriceContextQuery.sol",
+      "contracts/CrossBuyVault.sol",
+      "contracts/CrossSellVault.sol",
+      "contracts/GroupedPositionsVault.sol",
+      "contracts/PinnedPricingVault.sol",
+      "contracts/PinnedVaultAdmission.sol",
+      "contracts/SameQuoteCreateVault.sol",
+      "contracts/SameQuoteDirectVault.sol",
+      "contracts/SharedVault.sol",
+      "contracts/V2ConversionVault.sol",
+      "contracts/adapters/V2NativeQuoteAdapter.sol",
+      "contracts/interfaces/IUserVaultExecution.sol",
+      "contracts/libraries/LimitAccounting.sol",
+      "contracts/libraries/ProRataAllocation.sol",
+      "contracts/libraries/ProjectedQuoteMath.sol",
+      "contracts/libraries/ReferencePriceMath.sol",
+      "contracts/libraries/VaultAccounting.sol",
+      "contracts/mainnet-candidate/CreateGroupMath.sol",
+      "contracts/mainnet-candidate/FeeAttribution.sol",
+      "contracts/mainnet-candidate/FeeVaultMath.sol",
+      "contracts/mainnet-candidate/InternalSettlementPolicy.sol",
+      "contracts/mainnet-candidate/MainnetCrossProRataExecution.sol",
+      "contracts/mainnet-candidate/MainnetFeeCollectors.sol",
+      "contracts/mainnet-candidate/MainnetFeeDistribution.sol",
+      "contracts/mainnet-candidate/MainnetFeeProcessing.sol",
+      "contracts/mainnet-candidate/MainnetGroupedV2Vault.sol",
+      "contracts/mainnet-candidate/MainnetLimitOrderManager.sol",
+      "contracts/mainnet-candidate/MainnetLiquiditySnapshot.sol",
+      "contracts/mainnet-candidate/MainnetMarketLimitOrderManager.sol",
+      "contracts/mainnet-candidate/MainnetMarketLiquiditySnapshot.sol",
+      "contracts/mainnet-candidate/MainnetPinnedV2Vault.sol",
+      "contracts/mainnet-candidate/MainnetProRataExecution.sol",
+      "contracts/mainnet-candidate/PassiveCrossMath.sol",
+      "contracts/mainnet-candidate/SharedCreateModule.sol",
+      "contracts/reference/PinnedMarketPricing.sol",
+      "contracts/reference/PinnedReferencePrice.sol",
+      "contracts/reference/SharedPoolReader.sol",
+      "contracts/reference/SharedPricingFingerprint.sol",
+      "contracts/reference/SharedTokenPricing.sol",
+      "contracts/reference/UsdQuoteFeed.sol",
+      "contracts/reference/V2StateReader.sol",
+      "contracts/reference/V3StateReader.sol",
+      "contracts/reference/V4StateReader.sol"
+    ],
+    "targets": [
+      {
+        "name": "FeeVaultMath",
+        "source": "contracts/mainnet-candidate/FeeVaultMath.sol",
+        "role": "feeMath"
+      },
+      {
+        "name": "CreateGroupMath",
+        "source": "contracts/mainnet-candidate/CreateGroupMath.sol",
+        "role": "groupMath"
+      },
+      {
+        "name": "PassiveCrossMath",
+        "source": "contracts/mainnet-candidate/PassiveCrossMath.sol",
+        "role": "crossMath"
+      },
+      {
+        "name": "SharedPoolReader",
+        "source": "contracts/reference/SharedPoolReader.sol",
+        "role": "reader"
+      },
+      {
+        "name": "InternalSettlementPolicy",
+        "source": "contracts/mainnet-candidate/InternalSettlementPolicy.sol",
+        "role": "policy"
+      },
+      {
+        "name": "CachedTokenPricing",
+        "source": "cached/CachedTokenPricing.sol",
+        "role": "pricing"
+      },
+      {
+        "name": "FeeAwareGroupedVault",
+        "source": "contracts/mainnet-candidate/MainnetFeeCollectors.sol",
+        "role": "vault"
+      },
+      {
+        "name": "FeeAwareSameExecution",
+        "source": "contracts/mainnet-candidate/MainnetFeeCollectors.sol",
+        "role": "same"
+      },
+      {
+        "name": "FeeAwareCrossExecution",
+        "source": "contracts/mainnet-candidate/MainnetFeeCollectors.sol",
+        "role": "cross"
+      },
+      {
+        "name": "SharedCreateModule",
+        "source": "contracts/mainnet-candidate/SharedCreateModule.sol",
+        "role": "createModule"
+      },
+      {
+        "name": "PriceContextQuery",
+        "source": "cached/PriceContextQuery.sol",
+        "role": "query"
+      }
+    ]
+  },
+  {
+    "id": "range",
+    "compiler": "0.8.30",
+    "settings": {
+      "viaIR": true,
+      "optimizer": {
+        "enabled": true,
+        "runs": 1
+      },
+      "evmVersion": "cancun"
+    },
+    "sources": [
+      "@openzeppelin/contracts/access/Ownable.sol",
+      "@openzeppelin/contracts/access/Ownable2Step.sol",
+      "@openzeppelin/contracts/interfaces/IERC1363.sol",
+      "@openzeppelin/contracts/interfaces/IERC165.sol",
+      "@openzeppelin/contracts/interfaces/IERC20.sol",
+      "@openzeppelin/contracts/interfaces/IERC5267.sol",
+      "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "@openzeppelin/contracts/utils/Context.sol",
+      "@openzeppelin/contracts/utils/Panic.sol",
+      "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+      "@openzeppelin/contracts/utils/ShortStrings.sol",
+      "@openzeppelin/contracts/utils/StorageSlot.sol",
+      "@openzeppelin/contracts/utils/Strings.sol",
+      "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+      "@openzeppelin/contracts/utils/cryptography/EIP712.sol",
+      "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
+      "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "@openzeppelin/contracts/utils/math/Math.sol",
+      "@openzeppelin/contracts/utils/math/SafeCast.sol",
+      "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "aggregate/AggregateIndexMath.sol",
+      "aggregate/AggregateManagerCore.sol",
+      "aggregate/AggregateRangeAccounting.sol",
+      "aggregate/AggregateRangeTree.sol",
+      "aggregate/AggregateShares.sol",
+      "aggregate/RangeInternalExecution.sol",
+      "cached/CachedTokenPricing.sol",
+      "cached/PriceContextConsumer.sol",
+      "cached/PriceContextDispatch.sol",
+      "contracts/adapters/V2NativeQuoteAdapter.sol",
+      "contracts/interfaces/IUserVaultExecution.sol",
+      "contracts/libraries/LimitAccounting.sol",
+      "contracts/libraries/ProRataAllocation.sol",
+      "contracts/libraries/ProjectedQuoteMath.sol",
+      "contracts/libraries/ReferencePriceMath.sol",
+      "contracts/mainnet-candidate/CreateGroupMath.sol",
+      "contracts/mainnet-candidate/FeeAttribution.sol",
+      "contracts/mainnet-candidate/FeeAwareMarketLimitManager.sol",
+      "contracts/mainnet-candidate/FeeVaultMath.sol",
+      "contracts/mainnet-candidate/InternalSettlementPolicy.sol",
+      "contracts/mainnet-candidate/MainnetFeeDistribution.sol",
+      "contracts/mainnet-candidate/MainnetFeeProcessing.sol",
+      "contracts/mainnet-candidate/MainnetMarketLimitOrderManager.sol",
+      "contracts/mainnet-candidate/MainnetMarketLiquiditySnapshot.sol",
+      "contracts/mainnet-candidate/PassiveCrossMath.sol",
+      "contracts/reference/PinnedMarketPricing.sol",
+      "contracts/reference/PinnedReferencePrice.sol",
+      "contracts/reference/SharedPoolReader.sol",
+      "contracts/reference/SharedPricingFingerprint.sol",
+      "contracts/reference/SharedTokenPricing.sol",
+      "contracts/reference/UsdQuoteFeed.sol",
+      "contracts/reference/V2StateReader.sol",
+      "contracts/reference/V3StateReader.sol",
+      "contracts/reference/V4StateReader.sol"
+    ],
+    "targets": [
+      {
+        "name": "FeeAwareMarketLimitManager",
+        "source": "contracts/mainnet-candidate/FeeAwareMarketLimitManager.sol",
+        "role": "manager"
+      },
+      {
+        "name": "MainnetMarketLiquiditySnapshot",
+        "source": "contracts/mainnet-candidate/MainnetMarketLiquiditySnapshot.sol",
+        "role": "snapshot"
+      },
+      {
+        "name": "AggregateRangeAccounting",
+        "source": "aggregate/AggregateRangeAccounting.sol",
+        "role": "rangeAccounting"
+      },
+      {
+        "name": "RangeInternalExecution",
+        "source": "aggregate/RangeInternalExecution.sol",
+        "role": "rangeExecution"
+      }
+    ]
+  },
+  {
+    "id": "fees",
+    "compiler": "0.8.30",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "cancun",
+      "viaIR": true
+    },
+    "sources": [
+      "@openzeppelin/contracts/access/Ownable.sol",
+      "@openzeppelin/contracts/access/Ownable2Step.sol",
+      "@openzeppelin/contracts/interfaces/IERC1363.sol",
+      "@openzeppelin/contracts/interfaces/IERC165.sol",
+      "@openzeppelin/contracts/interfaces/IERC20.sol",
+      "@openzeppelin/contracts/interfaces/IERC5267.sol",
+      "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "@openzeppelin/contracts/utils/Context.sol",
+      "@openzeppelin/contracts/utils/Panic.sol",
+      "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+      "@openzeppelin/contracts/utils/ShortStrings.sol",
+      "@openzeppelin/contracts/utils/StorageSlot.sol",
+      "@openzeppelin/contracts/utils/Strings.sol",
+      "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+      "@openzeppelin/contracts/utils/cryptography/EIP712.sol",
+      "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
+      "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "@openzeppelin/contracts/utils/math/Math.sol",
+      "@openzeppelin/contracts/utils/math/SafeCast.sol",
+      "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "cached/CachedFeeProcessor.sol",
+      "cached/CachedFeeRoute.sol",
+      "cached/CachedTokenPricing.sol",
+      "cached/PriceContextConsumer.sol",
+      "cached/PriceContextDispatch.sol",
+      "contracts/adapters/V2NativeQuoteAdapter.sol",
+      "contracts/libraries/ProjectedQuoteMath.sol",
+      "contracts/libraries/ReferencePriceMath.sol",
+      "contracts/mainnet-v3/MainnetAutomaticFeeProcessing.sol",
+      "contracts/mainnet-v3/MainnetBoundedFeeProcessing.sol",
+      "contracts/mainnet-v3/MainnetFeeDistribution.sol",
+      "contracts/mainnet-v3/MainnetFeeProcessing.sol",
+      "contracts/mainnet-v3/MainnetSharedAutomaticFeeProcessing.sol",
+      "contracts/mainnet-v3/MainnetSharedBurnAndClaim.sol",
+      "contracts/mainnet-v3/MainnetSharedFeeDistribution.sol",
+      "contracts/reference/CachedTokenSwap.sol",
+      "contracts/reference/PinnedMarketPricing.sol",
+      "contracts/reference/PinnedReferencePrice.sol",
+      "contracts/reference/SharedPoolReader.sol",
+      "contracts/reference/UsdQuoteFeed.sol",
+      "contracts/reference/V2StateReader.sol",
+      "contracts/reference/V3StateReader.sol",
+      "contracts/reference/V4StateReader.sol"
+    ],
+    "targets": [
+      {
+        "name": "CachedTokenSwap",
+        "source": "contracts/reference/CachedTokenSwap.sol",
+        "role": "swapper"
+      },
+      {
+        "name": "CachedFeeRoute",
+        "source": "cached/CachedFeeRoute.sol",
+        "role": "route"
+      },
+      {
+        "name": "CachedFeeProcessor",
+        "source": "cached/CachedFeeProcessor.sol",
+        "role": "processor"
+      }
+    ]
+  },
+  {
+    "id": "distribution",
+    "compiler": "0.8.30",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "paris"
+    },
+    "sources": [
+      "@openzeppelin/contracts/access/Ownable.sol",
+      "@openzeppelin/contracts/access/Ownable2Step.sol",
+      "@openzeppelin/contracts/utils/Context.sol",
+      "contracts/mainnet-v2/MainnetFeeDistribution.sol",
+      "contracts/mainnet-v2/MainnetSharedFeeDistribution.sol"
+    ],
+    "targets": [
+      {
+        "name": "MainnetSharedFeeDistribution",
+        "source": "contracts/mainnet-v2/MainnetSharedFeeDistribution.sol",
+        "role": "distribution"
+      }
+    ]
+  },
+  {
+    "id": "burn",
+    "compiler": "0.8.30",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "cancun"
+    },
+    "sources": [
+      "Bridge.sol"
+    ],
+    "targets": [
+      {
+        "name": "MainnetDeferredBurnBridge",
+        "source": "Bridge.sol",
+        "role": "burn"
+      }
+    ]
+  },
+  {
+    "id": "gas",
+    "compiler": "0.8.30",
+    "settings": {
+      "viaIR": true,
+      "optimizer": {
+        "enabled": true,
+        "runs": 2000
+      },
+      "evmVersion": "cancun"
+    },
+    "sources": [
+      "@openzeppelin/contracts/access/Ownable.sol",
+      "@openzeppelin/contracts/access/Ownable2Step.sol",
+      "@openzeppelin/contracts/utils/Context.sol",
+      "ProtocolDualGasTreasury.sol",
+      "contracts/mainnet/ProtocolGasTreasury.sol"
+    ],
+    "targets": [
+      {
+        "name": "ProtocolDualGasTreasury",
+        "source": "ProtocolDualGasTreasury.sol",
+        "role": "gas"
+      }
+    ]
+  },
+  {
+    "id": "proxy",
+    "compiler": "0.8.30",
+    "settings": {
+      "viaIR": true,
+      "optimizer": {
+        "enabled": true,
+        "runs": 1
+      },
+      "evmVersion": "cancun"
+    },
+    "sources": [
+      "@openzeppelin/contracts/access/Ownable.sol",
+      "@openzeppelin/contracts/interfaces/IERC1967.sol",
+      "@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol",
+      "@openzeppelin/contracts/proxy/Proxy.sol",
+      "@openzeppelin/contracts/proxy/beacon/BeaconProxy.sol",
+      "@openzeppelin/contracts/proxy/beacon/IBeacon.sol",
+      "@openzeppelin/contracts/proxy/beacon/UpgradeableBeacon.sol",
+      "@openzeppelin/contracts/utils/Address.sol",
+      "@openzeppelin/contracts/utils/Context.sol",
+      "@openzeppelin/contracts/utils/Errors.sol",
+      "@openzeppelin/contracts/utils/StorageSlot.sol",
+      "modular/ModuleProxy.sol"
+    ],
+    "targets": [
+      {
+        "name": "ModuleProxy",
+        "source": "modular/ModuleProxy.sol"
+      },
+      {
+        "name": "ModuleInstaller",
+        "source": "modular/ModuleProxy.sol"
+      },
+      {
+        "name": "UpgradeableBeacon",
+        "source": "@openzeppelin/contracts/proxy/beacon/UpgradeableBeacon.sol"
+      }
+    ]
+  }
+]

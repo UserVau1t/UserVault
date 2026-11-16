@@ -1,0 +1,878 @@
+{
+  "schema": 1,
+  "transformation": "Comments and unused top-level declarations/imports removed. Bodies of retained declarations, inheritance, constants and constructor behavior are unchanged. Compiler source-set changes can alter optimizer output; see BUILD-VERIFICATION.json.",
+  "files": [
+    {
+      "path": "contracts/core/cached/CachedTokenPricing.sol",
+      "unit": "core",
+      "source": "cached/CachedTokenPricing.sol",
+      "sha256": "39507f9e0fbff17979857e9657e25d9c804cc06d6707cdbf6343e70cd4170ebf",
+      "originalSha256": "36554bcf5b4232d64a2513832b7c5b6f60022ff5fea0d6cf96182a1597ccff3a",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/cached/PriceContextConsumer.sol",
+      "unit": "core",
+      "source": "cached/PriceContextConsumer.sol",
+      "sha256": "925b8000ee9dc07d9258948844f83cad4505febab863ce365dc6c3fd30650596",
+      "originalSha256": "6896dfa52f8a2267eab876e9647a421c2eb3174870ceb91abbc6527f1b185221",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/cached/PriceContextDispatch.sol",
+      "unit": "core",
+      "source": "cached/PriceContextDispatch.sol",
+      "sha256": "62bafd8031b7321c23a24d5fe73273ac9df07911e261ca1ebc0b1e0ced6882f2",
+      "originalSha256": "00ea18d703e97545a55a235132de2424c5e60a9145542344f8534bb28ad2b00f",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/cached/PriceContextQuery.sol",
+      "unit": "core",
+      "source": "cached/PriceContextQuery.sol",
+      "sha256": "6825c693964fd1c25c611d2819a9fc7743fd6501d91004da1238728e4b8502d7",
+      "originalSha256": "49d189cc6a7014a47fbbd30ca83c8c8350acf98969693c202ac9e31fd2bb644e",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/CrossBuyVault.sol",
+      "unit": "core",
+      "source": "contracts/CrossBuyVault.sol",
+      "sha256": "cceff54ee270a1fc03251486263dd93ac7f0d9b7fd16b6b9fca4145213a9a8b5",
+      "originalSha256": "d6155b6b79572424980a1351143c88504059b35f23e6fb8431eeeb6975d7a6c7",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/CrossSellVault.sol",
+      "unit": "core",
+      "source": "contracts/CrossSellVault.sol",
+      "sha256": "5c6c7da587db7db9f00826ef82bbb6f26c539bc2fcfc9dba84f4728e4d883ce3",
+      "originalSha256": "2682182a19e35ed4db959439230c77e853901e0bc9e9e0382d4a56f5a87d906b",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/GroupedPositionsVault.sol",
+      "unit": "core",
+      "source": "contracts/GroupedPositionsVault.sol",
+      "sha256": "380a63bdf408dbca382a534d4b7c50fe15bc639ac72db0e14c3a5152263f67db",
+      "originalSha256": "58de737e34a761c8e6b1d6fba31997e57672dd03f0210902a15be7c3644d15c0",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/PinnedPricingVault.sol",
+      "unit": "core",
+      "source": "contracts/PinnedPricingVault.sol",
+      "sha256": "a24e335f96764cc7d57590656408f734b9fd0b700265396a383a2137de381ace",
+      "originalSha256": "4a6306819cb15b801461540084463db79f5d2dfe5964efd65f2c34c288fad392",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/PinnedVaultAdmission.sol",
+      "unit": "core",
+      "source": "contracts/PinnedVaultAdmission.sol",
+      "sha256": "f7d21d5c8757cc8293fe079b0992164ae5e7f54a00930eb87da4288de957775e",
+      "originalSha256": "7be7e5eb9faecc3c01f986cba12efef453ea5f0e94e22a479c0c33fabc27f365",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/SameQuoteCreateVault.sol",
+      "unit": "core",
+      "source": "contracts/SameQuoteCreateVault.sol",
+      "sha256": "4cc1568ec45d59b56514785f997a29c151d51e0565125705184e673f736c5759",
+      "originalSha256": "b08bce9e10b6e2c7a6b42b67b1a583d80e32ba6b0b7250a8b4a379021bbbda81",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/SameQuoteDirectVault.sol",
+      "unit": "core",
+      "source": "contracts/SameQuoteDirectVault.sol",
+      "sha256": "a3d2e4d4d78059e166a8c3fea9994dd195fca861cf9a8e7b6f871eeca9c5515b",
+      "originalSha256": "e304e608867362a6ce1ad109aade01436d35a0efbe1d5278044449495f2cf346",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/SharedVault.sol",
+      "unit": "core",
+      "source": "contracts/SharedVault.sol",
+      "sha256": "ec63283f856f29ac85db1f33d12ce4a0faf345cfb7dc32b8d233e192ae1c9fed",
+      "originalSha256": "4907c28a70a80cd56d15afb24733a7be45724d8f564abf4804d9682a22271d1c",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/V2ConversionVault.sol",
+      "unit": "core",
+      "source": "contracts/V2ConversionVault.sol",
+      "sha256": "7d164627481fbcf783f3d4dc683f65fdf23eeba52766617bae068f892260a90f",
+      "originalSha256": "c3ce8dd0e1334fca163071f93ef630dfdea3789e6642cfa093ed4b69157ed8c3",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/adapters/V2NativeQuoteAdapter.sol",
+      "unit": "core",
+      "source": "contracts/adapters/V2NativeQuoteAdapter.sol",
+      "sha256": "1388216885869faca1f2ee188534bb140465d0bbe8b45a89985697416b61baec",
+      "originalSha256": "f40cf860125882bf5466cec2b72d544ab4ddd5ad3b8d2a99b6b0ca6e03b9f831",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/interfaces/IUserVaultExecution.sol",
+      "unit": "core",
+      "source": "contracts/interfaces/IUserVaultExecution.sol",
+      "sha256": "70d6424ac3a0a57f4453dfe276449698be59e7f3058f051b9ed01c95ed9735ea",
+      "originalSha256": "350f838c45ba8fe9277dbcc2c27d586ad2ea90cc43e576df8833688e941ee463",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/libraries/LimitAccounting.sol",
+      "unit": "core",
+      "source": "contracts/libraries/LimitAccounting.sol",
+      "sha256": "3d0013806c5fb6fccf3ae5209c949ca48512dc38ca193e5b2030e4a4a990ad99",
+      "originalSha256": "f22ee3ab9010d887ab68f78d3b7124727e9fdbbf48c33be887ec5fd1264ba0c7",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/libraries/ProRataAllocation.sol",
+      "unit": "core",
+      "source": "contracts/libraries/ProRataAllocation.sol",
+      "sha256": "3b888c760cd367ab308c08046e5d9e978cb7c693a2ff8b0c8bf67ece494de5b4",
+      "originalSha256": "f0913db392a2b564fe707aeed977990ece4eead9e04e86bbe59c640d0e82ed30",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/libraries/ProjectedQuoteMath.sol",
+      "unit": "core",
+      "source": "contracts/libraries/ProjectedQuoteMath.sol",
+      "sha256": "1b684c75a4cfdad5b65eb1701cb387af72d2398745af0949f472b365bf926b53",
+      "originalSha256": "e71a003731dfb21cb5e6128191f7bc1370b35a40978a884d7ff15b01ec38bfd3",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/libraries/ReferencePriceMath.sol",
+      "unit": "core",
+      "source": "contracts/libraries/ReferencePriceMath.sol",
+      "sha256": "09874d00f51d0a134218a9cd93205d6ee7728858cc98ed57860412b459dc6f88",
+      "originalSha256": "c0abb2667938a0abe0f6ffde11fdf1164b379fc2ddc87634fcd9471fe808cc91",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/libraries/VaultAccounting.sol",
+      "unit": "core",
+      "source": "contracts/libraries/VaultAccounting.sol",
+      "sha256": "ae3d6462accdaa88fd2dd46201ba84c9f5799268d6ed6a79042b2fa57db6960e",
+      "originalSha256": "3c33b5703507950aa87c5e7a1aac0a6605eee221c45e70687883d2aba52e49fc",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/CreateGroupMath.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/CreateGroupMath.sol",
+      "sha256": "c0ac21f23e0e58af6109b49a2c729175aa99277096bada3b35ccd41642b997cc",
+      "originalSha256": "b0679fbf0d632296e1151b289e601e9f6d4c3a21d2a7c18b25b398ee1ae38a40",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/FeeAttribution.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/FeeAttribution.sol",
+      "sha256": "9469fda101d40f273492eeb352cf94d9d0d7367acff4b06dcd950746b09047de",
+      "originalSha256": "8ab4c5ee1c5670b9ed8d3ef11d61046386422f517635cad804a892bbea62b7c7",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/FeeVaultMath.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/FeeVaultMath.sol",
+      "sha256": "3aa28a8e2887af6429ae751823136cef91571434a9d1606577596e9e8a0b151a",
+      "originalSha256": "8bc114a82c712d77ab108e447cb3a399d58a4cfbbd8e418521bf61835b93c036",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/InternalSettlementPolicy.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/InternalSettlementPolicy.sol",
+      "sha256": "4e994b9c8174ebf00d463233d06281bf6947b4b6c8010cb13fbfbad51783846b",
+      "originalSha256": "d84c7eaaf1659005023bd6be5b6c7d7188a2f2f7efbbd1f8e0233947767aac2e",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetCrossProRataExecution.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/MainnetCrossProRataExecution.sol",
+      "sha256": "b03e6146ab3a46115ef2b4aa2fe4ac70ebd93a3f72461763ba18055c16037fb8",
+      "originalSha256": "da5465d2de44e532fbfcb2ba71ad7d290ac034166fe347e1a93eeeb8474eabce",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetFeeCollectors.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/MainnetFeeCollectors.sol",
+      "sha256": "051ec8f23fda2fa718a8836a632654f5df85da95b593018141fa9f8b27ec29d3",
+      "originalSha256": "25c1872e48bf830f75806899d1f7a05fd0a85640f680d89b09fd3535fb5deedc",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetFeeDistribution.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/MainnetFeeDistribution.sol",
+      "sha256": "fd7fad92cad74eb8c26547d236704a62cf94736618e27f9ba909f9158362daa1",
+      "originalSha256": "e089bf240dfaebd3efb578b7a9a63839581bcb99cecd778fe35486018acafe7d",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetFeeProcessing.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/MainnetFeeProcessing.sol",
+      "sha256": "cb3bd6c330bfe8445471c77a80bfe93c292e78ebaf522cfbf6a716132d172330",
+      "originalSha256": "9b631982368f5b540bfd39556a6582fd21f0481ab5b068122a5974031ef7eb4f",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetGroupedV2Vault.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/MainnetGroupedV2Vault.sol",
+      "sha256": "bd27ee7922b0154e2110c275b347c4190fb1ad355c1e29cb8bb27fb58f92ca4b",
+      "originalSha256": "635543ae04bfcbf781db7506bf2f2c06fdd6c15c80df9d1da3939c306449b78a",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetLimitOrderManager.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/MainnetLimitOrderManager.sol",
+      "sha256": "39a3697641489b1f65aedefb6417dc5c57262c7ff68d8945c72484547a96b050",
+      "originalSha256": "a57561a310b56801a8a1b698f821af8fb5ddeb287c2d6d9a07017372d3e753a4",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetLiquiditySnapshot.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/MainnetLiquiditySnapshot.sol",
+      "sha256": "1808ad99ca480f88103343d4bb6e3c32bce6332c45df3f433b21af464f855ed1",
+      "originalSha256": "ff3728a358c183e5465a96949e84d21b0396984f7d5abe6d92fd3e332dcc782a",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetMarketLimitOrderManager.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/MainnetMarketLimitOrderManager.sol",
+      "sha256": "8c03dcb9b5a95d47b9b05a4bc930fa8b4ac2a9307f97f867bc74683315293686",
+      "originalSha256": "5e32dbf058f75fd7de66074195f21a0d948b0bbe0e3aa81e4fc395013e8264da",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetMarketLiquiditySnapshot.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/MainnetMarketLiquiditySnapshot.sol",
+      "sha256": "a5806962714441208040eeb278c7be0bd08ea26300ab3937a4ce58ad76552f3e",
+      "originalSha256": "ba3dd3996e2765295caea3b5dd1b96a66cac531cb12322b3d02b1e04f74f67b5",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetPinnedV2Vault.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/MainnetPinnedV2Vault.sol",
+      "sha256": "4416ee701d3605cd693d0ad61d97686d824c5af8af3bf0ba85af1919fcb25623",
+      "originalSha256": "a308f8647507e72301bd720f3b3058e7a00cc14c874bc73783a1ff673219a2fc",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetProRataExecution.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/MainnetProRataExecution.sol",
+      "sha256": "e359590285b81a50dde9acf2bd4d78a46b34353e44e46fae4db2f41e19d45c96",
+      "originalSha256": "6a44404218f9024f1b85b9c568e3b090f572b5973941a9007ff2559514d9224f",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/PassiveCrossMath.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/PassiveCrossMath.sol",
+      "sha256": "d474e24c53dfbc49ddedc565d7548e7e4072b949052fe9ab14a201fdedb3303b",
+      "originalSha256": "6dca40f017a234198ab692ce75ca9ffaf1dbe653330f8265d296cfc9b2e81d1a",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/SharedCreateModule.sol",
+      "unit": "core",
+      "source": "contracts/mainnet-candidate/SharedCreateModule.sol",
+      "sha256": "90de3fdb16c3e7423f31f7c0ab15d549e65bdd53549347e2463eca4a568a52f2",
+      "originalSha256": "ac545cc04450cfb004877df5c998db0329375b62bd6cc894d6c639aed021d2fe",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/reference/PinnedMarketPricing.sol",
+      "unit": "core",
+      "source": "contracts/reference/PinnedMarketPricing.sol",
+      "sha256": "a17eb6500cb3d2c0c02f66bc7ff309a12d5c96db84c9b264934502c870469131",
+      "originalSha256": "2ca693f859bea759fb949b5e1afd80f14465bdfdf345b4d17bfc6ffd421f517c",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/reference/PinnedReferencePrice.sol",
+      "unit": "core",
+      "source": "contracts/reference/PinnedReferencePrice.sol",
+      "sha256": "6dc5c6c55c00e14128d767b23a784b6987aa47eaa8102e78138900f3fe9c2fb6",
+      "originalSha256": "a393ebdb4fb7891799817a3487536e95549cbefc8c35b32eeafa84f25232f9f7",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/reference/SharedPoolReader.sol",
+      "unit": "core",
+      "source": "contracts/reference/SharedPoolReader.sol",
+      "sha256": "c0de9c687699933e33a79c78958b590f3d47fc64f25086227bf159e0d83c45d0",
+      "originalSha256": "a7c001aa70aa70ff91f6c061dc2c1df3fefc5ae8ea7cfc4ad48753a3e4e1e31f",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/reference/SharedPricingFingerprint.sol",
+      "unit": "core",
+      "source": "contracts/reference/SharedPricingFingerprint.sol",
+      "sha256": "1daf8868c0e630c89d47b04433910f1f4a83dc9ad1160142d8efe570ec3362d7",
+      "originalSha256": "b7456086baa95671a1c2813978754380ff4d6b0b9457efe4d0c19a777e69d4ab",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/reference/SharedTokenPricing.sol",
+      "unit": "core",
+      "source": "contracts/reference/SharedTokenPricing.sol",
+      "sha256": "0848e9d116e92864658edd26b7ecc596f6dbc77db10467aad353aec470616ca3",
+      "originalSha256": "0a5057be013e3b02e20d95ef9b671fb29c9304601e4b2a6e8ad2744a8b538faa",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/reference/UsdQuoteFeed.sol",
+      "unit": "core",
+      "source": "contracts/reference/UsdQuoteFeed.sol",
+      "sha256": "e73f16fd998f901d29b521ec3dc2184e3204adb3ff4e70a73e9e3b1dcd88b5f8",
+      "originalSha256": "23abd5fabfd5c86779c48216bebe5bc0dce9e766156a0e488d6c2bd36924180c",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/reference/V2StateReader.sol",
+      "unit": "core",
+      "source": "contracts/reference/V2StateReader.sol",
+      "sha256": "cbde97acef8b2020d760e534e804d6a2e65ec398d2623d6d9df8076266f9b99d",
+      "originalSha256": "bcd7fecced6e095293f2d6c734067d367e17c7f098512f336d1ec8f1d100be35",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/reference/V3StateReader.sol",
+      "unit": "core",
+      "source": "contracts/reference/V3StateReader.sol",
+      "sha256": "de9ee1f1fc8cf4dc8d86de16407595d6b9074dc9132601f710666ccf5b9252f3",
+      "originalSha256": "705b6c45761ae539dea8a1bd525be2f4e80f53282ce6477281e04b756b8009b1",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/core/contracts/reference/V4StateReader.sol",
+      "unit": "core",
+      "source": "contracts/reference/V4StateReader.sol",
+      "sha256": "782501eaf9f14f1969029ab300004f4e113e96b7a2f24d9d2d6ffed9b7b592f9",
+      "originalSha256": "e37c6b4ba71836d56518b04b1c66b9d9948c315d55a3b9df656ece5a4dfd4496",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/aggregate/AggregateIndexMath.sol",
+      "unit": "range",
+      "source": "aggregate/AggregateIndexMath.sol",
+      "sha256": "78a2d33bec9c60d8ea6dea55a5584e1bc3c4a5247707db160018db8d3f117022",
+      "originalSha256": "78a2d33bec9c60d8ea6dea55a5584e1bc3c4a5247707db160018db8d3f117022",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/aggregate/AggregateManagerCore.sol",
+      "unit": "range",
+      "source": "aggregate/AggregateManagerCore.sol",
+      "sha256": "e3dab7dd8908193dd22df5294b2ce009fe85bca97bdb0d3d6b6ff7d4ba6717a7",
+      "originalSha256": "df37d28e556b61dc512490ad6e89f328a16bbf06ff2f194933600bd315a0f38c",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/aggregate/AggregateRangeAccounting.sol",
+      "unit": "range",
+      "source": "aggregate/AggregateRangeAccounting.sol",
+      "sha256": "fde54a30ebeea45623651443baff2a86cf9ede235fe77f4e955b2e28d25bf8df",
+      "originalSha256": "fde54a30ebeea45623651443baff2a86cf9ede235fe77f4e955b2e28d25bf8df",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/aggregate/AggregateRangeTree.sol",
+      "unit": "range",
+      "source": "aggregate/AggregateRangeTree.sol",
+      "sha256": "0942c17bf7a736033af47afd5cd33adf1cdd900798ba093bff5d7417074bc8e2",
+      "originalSha256": "0942c17bf7a736033af47afd5cd33adf1cdd900798ba093bff5d7417074bc8e2",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/aggregate/AggregateShares.sol",
+      "unit": "range",
+      "source": "aggregate/AggregateShares.sol",
+      "sha256": "be2176d63e9971dbaaeded7420af2e10a24c59ba7824cbde4f276086d2d673b7",
+      "originalSha256": "be2176d63e9971dbaaeded7420af2e10a24c59ba7824cbde4f276086d2d673b7",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/aggregate/RangeInternalExecution.sol",
+      "unit": "range",
+      "source": "aggregate/RangeInternalExecution.sol",
+      "sha256": "80eaf42785c5d08e59bb7111ae54f07f5b054459f25664f732138e26fff438d4",
+      "originalSha256": "5349d8a86261ca8957f72cfdd02b0d46c0fec1e87285e6d793883f5c3b44fb6f",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/cached/CachedTokenPricing.sol",
+      "unit": "range",
+      "source": "cached/CachedTokenPricing.sol",
+      "sha256": "39507f9e0fbff17979857e9657e25d9c804cc06d6707cdbf6343e70cd4170ebf",
+      "originalSha256": "36554bcf5b4232d64a2513832b7c5b6f60022ff5fea0d6cf96182a1597ccff3a",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/cached/PriceContextConsumer.sol",
+      "unit": "range",
+      "source": "cached/PriceContextConsumer.sol",
+      "sha256": "925b8000ee9dc07d9258948844f83cad4505febab863ce365dc6c3fd30650596",
+      "originalSha256": "6896dfa52f8a2267eab876e9647a421c2eb3174870ceb91abbc6527f1b185221",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/cached/PriceContextDispatch.sol",
+      "unit": "range",
+      "source": "cached/PriceContextDispatch.sol",
+      "sha256": "62bafd8031b7321c23a24d5fe73273ac9df07911e261ca1ebc0b1e0ced6882f2",
+      "originalSha256": "00ea18d703e97545a55a235132de2424c5e60a9145542344f8534bb28ad2b00f",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/adapters/V2NativeQuoteAdapter.sol",
+      "unit": "range",
+      "source": "contracts/adapters/V2NativeQuoteAdapter.sol",
+      "sha256": "1388216885869faca1f2ee188534bb140465d0bbe8b45a89985697416b61baec",
+      "originalSha256": "f40cf860125882bf5466cec2b72d544ab4ddd5ad3b8d2a99b6b0ca6e03b9f831",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/interfaces/IUserVaultExecution.sol",
+      "unit": "range",
+      "source": "contracts/interfaces/IUserVaultExecution.sol",
+      "sha256": "70d6424ac3a0a57f4453dfe276449698be59e7f3058f051b9ed01c95ed9735ea",
+      "originalSha256": "350f838c45ba8fe9277dbcc2c27d586ad2ea90cc43e576df8833688e941ee463",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/libraries/LimitAccounting.sol",
+      "unit": "range",
+      "source": "contracts/libraries/LimitAccounting.sol",
+      "sha256": "3d0013806c5fb6fccf3ae5209c949ca48512dc38ca193e5b2030e4a4a990ad99",
+      "originalSha256": "f22ee3ab9010d887ab68f78d3b7124727e9fdbbf48c33be887ec5fd1264ba0c7",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/libraries/ProRataAllocation.sol",
+      "unit": "range",
+      "source": "contracts/libraries/ProRataAllocation.sol",
+      "sha256": "3b888c760cd367ab308c08046e5d9e978cb7c693a2ff8b0c8bf67ece494de5b4",
+      "originalSha256": "f0913db392a2b564fe707aeed977990ece4eead9e04e86bbe59c640d0e82ed30",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/libraries/ProjectedQuoteMath.sol",
+      "unit": "range",
+      "source": "contracts/libraries/ProjectedQuoteMath.sol",
+      "sha256": "1b684c75a4cfdad5b65eb1701cb387af72d2398745af0949f472b365bf926b53",
+      "originalSha256": "e71a003731dfb21cb5e6128191f7bc1370b35a40978a884d7ff15b01ec38bfd3",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/libraries/ReferencePriceMath.sol",
+      "unit": "range",
+      "source": "contracts/libraries/ReferencePriceMath.sol",
+      "sha256": "09874d00f51d0a134218a9cd93205d6ee7728858cc98ed57860412b459dc6f88",
+      "originalSha256": "c0abb2667938a0abe0f6ffde11fdf1164b379fc2ddc87634fcd9471fe808cc91",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/CreateGroupMath.sol",
+      "unit": "range",
+      "source": "contracts/mainnet-candidate/CreateGroupMath.sol",
+      "sha256": "c0ac21f23e0e58af6109b49a2c729175aa99277096bada3b35ccd41642b997cc",
+      "originalSha256": "b0679fbf0d632296e1151b289e601e9f6d4c3a21d2a7c18b25b398ee1ae38a40",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/FeeAttribution.sol",
+      "unit": "range",
+      "source": "contracts/mainnet-candidate/FeeAttribution.sol",
+      "sha256": "9469fda101d40f273492eeb352cf94d9d0d7367acff4b06dcd950746b09047de",
+      "originalSha256": "8ab4c5ee1c5670b9ed8d3ef11d61046386422f517635cad804a892bbea62b7c7",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/FeeAwareMarketLimitManager.sol",
+      "unit": "range",
+      "source": "contracts/mainnet-candidate/FeeAwareMarketLimitManager.sol",
+      "sha256": "5187fb1d29788c40a16b0a281af58867ea66e296704d2ce391f80e27b36909fb",
+      "originalSha256": "5bfc04b0d5db78b32de763053de98302d2d570325ca637c47a4fb66ba91a4c86",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/FeeVaultMath.sol",
+      "unit": "range",
+      "source": "contracts/mainnet-candidate/FeeVaultMath.sol",
+      "sha256": "3aa28a8e2887af6429ae751823136cef91571434a9d1606577596e9e8a0b151a",
+      "originalSha256": "8bc114a82c712d77ab108e447cb3a399d58a4cfbbd8e418521bf61835b93c036",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/InternalSettlementPolicy.sol",
+      "unit": "range",
+      "source": "contracts/mainnet-candidate/InternalSettlementPolicy.sol",
+      "sha256": "4e994b9c8174ebf00d463233d06281bf6947b4b6c8010cb13fbfbad51783846b",
+      "originalSha256": "d84c7eaaf1659005023bd6be5b6c7d7188a2f2f7efbbd1f8e0233947767aac2e",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/MainnetFeeDistribution.sol",
+      "unit": "range",
+      "source": "contracts/mainnet-candidate/MainnetFeeDistribution.sol",
+      "sha256": "fd7fad92cad74eb8c26547d236704a62cf94736618e27f9ba909f9158362daa1",
+      "originalSha256": "e089bf240dfaebd3efb578b7a9a63839581bcb99cecd778fe35486018acafe7d",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/MainnetFeeProcessing.sol",
+      "unit": "range",
+      "source": "contracts/mainnet-candidate/MainnetFeeProcessing.sol",
+      "sha256": "cb3bd6c330bfe8445471c77a80bfe93c292e78ebaf522cfbf6a716132d172330",
+      "originalSha256": "9b631982368f5b540bfd39556a6582fd21f0481ab5b068122a5974031ef7eb4f",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/MainnetMarketLimitOrderManager.sol",
+      "unit": "range",
+      "source": "contracts/mainnet-candidate/MainnetMarketLimitOrderManager.sol",
+      "sha256": "e9c0610f79e696ff1e90e45843d3bf91b32834aaa9ec3b8f9c56d002044004fa",
+      "originalSha256": "c375e28bb6b03d0024989f747b0e8925dc6d0f73bf411cded0acc1f6e71b83fb",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/MainnetMarketLiquiditySnapshot.sol",
+      "unit": "range",
+      "source": "contracts/mainnet-candidate/MainnetMarketLiquiditySnapshot.sol",
+      "sha256": "307ca8fb16e9495c39e724e9315f410b53a8b87c1145d4ae7b965dda76aa1d26",
+      "originalSha256": "2984071e5733701ad0f1ea319a30663bfd26a8f3b445ccf4c1a3a0de0b441fa7",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/PassiveCrossMath.sol",
+      "unit": "range",
+      "source": "contracts/mainnet-candidate/PassiveCrossMath.sol",
+      "sha256": "d474e24c53dfbc49ddedc565d7548e7e4072b949052fe9ab14a201fdedb3303b",
+      "originalSha256": "6dca40f017a234198ab692ce75ca9ffaf1dbe653330f8265d296cfc9b2e81d1a",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/reference/PinnedMarketPricing.sol",
+      "unit": "range",
+      "source": "contracts/reference/PinnedMarketPricing.sol",
+      "sha256": "a17eb6500cb3d2c0c02f66bc7ff309a12d5c96db84c9b264934502c870469131",
+      "originalSha256": "2ca693f859bea759fb949b5e1afd80f14465bdfdf345b4d17bfc6ffd421f517c",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/reference/PinnedReferencePrice.sol",
+      "unit": "range",
+      "source": "contracts/reference/PinnedReferencePrice.sol",
+      "sha256": "6dc5c6c55c00e14128d767b23a784b6987aa47eaa8102e78138900f3fe9c2fb6",
+      "originalSha256": "a393ebdb4fb7891799817a3487536e95549cbefc8c35b32eeafa84f25232f9f7",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/reference/SharedPoolReader.sol",
+      "unit": "range",
+      "source": "contracts/reference/SharedPoolReader.sol",
+      "sha256": "c0de9c687699933e33a79c78958b590f3d47fc64f25086227bf159e0d83c45d0",
+      "originalSha256": "a7c001aa70aa70ff91f6c061dc2c1df3fefc5ae8ea7cfc4ad48753a3e4e1e31f",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/reference/SharedPricingFingerprint.sol",
+      "unit": "range",
+      "source": "contracts/reference/SharedPricingFingerprint.sol",
+      "sha256": "1daf8868c0e630c89d47b04433910f1f4a83dc9ad1160142d8efe570ec3362d7",
+      "originalSha256": "b7456086baa95671a1c2813978754380ff4d6b0b9457efe4d0c19a777e69d4ab",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/reference/SharedTokenPricing.sol",
+      "unit": "range",
+      "source": "contracts/reference/SharedTokenPricing.sol",
+      "sha256": "0848e9d116e92864658edd26b7ecc596f6dbc77db10467aad353aec470616ca3",
+      "originalSha256": "0a5057be013e3b02e20d95ef9b671fb29c9304601e4b2a6e8ad2744a8b538faa",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/reference/UsdQuoteFeed.sol",
+      "unit": "range",
+      "source": "contracts/reference/UsdQuoteFeed.sol",
+      "sha256": "e73f16fd998f901d29b521ec3dc2184e3204adb3ff4e70a73e9e3b1dcd88b5f8",
+      "originalSha256": "23abd5fabfd5c86779c48216bebe5bc0dce9e766156a0e488d6c2bd36924180c",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/reference/V2StateReader.sol",
+      "unit": "range",
+      "source": "contracts/reference/V2StateReader.sol",
+      "sha256": "cbde97acef8b2020d760e534e804d6a2e65ec398d2623d6d9df8076266f9b99d",
+      "originalSha256": "bcd7fecced6e095293f2d6c734067d367e17c7f098512f336d1ec8f1d100be35",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/reference/V3StateReader.sol",
+      "unit": "range",
+      "source": "contracts/reference/V3StateReader.sol",
+      "sha256": "de9ee1f1fc8cf4dc8d86de16407595d6b9074dc9132601f710666ccf5b9252f3",
+      "originalSha256": "705b6c45761ae539dea8a1bd525be2f4e80f53282ce6477281e04b756b8009b1",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/range/contracts/reference/V4StateReader.sol",
+      "unit": "range",
+      "source": "contracts/reference/V4StateReader.sol",
+      "sha256": "782501eaf9f14f1969029ab300004f4e113e96b7a2f24d9d2d6ffed9b7b592f9",
+      "originalSha256": "e37c6b4ba71836d56518b04b1c66b9d9948c315d55a3b9df656ece5a4dfd4496",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/cached/CachedFeeProcessor.sol",
+      "unit": "fees",
+      "source": "cached/CachedFeeProcessor.sol",
+      "sha256": "b93bf5b42568e405ab1b7731e485f46f3acad1d489ec2acec9736b79d8edfbb7",
+      "originalSha256": "db8aed9caaa3639eb91c496b77b796f08cd5ba375e3bf52c4df212ecbbe4f3b6",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/cached/CachedFeeRoute.sol",
+      "unit": "fees",
+      "source": "cached/CachedFeeRoute.sol",
+      "sha256": "4650e8886d1dff4622ae5bb6679b15a3b3314aed02efeff592ab06d1821652f5",
+      "originalSha256": "2ff4a043db42b1bf5dfffa2960eb77fc4ec019c529257aafc6f50cec5ba43255",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/cached/CachedTokenPricing.sol",
+      "unit": "fees",
+      "source": "cached/CachedTokenPricing.sol",
+      "sha256": "39507f9e0fbff17979857e9657e25d9c804cc06d6707cdbf6343e70cd4170ebf",
+      "originalSha256": "36554bcf5b4232d64a2513832b7c5b6f60022ff5fea0d6cf96182a1597ccff3a",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/cached/PriceContextConsumer.sol",
+      "unit": "fees",
+      "source": "cached/PriceContextConsumer.sol",
+      "sha256": "925b8000ee9dc07d9258948844f83cad4505febab863ce365dc6c3fd30650596",
+      "originalSha256": "6896dfa52f8a2267eab876e9647a421c2eb3174870ceb91abbc6527f1b185221",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/cached/PriceContextDispatch.sol",
+      "unit": "fees",
+      "source": "cached/PriceContextDispatch.sol",
+      "sha256": "62bafd8031b7321c23a24d5fe73273ac9df07911e261ca1ebc0b1e0ced6882f2",
+      "originalSha256": "00ea18d703e97545a55a235132de2424c5e60a9145542344f8534bb28ad2b00f",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/adapters/V2NativeQuoteAdapter.sol",
+      "unit": "fees",
+      "source": "contracts/adapters/V2NativeQuoteAdapter.sol",
+      "sha256": "1388216885869faca1f2ee188534bb140465d0bbe8b45a89985697416b61baec",
+      "originalSha256": "f40cf860125882bf5466cec2b72d544ab4ddd5ad3b8d2a99b6b0ca6e03b9f831",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/libraries/ProjectedQuoteMath.sol",
+      "unit": "fees",
+      "source": "contracts/libraries/ProjectedQuoteMath.sol",
+      "sha256": "1b684c75a4cfdad5b65eb1701cb387af72d2398745af0949f472b365bf926b53",
+      "originalSha256": "e71a003731dfb21cb5e6128191f7bc1370b35a40978a884d7ff15b01ec38bfd3",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/libraries/ReferencePriceMath.sol",
+      "unit": "fees",
+      "source": "contracts/libraries/ReferencePriceMath.sol",
+      "sha256": "09874d00f51d0a134218a9cd93205d6ee7728858cc98ed57860412b459dc6f88",
+      "originalSha256": "c0abb2667938a0abe0f6ffde11fdf1164b379fc2ddc87634fcd9471fe808cc91",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetAutomaticFeeProcessing.sol",
+      "unit": "fees",
+      "source": "contracts/mainnet-v3/MainnetAutomaticFeeProcessing.sol",
+      "sha256": "9edb874e051afa6281671beb729359deb243b40c886a6808b550cc10fb9c3147",
+      "originalSha256": "304511ce54ed7c61922380dba1fc176512fa2ab673c6d3cf57159509bb405232",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetBoundedFeeProcessing.sol",
+      "unit": "fees",
+      "source": "contracts/mainnet-v3/MainnetBoundedFeeProcessing.sol",
+      "sha256": "5a68c63b56e33a06369fa360ea79b7dbec0388bc3ce2c91bd2e2abb889f1e7ef",
+      "originalSha256": "72ce23ed808acc463e70e32773da7fe92813e299743b0d7abd2faca5b313de42",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetFeeDistribution.sol",
+      "unit": "fees",
+      "source": "contracts/mainnet-v3/MainnetFeeDistribution.sol",
+      "sha256": "fd7fad92cad74eb8c26547d236704a62cf94736618e27f9ba909f9158362daa1",
+      "originalSha256": "e089bf240dfaebd3efb578b7a9a63839581bcb99cecd778fe35486018acafe7d",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetFeeProcessing.sol",
+      "unit": "fees",
+      "source": "contracts/mainnet-v3/MainnetFeeProcessing.sol",
+      "sha256": "cb3bd6c330bfe8445471c77a80bfe93c292e78ebaf522cfbf6a716132d172330",
+      "originalSha256": "9b631982368f5b540bfd39556a6582fd21f0481ab5b068122a5974031ef7eb4f",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetSharedAutomaticFeeProcessing.sol",
+      "unit": "fees",
+      "source": "contracts/mainnet-v3/MainnetSharedAutomaticFeeProcessing.sol",
+      "sha256": "24d87deacdb0d2aa3e523bac15f0cc987da8733436ab77734199661b1ef1a0ec",
+      "originalSha256": "44722598b77702cd9d889dcdda6a980f2aa8395c216cdd42b3a9f82ea4ae3c9a",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetSharedBurnAndClaim.sol",
+      "unit": "fees",
+      "source": "contracts/mainnet-v3/MainnetSharedBurnAndClaim.sol",
+      "sha256": "4b79e6adae520a50e4fcfadd6b43b1e53dface15c76afa7d2796712d78c39137",
+      "originalSha256": "6ace142e301bb6517d5448ffd8b86672c215b51b39d5b920cba483f7b67ce5b2",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetSharedFeeDistribution.sol",
+      "unit": "fees",
+      "source": "contracts/mainnet-v3/MainnetSharedFeeDistribution.sol",
+      "sha256": "6f26e5d7692bad8fd94961374759079c068d8147257beb7a236fc221e38da49f",
+      "originalSha256": "11c0fe6a782530a193313c2bd72ba519d17cd060368a1779401ee9a5f5ef66af",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/reference/CachedTokenSwap.sol",
+      "unit": "fees",
+      "source": "contracts/reference/CachedTokenSwap.sol",
+      "sha256": "297065965f5b8c90d324ead5cee71a62801113aaaa7df6b9521b0057b44ee832",
+      "originalSha256": "bcc1b7bb76f19018ecba49d7b660ffb65022bfdceeb477a99fe89f3396e19ab5",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/reference/PinnedMarketPricing.sol",
+      "unit": "fees",
+      "source": "contracts/reference/PinnedMarketPricing.sol",
+      "sha256": "a17eb6500cb3d2c0c02f66bc7ff309a12d5c96db84c9b264934502c870469131",
+      "originalSha256": "2ca693f859bea759fb949b5e1afd80f14465bdfdf345b4d17bfc6ffd421f517c",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/reference/PinnedReferencePrice.sol",
+      "unit": "fees",
+      "source": "contracts/reference/PinnedReferencePrice.sol",
+      "sha256": "6dc5c6c55c00e14128d767b23a784b6987aa47eaa8102e78138900f3fe9c2fb6",
+      "originalSha256": "a393ebdb4fb7891799817a3487536e95549cbefc8c35b32eeafa84f25232f9f7",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/reference/SharedPoolReader.sol",
+      "unit": "fees",
+      "source": "contracts/reference/SharedPoolReader.sol",
+      "sha256": "c0de9c687699933e33a79c78958b590f3d47fc64f25086227bf159e0d83c45d0",
+      "originalSha256": "a7c001aa70aa70ff91f6c061dc2c1df3fefc5ae8ea7cfc4ad48753a3e4e1e31f",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/reference/UsdQuoteFeed.sol",
+      "unit": "fees",
+      "source": "contracts/reference/UsdQuoteFeed.sol",
+      "sha256": "e73f16fd998f901d29b521ec3dc2184e3204adb3ff4e70a73e9e3b1dcd88b5f8",
+      "originalSha256": "23abd5fabfd5c86779c48216bebe5bc0dce9e766156a0e488d6c2bd36924180c",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/reference/V2StateReader.sol",
+      "unit": "fees",
+      "source": "contracts/reference/V2StateReader.sol",
+      "sha256": "cbde97acef8b2020d760e534e804d6a2e65ec398d2623d6d9df8076266f9b99d",
+      "originalSha256": "bcd7fecced6e095293f2d6c734067d367e17c7f098512f336d1ec8f1d100be35",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/reference/V3StateReader.sol",
+      "unit": "fees",
+      "source": "contracts/reference/V3StateReader.sol",
+      "sha256": "de9ee1f1fc8cf4dc8d86de16407595d6b9074dc9132601f710666ccf5b9252f3",
+      "originalSha256": "705b6c45761ae539dea8a1bd525be2f4e80f53282ce6477281e04b756b8009b1",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/fees/contracts/reference/V4StateReader.sol",
+      "unit": "fees",
+      "source": "contracts/reference/V4StateReader.sol",
+      "sha256": "782501eaf9f14f1969029ab300004f4e113e96b7a2f24d9d2d6ffed9b7b592f9",
+      "originalSha256": "e37c6b4ba71836d56518b04b1c66b9d9948c315d55a3b9df656ece5a4dfd4496",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/distribution/contracts/mainnet-v2/MainnetFeeDistribution.sol",
+      "unit": "distribution",
+      "source": "contracts/mainnet-v2/MainnetFeeDistribution.sol",
+      "sha256": "fd7fad92cad74eb8c26547d236704a62cf94736618e27f9ba909f9158362daa1",
+      "originalSha256": "e089bf240dfaebd3efb578b7a9a63839581bcb99cecd778fe35486018acafe7d",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/distribution/contracts/mainnet-v2/MainnetSharedFeeDistribution.sol",
+      "unit": "distribution",
+      "source": "contracts/mainnet-v2/MainnetSharedFeeDistribution.sol",
+      "sha256": "6f26e5d7692bad8fd94961374759079c068d8147257beb7a236fc221e38da49f",
+      "originalSha256": "11c0fe6a782530a193313c2bd72ba519d17cd060368a1779401ee9a5f5ef66af",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/burn/Bridge.sol",
+      "unit": "burn",
+      "source": "Bridge.sol",
+      "sha256": "cc64fd4ef3e62595aa899f21d264e650e250844b8091aabcacdabc46ab825fc3",
+      "originalSha256": "88867aa1f662505fe879db0054af3e17e6121417dd2be79291b31d92fc9c31b5",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/gas/ProtocolDualGasTreasury.sol",
+      "unit": "gas",
+      "source": "ProtocolDualGasTreasury.sol",
+      "sha256": "599711b509eb58df012454cad3e00167d5d83d109432a826275a17222194ae8c",
+      "originalSha256": "fd06ff5646ee565158875a1497a54efc458e185304176824cba1ffb9e7046c48",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/gas/contracts/mainnet/ProtocolGasTreasury.sol",
+      "unit": "gas",
+      "source": "contracts/mainnet/ProtocolGasTreasury.sol",
+      "sha256": "f7f5f6604bdce084d8f5c0f906644e1bef02ea8860a8d278e5c266648252b415",
+      "originalSha256": "3dea5ae4bf4f23ffa51797c4aeade2c2ea7f4481d1fac5316bc8c159ec6d401e",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    },
+    {
+      "path": "contracts/proxy/modular/ModuleProxy.sol",
+      "unit": "proxy",
+      "source": "modular/ModuleProxy.sol",
+      "sha256": "36e9c30f3674d7f6fbb8213828d08a6ad21cc938798d56d7f69ab7479d9211d6",
+      "originalSha256": "6e6d6c5c0660ff7e03ac0e39193e17d6e1c9c5e8daa7e458cf0fef338c24ed0b",
+      "transformation": "comments removed; unused top-level declarations and imports removed; retained declaration bodies unchanged"
+    }
+  ]
+}

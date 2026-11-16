@@ -1,0 +1,1039 @@
+[
+  {
+    "inputs": [],
+    "name": "CapacityOverflow",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidPlan",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidRatio",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidSources",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "chainId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "baseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "canonicalQuote",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "inputAsset",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IUserVaultExecution.Side",
+            "name": "side",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGrossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minGrossInputFilled",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minNetOutput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowCrossQuote",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IUserVaultExecution.DirectRequest",
+        "name": "q",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bytes32",
+            "name": "key",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint256",
+            "name": "available",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "kind",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint16",
+            "name": "bucket",
+            "type": "uint16"
+          }
+        ],
+        "internalType": "struct MainnetMarketLiquiditySnapshot.Source[]",
+        "name": "sources",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "rate",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "usd",
+        "type": "tuple"
+      }
+    ],
+    "name": "plan",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint256",
+                "name": "available",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint8",
+                "name": "kind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bucket",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct MainnetMarketLiquiditySnapshot.Source[]",
+            "name": "sources",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "grossInputs",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "outputs",
+            "type": "uint256[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "n",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "d",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ReferencePriceMath.Ratio",
+            "name": "rate",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "n",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "d",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ReferencePriceMath.Ratio",
+            "name": "usd",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "grossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "netInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "output",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "feeAdjustment",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct CreateGroupMath.Plan",
+        "name": "p",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract MainnetMarketLiquiditySnapshot",
+        "name": "snapshot",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "chainId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "baseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "canonicalQuote",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "inputAsset",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IUserVaultExecution.Side",
+            "name": "side",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGrossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minGrossInputFilled",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minNetOutput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowCrossQuote",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IUserVaultExecution.DirectRequest",
+        "name": "q",
+        "type": "tuple"
+      }
+    ],
+    "name": "planFor",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint256",
+                "name": "available",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint8",
+                "name": "kind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bucket",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct MainnetMarketLiquiditySnapshot.Source[]",
+            "name": "sources",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "grossInputs",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "outputs",
+            "type": "uint256[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "n",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "d",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ReferencePriceMath.Ratio",
+            "name": "rate",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "n",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "d",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ReferencePriceMath.Ratio",
+            "name": "usd",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "grossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "netInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "output",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "feeAdjustment",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct CreateGroupMath.Plan",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract MainnetMarketLiquiditySnapshot",
+        "name": "snapshot",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "chainId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "baseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "canonicalQuote",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "inputAsset",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IUserVaultExecution.Side",
+            "name": "side",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGrossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minGrossInputFilled",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minNetOutput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowCrossQuote",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IUserVaultExecution.DirectRequest",
+        "name": "q",
+        "type": "tuple"
+      }
+    ],
+    "name": "planLimitOrdersFor",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint256",
+                "name": "available",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint8",
+                "name": "kind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bucket",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct MainnetMarketLiquiditySnapshot.Source[]",
+            "name": "sources",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "grossInputs",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "outputs",
+            "type": "uint256[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "n",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "d",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ReferencePriceMath.Ratio",
+            "name": "rate",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "n",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "d",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ReferencePriceMath.Ratio",
+            "name": "usd",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "grossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "netInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "output",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "feeAdjustment",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct CreateGroupMath.Plan",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "chainId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "baseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "canonicalQuote",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "inputAsset",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IUserVaultExecution.Side",
+            "name": "side",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGrossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minGrossInputFilled",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minNetOutput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowCrossQuote",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IUserVaultExecution.DirectRequest",
+        "name": "q",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bytes32",
+            "name": "key",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint256",
+            "name": "available",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "kind",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint16",
+            "name": "bucket",
+            "type": "uint16"
+          }
+        ],
+        "internalType": "struct MainnetMarketLiquiditySnapshot.Source[]",
+        "name": "sources",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "rate",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "d",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ReferencePriceMath.Ratio",
+        "name": "usd",
+        "type": "tuple"
+      }
+    ],
+    "name": "planPassive",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint256",
+                "name": "available",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint8",
+                "name": "kind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bucket",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct MainnetMarketLiquiditySnapshot.Source[]",
+            "name": "sources",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "grossInputs",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "outputs",
+            "type": "uint256[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "n",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "d",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ReferencePriceMath.Ratio",
+            "name": "rate",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "n",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "d",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ReferencePriceMath.Ratio",
+            "name": "usd",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "grossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "netInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "output",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "feeAdjustment",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct CreateGroupMath.Plan",
+        "name": "p",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract MainnetMarketLiquiditySnapshot",
+        "name": "snapshot",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "chainId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "baseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "canonicalQuote",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "inputAsset",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IUserVaultExecution.Side",
+            "name": "side",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGrossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minGrossInputFilled",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minNetOutput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowCrossQuote",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IUserVaultExecution.DirectRequest",
+        "name": "q",
+        "type": "tuple"
+      }
+    ],
+    "name": "planPassiveFor",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint256",
+                "name": "available",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint8",
+                "name": "kind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bucket",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct MainnetMarketLiquiditySnapshot.Source[]",
+            "name": "sources",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "grossInputs",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "outputs",
+            "type": "uint256[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "n",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "d",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ReferencePriceMath.Ratio",
+            "name": "rate",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "n",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "d",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ReferencePriceMath.Ratio",
+            "name": "usd",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "grossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "netInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "output",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "feeAdjustment",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct CreateGroupMath.Plan",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

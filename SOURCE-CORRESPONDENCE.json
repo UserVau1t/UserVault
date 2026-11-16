@@ -1,0 +1,1497 @@
+{
+  "method": "Solidity 0.8.30 parsing AST equality for every retained top-level declaration against the compilation inputs paired with verified deployment artifacts. Only location, node ID, documentation and license fields are ignored. Imports are pruned separately and validated by compilation.",
+  "retainedDeclarations": 189,
+  "allRetainedBodiesUnchanged": true,
+  "files": [
+    {
+      "path": "contracts/core/cached/CachedTokenPricing.sol",
+      "declarations": [
+        {
+          "name": "CachedTokenPricing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "19b162c40d332b1d26367608c5bc7556281727d44e9411385e37bd672bdb5ce5"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/cached/PriceContextConsumer.sol",
+      "declarations": [
+        {
+          "name": "PriceContextConsumer",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "b67b4e0b474bd3ff766cdde8256a8ccece9df6adc51a95d00dc3ba92301ef5f5"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/cached/PriceContextDispatch.sol",
+      "declarations": [
+        {
+          "name": "IPriceContext",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "59f5c437a59db428d6f2c36750136555bcc370dab9bf729b07c08fdba4706bfa"
+        },
+        {
+          "name": "IPriceContextHost",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "7366f1c52a39718bb1126a958a240e135ec3554d25aaf84e61a9df347c2f1433"
+        },
+        {
+          "name": "PriceContextDispatch",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "888ce7b569724a704a6aeef687a49179abaaca237a7ea96d77a0f9b1be27b8d6"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/cached/PriceContextQuery.sol",
+      "declarations": [
+        {
+          "name": "PriceContextQuery",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "75ba3010d9862fa3e18052b52149cb5507c815a2f05804c3107bf43b80e876b5"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/CrossBuyVault.sol",
+      "declarations": [
+        {
+          "name": "CrossBuyVault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "2bb471b504dcccfdcb79d15e3cc611648f17f673e9b6bd6b733ec2a5411e0f9a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/CrossSellVault.sol",
+      "declarations": [
+        {
+          "name": "CrossSellVault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "10f59e16f5c9e56f80ed0475825c36439ad2406fed3480be9379c5d252fdcef0"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/GroupedPositionsVault.sol",
+      "declarations": [
+        {
+          "name": "GroupedPositionsVault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a062803d40329af8e827b58ab7aea094b9d2b90da32a29f27fd4a5ab9f56fa4a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/PinnedPricingVault.sol",
+      "declarations": [
+        {
+          "name": "PinnedPricingVault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "295bd6950922fd5c84e52027ba41e78e0a87e1b88115ea104d342ad0dabf5176"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/PinnedVaultAdmission.sol",
+      "declarations": [
+        {
+          "name": "PinnedVaultAdmission",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "9859f5bcc2d28ba1eb3c7486aa734ddd30db454695e376e31b1904e410fb10fb"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/SameQuoteCreateVault.sol",
+      "declarations": [
+        {
+          "name": "SameQuoteCreateVault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "f2c1fb1f7f958999febfee7ea6b50c4f04f5d3bd5b94f2ad2a309f0b22cae8c3"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/SameQuoteDirectVault.sol",
+      "declarations": [
+        {
+          "name": "SameQuoteDirectVault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "7c8056aaae733651c05fd5452ad71279b472ea7a99990f21ee6b9a787b63fa7a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/SharedVault.sol",
+      "declarations": [
+        {
+          "name": "SharedVault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "edd29ebef8191e0df151eb494f9543f235b243e3d37b4931741e4f3a8ceb2abe"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/V2ConversionVault.sol",
+      "declarations": [
+        {
+          "name": "V2ConversionVault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "96ad4d2526184279a21f51ea12bd31f465095e2a4459358d58e03177e70d5a14"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/adapters/V2NativeQuoteAdapter.sol",
+      "declarations": [
+        {
+          "name": "IV2QuoteRouter",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "aa7d174468a2b417bc98843266fa21eeef2fd86de5be1c30332e29a948d4e84a"
+        },
+        {
+          "name": "IV2QuoteFactory",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "2cafb0841f4e8cb6deed556b1f5a3086cd95a23c592d3ba43e328477b6bdd4fd"
+        },
+        {
+          "name": "IV2QuotePair",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "fb88a6206edb2fe3939c68b061abfde3dc824bc3b90a5b520174ee4a6932f483"
+        },
+        {
+          "name": "V2NativeQuoteAdapter",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "069666aa45411a1607b79d961d37a68f58a7832f229efd1469ba611d2311e43a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/interfaces/IUserVaultExecution.sol",
+      "declarations": [
+        {
+          "name": "IUserVaultExecution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "502c46fdca19d9ea022626bf2bfe91231856e3f2e47d1938a2c336c86bd70b30"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/libraries/LimitAccounting.sol",
+      "declarations": [
+        {
+          "name": "LimitAccounting",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "fe186601a91a36ad347268b4c80848dfcba5a43223a5e93ef8afc89b43083b7a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/libraries/ProRataAllocation.sol",
+      "declarations": [
+        {
+          "name": "ProRataAllocation",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c8008406df45ca2beb5f62c9c3210dbf7e86fbb18566eb660d6756f4b672e022"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/libraries/ProjectedQuoteMath.sol",
+      "declarations": [
+        {
+          "name": "ProjectedQuoteMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a54d49f58f648007435105e6275b232099974176ea183dd3b03d26c12d70c966"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/libraries/ReferencePriceMath.sol",
+      "declarations": [
+        {
+          "name": "ReferencePriceMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "8ef3a9c58377e59ce254c80c722ac3684d297af1b1451b14c7ceccd79adcd822"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/libraries/VaultAccounting.sol",
+      "declarations": [
+        {
+          "name": "VaultAccounting",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "71c8cd0474bfe9984a64d8a7560769e0a5553922cfe72e9f32509756f88cc70a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/CreateGroupMath.sol",
+      "declarations": [
+        {
+          "name": "CreateGroupMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "6564d14530529e26beefe0013b19942a1603452289c71a190b902c6c44a673fd"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/FeeAttribution.sol",
+      "declarations": [
+        {
+          "name": "IFeePayerContext",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a59cf7d6a1318c1ebb34062c9250ecea13ef6337926ee0245e06f64229ff2a07"
+        },
+        {
+          "name": "FeePayerContext",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "460b3fd0494ac8b096bd44965f229d22cb9f07eb5f20dd22c9b1854d9b797ce2"
+        },
+        {
+          "name": "FeeAttributedCollector",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "1c1bc553cd2f5919f86681b8ca39acf9c401246eea177d6ea4de2694591dca22"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/FeeVaultMath.sol",
+      "declarations": [
+        {
+          "name": "FeeVaultMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "f39713f2363128b5e47bd8f788a227ad9d919a8a5db1d65e1ca04ac3c32b0890"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/InternalSettlementPolicy.sol",
+      "declarations": [
+        {
+          "name": "ICreateGraphModule",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "de630d2b6cf1120d8e9698ec67f6104f9db14ea8d4d5579d83e8dbdfe7b26f42"
+        },
+        {
+          "name": "ICreateGraphSnapshot",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "de19fcb1e991447442bc90b2cb8338b1b5bee5fcd62fa57732204ed0665607a5"
+        },
+        {
+          "name": "IInternalPositionSource",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "acfc4289cb9cf18629883c1cdc297092f2f7879253de64a6e9775d0c09c045d5"
+        },
+        {
+          "name": "IInternalPolicyVault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "7072288d207f6161e2440d635bfb9d7b5e9671106343b3a5d69450ee569a57ad"
+        },
+        {
+          "name": "InternalSettlementPolicy",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "263f7a4dfb471d9a7d2d193d66f8fe4b2a6d0fe1c26d2fd68beb49d3a95e2d65"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetCrossProRataExecution.sol",
+      "declarations": [
+        {
+          "name": "MainnetCrossProRataExecution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "6dbcae9de30bbcb0ece77244fa39b7294a222cec3fe9e2391bd7f68ed5bb047e"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetFeeCollectors.sol",
+      "declarations": [
+        {
+          "name": "IAtomicAdmission",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "15e0acb96f48ec6f442d59a5763b274e400d4b576cc461d6ff80cf22aac5bf75"
+        },
+        {
+          "name": "FeeAwareVaultCore",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c3fb510d1563b775fc1663f67684a029e4b577a217d294e73b137a03109606d1"
+        },
+        {
+          "name": "FeeAwareGroupedVault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "243ef4336220e76e8b9da34e3e1f4fdc6dcc2511b9fab13dbdd83ff57dc55272"
+        },
+        {
+          "name": "FeeAwareSameExecution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "5e8a04548c09f2a7f1cfd01bbbf109a494556cce56116d1a935c9faa678cd386"
+        },
+        {
+          "name": "FeeAwareCrossExecution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "fa87716d9fc5ecc95dd909f526b15e44ad6b3d91ccb793560ff1cea83f60586b"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetFeeDistribution.sol",
+      "declarations": [
+        {
+          "name": "MainnetFeeDistribution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a88ad37cddaf4be0ca81d273bec4a9979e40a2836d06dd7823b51d0367bbca01"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetFeeProcessing.sol",
+      "declarations": [
+        {
+          "name": "IFeeProcessingPolicy",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "4089c5c1bfd5972b4d6e666c1b0da1bbb5c94fe9d93e68253daea83a21a78a7d"
+        },
+        {
+          "name": "IFeeETHConverter",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "d79003c8e37f31387b17762816cb3bdd216d3c070b9498895fcb0e5fc6e6bbc1"
+        },
+        {
+          "name": "MainnetFeeProcessing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "7f440e1ca1ddbbf4a23ce70b621c7da4ef51e92cd7c1d95abe0d75f7d40c30d6"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetGroupedV2Vault.sol",
+      "declarations": [
+        {
+          "name": "MainnetGroupedV2Vault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "cfd9131b1692b2a0480c5d579416a1658c7bde02e3490bd3afa57bc5ef223f3b"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetLimitOrderManager.sol",
+      "declarations": [
+        {
+          "name": "MainnetLimitOrderManager",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c99259e9bc4036a310be7c1b7875285b86862ceaf4f0f5d74d145de31f3207d9"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetLiquiditySnapshot.sol",
+      "declarations": [
+        {
+          "name": "MainnetLiquiditySnapshot",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "00c1ea586351ee4f83bc3c40558efa1bb3f537528a3a614db66361299a7a8f7b"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetMarketLimitOrderManager.sol",
+      "declarations": [
+        {
+          "name": "IInternalQuoteHost",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c9c8c89c76d84c9065997448f18b7ec59152990c59b4322ba47aecbb77df80bf"
+        },
+        {
+          "name": "ILimitTokenAdmission",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "648cbb69c2e80c85589ece7073b24f9ec7d45024d1bd2a74d4864644ec88c03f"
+        },
+        {
+          "name": "MainnetMarketLimitOrderManager",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "4f13aa7629d27d85d4119838da3c3b434360e1d23e761993b835367a5ac3186d"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetMarketLiquiditySnapshot.sol",
+      "declarations": [
+        {
+          "name": "MainnetMarketLiquiditySnapshot",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "2584461c3ad63a41264191de58f62cd74a36a35cd85009e45a6363a9251e283b"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetPinnedV2Vault.sol",
+      "declarations": [
+        {
+          "name": "MainnetPinnedV2Vault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "19fa36c2209a268f66a8a11818e67ed0d121c144746ae033177e264d0ddeaeb6"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/MainnetProRataExecution.sol",
+      "declarations": [
+        {
+          "name": "MainnetProRataExecution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "31fe43377f0f38653f3e43bc5b39ed348d1dcdf8dd21b86835770f0c263687cd"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/PassiveCrossMath.sol",
+      "declarations": [
+        {
+          "name": "IInternalAmountsIn",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "58365b2451f2e9b99cd2ca8b231592f8977d2f1385353c863d27bf6032ef1ccc"
+        },
+        {
+          "name": "PassiveCrossMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "7d892879d8bcc8500bbc834de06689e1a83d51dedec124c8f13acc967c659aae"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/mainnet-candidate/SharedCreateModule.sol",
+      "declarations": [
+        {
+          "name": "ICreateHost",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "3d31d1ac22bd3b1da53375ceec9ffb39b9800fa5a7ab5441e5227715f0c3544d"
+        },
+        {
+          "name": "SharedCreateModule",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "b3a5d47afa1542f7fd9956657f11273a2fd6a5c7748b17160eda4209572db5be"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/reference/PinnedMarketPricing.sol",
+      "declarations": [
+        {
+          "name": "IUsdBackedPrice",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "f5a2687078382943d6c0ee59b93a844e3ebbcbcd51b6223e6f5b24d77deaddba"
+        },
+        {
+          "name": "PinnedMarketPricing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "0593dbdf5a83c3997e95583549560177b4a4617ca2b16ecc4cb072828046e71b"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/reference/PinnedReferencePrice.sol",
+      "declarations": [
+        {
+          "name": "IPinnedPriceSource",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "fcbf4ec151f17deb7cf15b8e18ee2524129d34ce6f7f152e127a2c271ec07c76"
+        },
+        {
+          "name": "PinnedReferencePrice",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "73c5970425bb6c9c19680014e45b520c958d4d1794f94702c4e901285d1445b3"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/reference/SharedPoolReader.sol",
+      "declarations": [
+        {
+          "name": "ISharedPonsInspector",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "015577cb218f05871d01199ce66f537cbbf633f44cff058ae5b15d1527ad1d33"
+        },
+        {
+          "name": "SharedPoolReader",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "aa32bdd8f9b6fcb13b5d9e7e45c5a460a199ae8c25a4fd3d567d34805d32b1a1"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/reference/SharedPricingFingerprint.sol",
+      "declarations": [
+        {
+          "name": "SharedPricingFingerprint",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "e87a793517b3291ea071f247c6ae4ffa84f0dcba680d232f97c3a8e1fffe68de"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/reference/SharedTokenPricing.sol",
+      "declarations": [
+        {
+          "name": "ISharedArbSys",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "30856dbff56cd5af9e849467e2fcb1cf461a59db4d0fc566ed59753ef2b7eb4b"
+        },
+        {
+          "name": "SharedTokenPricing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "aa0f813fa98e0916e9ba7282dc34a22736ad86451e7e1b63f2ffdfb2777274c1"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/reference/UsdQuoteFeed.sol",
+      "declarations": [
+        {
+          "name": "IUsdAggregatorV3",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "80529b93894db04968ab871105ab35b182c5a6e567795a6f142d40a056290d9f"
+        },
+        {
+          "name": "UsdQuoteFeed",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "0c03440c9bc63895212e27e22183be7b2c1123ebcd0257e33dacea6ddac5fa68"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/reference/V2StateReader.sol",
+      "declarations": [
+        {
+          "name": "IV2Identity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "5b96c8911c7b9c712f47ec4953d72f3cac9a7b668e694b59de74daf95a1fb30d"
+        },
+        {
+          "name": "IV2FactoryIdentity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "8e5d532849288308aea058ad88ca27f22de6307b0eb5709816d0f82c3e29b73a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/reference/V3StateReader.sol",
+      "declarations": [
+        {
+          "name": "IV3PoolIdentity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a645bf7acd81a6bba22663e14a0ea12e0b3536426d98f480ddd0a20244a03514"
+        },
+        {
+          "name": "IV3FactoryIdentity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c1c092df085b910c69e2c4f212ddba2e680b03cd8ba5c2d775606bfa975379cb"
+        }
+      ]
+    },
+    {
+      "path": "contracts/core/contracts/reference/V4StateReader.sol",
+      "declarations": [
+        {
+          "name": "IV4ExternalStorage",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "3dc290fc6e09aa99313d28b5b196683576b76760cfdad980ad7f42bcdae41c4f"
+        },
+        {
+          "name": "V4StateReader",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "2216125de1a4fc76110ba6b6176c5ce5a64329e9d8ec00cc4f60bb43d94258a7"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/aggregate/AggregateIndexMath.sol",
+      "declarations": [
+        {
+          "name": "AggregateIndexMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "bbb8f9d4e9ce01d66e34a85e2359d2802d8476875a56eaf993d931fccf31fdd6"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/aggregate/AggregateManagerCore.sol",
+      "declarations": [
+        {
+          "name": "IInternalQuoteHost",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c9c8c89c76d84c9065997448f18b7ec59152990c59b4322ba47aecbb77df80bf"
+        },
+        {
+          "name": "AggregateManagerCore",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "808c2e272d75cfea6513eda61ea6c54b2667f7537e759da10e79cdb44f4bde99"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/aggregate/AggregateRangeAccounting.sol",
+      "declarations": [
+        {
+          "name": "AggregateRangeAccounting",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "f07c1a5e3b4ca388cb7ec62b00223a738e308a8af5ccca741201460ddea50a50"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/aggregate/AggregateRangeTree.sol",
+      "declarations": [
+        {
+          "name": "AggregateRangeTree",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "133ac340bc2eaed1162ade8ec2dabb6f79251a4efe3c591701faa281424091a5"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/aggregate/AggregateShares.sol",
+      "declarations": [
+        {
+          "name": "AggregateShares",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "4586d2c8a56e48b1b20470e2c0ac255f047edf2440addba1da1401d160c1a091"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/aggregate/RangeInternalExecution.sol",
+      "declarations": [
+        {
+          "name": "RangeInternalExecution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "59678471446a3768b2ef4415f6debb6c8ce5d197b56870d5f8150dc5e18378a6"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/cached/CachedTokenPricing.sol",
+      "declarations": [
+        {
+          "name": "CachedTokenPricing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "19b162c40d332b1d26367608c5bc7556281727d44e9411385e37bd672bdb5ce5"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/cached/PriceContextConsumer.sol",
+      "declarations": [
+        {
+          "name": "PriceContextConsumer",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "b67b4e0b474bd3ff766cdde8256a8ccece9df6adc51a95d00dc3ba92301ef5f5"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/cached/PriceContextDispatch.sol",
+      "declarations": [
+        {
+          "name": "IPriceContext",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "59f5c437a59db428d6f2c36750136555bcc370dab9bf729b07c08fdba4706bfa"
+        },
+        {
+          "name": "IPriceContextHost",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "7366f1c52a39718bb1126a958a240e135ec3554d25aaf84e61a9df347c2f1433"
+        },
+        {
+          "name": "PriceContextDispatch",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "888ce7b569724a704a6aeef687a49179abaaca237a7ea96d77a0f9b1be27b8d6"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/adapters/V2NativeQuoteAdapter.sol",
+      "declarations": [
+        {
+          "name": "IV2QuoteRouter",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "aa7d174468a2b417bc98843266fa21eeef2fd86de5be1c30332e29a948d4e84a"
+        },
+        {
+          "name": "IV2QuoteFactory",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "2cafb0841f4e8cb6deed556b1f5a3086cd95a23c592d3ba43e328477b6bdd4fd"
+        },
+        {
+          "name": "IV2QuotePair",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "fb88a6206edb2fe3939c68b061abfde3dc824bc3b90a5b520174ee4a6932f483"
+        },
+        {
+          "name": "V2NativeQuoteAdapter",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "069666aa45411a1607b79d961d37a68f58a7832f229efd1469ba611d2311e43a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/interfaces/IUserVaultExecution.sol",
+      "declarations": [
+        {
+          "name": "IUserVaultExecution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "502c46fdca19d9ea022626bf2bfe91231856e3f2e47d1938a2c336c86bd70b30"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/libraries/LimitAccounting.sol",
+      "declarations": [
+        {
+          "name": "LimitAccounting",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "fe186601a91a36ad347268b4c80848dfcba5a43223a5e93ef8afc89b43083b7a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/libraries/ProRataAllocation.sol",
+      "declarations": [
+        {
+          "name": "ProRataAllocation",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c8008406df45ca2beb5f62c9c3210dbf7e86fbb18566eb660d6756f4b672e022"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/libraries/ProjectedQuoteMath.sol",
+      "declarations": [
+        {
+          "name": "ProjectedQuoteMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a54d49f58f648007435105e6275b232099974176ea183dd3b03d26c12d70c966"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/libraries/ReferencePriceMath.sol",
+      "declarations": [
+        {
+          "name": "ReferencePriceMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "8ef3a9c58377e59ce254c80c722ac3684d297af1b1451b14c7ceccd79adcd822"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/CreateGroupMath.sol",
+      "declarations": [
+        {
+          "name": "CreateGroupMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "6564d14530529e26beefe0013b19942a1603452289c71a190b902c6c44a673fd"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/FeeAttribution.sol",
+      "declarations": [
+        {
+          "name": "IFeePayerContext",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a59cf7d6a1318c1ebb34062c9250ecea13ef6337926ee0245e06f64229ff2a07"
+        },
+        {
+          "name": "FeePayerContext",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "460b3fd0494ac8b096bd44965f229d22cb9f07eb5f20dd22c9b1854d9b797ce2"
+        },
+        {
+          "name": "FeeAttributedCollector",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "1c1bc553cd2f5919f86681b8ca39acf9c401246eea177d6ea4de2694591dca22"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/FeeAwareMarketLimitManager.sol",
+      "declarations": [
+        {
+          "name": "FeeAwareMarketLimitManager",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "1e350d97a7a35784272eca4aea9c25a48e92187d67b44c57515992cec62802f7"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/FeeVaultMath.sol",
+      "declarations": [
+        {
+          "name": "FeeVaultMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "f39713f2363128b5e47bd8f788a227ad9d919a8a5db1d65e1ca04ac3c32b0890"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/InternalSettlementPolicy.sol",
+      "declarations": [
+        {
+          "name": "ICreateGraphModule",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "de630d2b6cf1120d8e9698ec67f6104f9db14ea8d4d5579d83e8dbdfe7b26f42"
+        },
+        {
+          "name": "ICreateGraphSnapshot",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "de19fcb1e991447442bc90b2cb8338b1b5bee5fcd62fa57732204ed0665607a5"
+        },
+        {
+          "name": "IInternalPositionSource",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "acfc4289cb9cf18629883c1cdc297092f2f7879253de64a6e9775d0c09c045d5"
+        },
+        {
+          "name": "IInternalPolicyVault",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "7072288d207f6161e2440d635bfb9d7b5e9671106343b3a5d69450ee569a57ad"
+        },
+        {
+          "name": "InternalSettlementPolicy",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "263f7a4dfb471d9a7d2d193d66f8fe4b2a6d0fe1c26d2fd68beb49d3a95e2d65"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/MainnetFeeDistribution.sol",
+      "declarations": [
+        {
+          "name": "MainnetFeeDistribution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a88ad37cddaf4be0ca81d273bec4a9979e40a2836d06dd7823b51d0367bbca01"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/MainnetFeeProcessing.sol",
+      "declarations": [
+        {
+          "name": "IFeeProcessingPolicy",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "4089c5c1bfd5972b4d6e666c1b0da1bbb5c94fe9d93e68253daea83a21a78a7d"
+        },
+        {
+          "name": "IFeeETHConverter",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "d79003c8e37f31387b17762816cb3bdd216d3c070b9498895fcb0e5fc6e6bbc1"
+        },
+        {
+          "name": "MainnetFeeProcessing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "7f440e1ca1ddbbf4a23ce70b621c7da4ef51e92cd7c1d95abe0d75f7d40c30d6"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/MainnetMarketLimitOrderManager.sol",
+      "declarations": [
+        {
+          "name": "ILimitTokenAdmission",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "648cbb69c2e80c85589ece7073b24f9ec7d45024d1bd2a74d4864644ec88c03f"
+        },
+        {
+          "name": "IRangeInternalModule",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "e5a833c5aa6abf116204511a575df599a2ee9fde58b554d537bf2bdd8d1e4024"
+        },
+        {
+          "name": "MainnetMarketLimitOrderManager",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "e5dd7e7ad2625e4237807a3ce64f7cbb4b630f2ed7f0b4e43527471afd2731dd"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/MainnetMarketLiquiditySnapshot.sol",
+      "declarations": [
+        {
+          "name": "MainnetMarketLiquiditySnapshot",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "4acc4777a8bb4603bbf7a577fe60084bd6a7139061263bb0e3e8e4276de70e8a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/mainnet-candidate/PassiveCrossMath.sol",
+      "declarations": [
+        {
+          "name": "IInternalAmountsIn",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "58365b2451f2e9b99cd2ca8b231592f8977d2f1385353c863d27bf6032ef1ccc"
+        },
+        {
+          "name": "PassiveCrossMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "7d892879d8bcc8500bbc834de06689e1a83d51dedec124c8f13acc967c659aae"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/reference/PinnedMarketPricing.sol",
+      "declarations": [
+        {
+          "name": "IUsdBackedPrice",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "f5a2687078382943d6c0ee59b93a844e3ebbcbcd51b6223e6f5b24d77deaddba"
+        },
+        {
+          "name": "PinnedMarketPricing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "0593dbdf5a83c3997e95583549560177b4a4617ca2b16ecc4cb072828046e71b"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/reference/PinnedReferencePrice.sol",
+      "declarations": [
+        {
+          "name": "IPinnedPriceSource",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "fcbf4ec151f17deb7cf15b8e18ee2524129d34ce6f7f152e127a2c271ec07c76"
+        },
+        {
+          "name": "PinnedReferencePrice",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "73c5970425bb6c9c19680014e45b520c958d4d1794f94702c4e901285d1445b3"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/reference/SharedPoolReader.sol",
+      "declarations": [
+        {
+          "name": "ISharedPonsInspector",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "015577cb218f05871d01199ce66f537cbbf633f44cff058ae5b15d1527ad1d33"
+        },
+        {
+          "name": "SharedPoolReader",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "aa32bdd8f9b6fcb13b5d9e7e45c5a460a199ae8c25a4fd3d567d34805d32b1a1"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/reference/SharedPricingFingerprint.sol",
+      "declarations": [
+        {
+          "name": "SharedPricingFingerprint",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "e87a793517b3291ea071f247c6ae4ffa84f0dcba680d232f97c3a8e1fffe68de"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/reference/SharedTokenPricing.sol",
+      "declarations": [
+        {
+          "name": "ISharedArbSys",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "30856dbff56cd5af9e849467e2fcb1cf461a59db4d0fc566ed59753ef2b7eb4b"
+        },
+        {
+          "name": "SharedTokenPricing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "aa0f813fa98e0916e9ba7282dc34a22736ad86451e7e1b63f2ffdfb2777274c1"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/reference/UsdQuoteFeed.sol",
+      "declarations": [
+        {
+          "name": "IUsdAggregatorV3",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "80529b93894db04968ab871105ab35b182c5a6e567795a6f142d40a056290d9f"
+        },
+        {
+          "name": "UsdQuoteFeed",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "0c03440c9bc63895212e27e22183be7b2c1123ebcd0257e33dacea6ddac5fa68"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/reference/V2StateReader.sol",
+      "declarations": [
+        {
+          "name": "IV2Identity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "5b96c8911c7b9c712f47ec4953d72f3cac9a7b668e694b59de74daf95a1fb30d"
+        },
+        {
+          "name": "IV2FactoryIdentity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "8e5d532849288308aea058ad88ca27f22de6307b0eb5709816d0f82c3e29b73a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/reference/V3StateReader.sol",
+      "declarations": [
+        {
+          "name": "IV3PoolIdentity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a645bf7acd81a6bba22663e14a0ea12e0b3536426d98f480ddd0a20244a03514"
+        },
+        {
+          "name": "IV3FactoryIdentity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c1c092df085b910c69e2c4f212ddba2e680b03cd8ba5c2d775606bfa975379cb"
+        }
+      ]
+    },
+    {
+      "path": "contracts/range/contracts/reference/V4StateReader.sol",
+      "declarations": [
+        {
+          "name": "IV4ExternalStorage",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "3dc290fc6e09aa99313d28b5b196683576b76760cfdad980ad7f42bcdae41c4f"
+        },
+        {
+          "name": "V4StateReader",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "2216125de1a4fc76110ba6b6176c5ce5a64329e9d8ec00cc4f60bb43d94258a7"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/cached/CachedFeeProcessor.sol",
+      "declarations": [
+        {
+          "name": "ICacheFeeRoute",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "8396000b0d82fafce09d922567dfd8643f3e5b954ea1e38c9b7cdd7d8575ae69"
+        },
+        {
+          "name": "CachedFeeProcessor",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c5444be06590400a2f2495a8a2b7b18efc31c66a171947840d8181445a2365c9"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/cached/CachedFeeRoute.sol",
+      "declarations": [
+        {
+          "name": "ICachedFeeWETH",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "bd64cbf0fc4ffc25d432ef0b45bb1406575139513e8d32c7bc9bf3cfcd20999c"
+        },
+        {
+          "name": "CachedFeeRoute",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "3627c5e6385fcad84910558b7abc73b21554984f694fbe3d064149066f47f9ea"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/cached/CachedTokenPricing.sol",
+      "declarations": [
+        {
+          "name": "CachedTokenPricing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "19b162c40d332b1d26367608c5bc7556281727d44e9411385e37bd672bdb5ce5"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/cached/PriceContextConsumer.sol",
+      "declarations": [
+        {
+          "name": "PriceContextConsumer",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "b67b4e0b474bd3ff766cdde8256a8ccece9df6adc51a95d00dc3ba92301ef5f5"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/cached/PriceContextDispatch.sol",
+      "declarations": [
+        {
+          "name": "IPriceContext",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "59f5c437a59db428d6f2c36750136555bcc370dab9bf729b07c08fdba4706bfa"
+        },
+        {
+          "name": "IPriceContextHost",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "7366f1c52a39718bb1126a958a240e135ec3554d25aaf84e61a9df347c2f1433"
+        },
+        {
+          "name": "PriceContextDispatch",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "888ce7b569724a704a6aeef687a49179abaaca237a7ea96d77a0f9b1be27b8d6"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/adapters/V2NativeQuoteAdapter.sol",
+      "declarations": [
+        {
+          "name": "IV2QuoteRouter",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "aa7d174468a2b417bc98843266fa21eeef2fd86de5be1c30332e29a948d4e84a"
+        },
+        {
+          "name": "IV2QuoteFactory",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "2cafb0841f4e8cb6deed556b1f5a3086cd95a23c592d3ba43e328477b6bdd4fd"
+        },
+        {
+          "name": "IV2QuotePair",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "fb88a6206edb2fe3939c68b061abfde3dc824bc3b90a5b520174ee4a6932f483"
+        },
+        {
+          "name": "V2NativeQuoteAdapter",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "069666aa45411a1607b79d961d37a68f58a7832f229efd1469ba611d2311e43a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/libraries/ProjectedQuoteMath.sol",
+      "declarations": [
+        {
+          "name": "ProjectedQuoteMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a54d49f58f648007435105e6275b232099974176ea183dd3b03d26c12d70c966"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/libraries/ReferencePriceMath.sol",
+      "declarations": [
+        {
+          "name": "ReferencePriceMath",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "8ef3a9c58377e59ce254c80c722ac3684d297af1b1451b14c7ceccd79adcd822"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetAutomaticFeeProcessing.sol",
+      "declarations": [
+        {
+          "name": "MainnetAutomaticFeeProcessing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c7cb708808796419d30dfe9949eebeeb964cbdf8d21fe4ff8cf7d3d7ae409b5c"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetBoundedFeeProcessing.sol",
+      "declarations": [
+        {
+          "name": "MainnetBoundedFeeProcessing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "0ec77c35a0c0be26ef46dbd22257fba3fba27154f62041cede973c8fa6efabd5"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetFeeDistribution.sol",
+      "declarations": [
+        {
+          "name": "MainnetFeeDistribution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a88ad37cddaf4be0ca81d273bec4a9979e40a2836d06dd7823b51d0367bbca01"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetFeeProcessing.sol",
+      "declarations": [
+        {
+          "name": "IFeeProcessingPolicy",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "4089c5c1bfd5972b4d6e666c1b0da1bbb5c94fe9d93e68253daea83a21a78a7d"
+        },
+        {
+          "name": "IFeeETHConverter",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "d79003c8e37f31387b17762816cb3bdd216d3c070b9498895fcb0e5fc6e6bbc1"
+        },
+        {
+          "name": "MainnetFeeProcessing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "7f440e1ca1ddbbf4a23ce70b621c7da4ef51e92cd7c1d95abe0d75f7d40c30d6"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetSharedAutomaticFeeProcessing.sol",
+      "declarations": [
+        {
+          "name": "MainnetSharedAutomaticFeeProcessing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "3e869cf8a5aac0f3470581171c4303d2aaea23b396b17417954c1b1f4c2cf492"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetSharedBurnAndClaim.sol",
+      "declarations": [
+        {
+          "name": "IBurnableUSER",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a91e93d8a2f5739eb33b48c343302a4bf5260d4955565114f6cfd0636d64a88c"
+        },
+        {
+          "name": "ISharedBurnFunds",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c65933a5401d396102bbd4766c2cb64857d99f88bc17ff757182b8a4c923a775"
+        },
+        {
+          "name": "MainnetSharedBurnAndClaim",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c0b0bf47b6201260fd8297dd0bd7d92bb8ef9d30df67d31abdbebd548e927838"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/mainnet-v3/MainnetSharedFeeDistribution.sol",
+      "declarations": [
+        {
+          "name": "MainnetSharedFeeDistribution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "5f49ddd589494010a44978253ab813dc987d3a1cc3f6cb3c75779ccda9b42c32"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/reference/CachedTokenSwap.sol",
+      "declarations": [
+        {
+          "name": "ISharedV2Swap",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "76628e1876c902a38c29f883014eac60a5136083912c66b1b7dda15eff3972a4"
+        },
+        {
+          "name": "ISharedV3Swap",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "756e8937fe90e45eb73ad8eff39f79c3244e50667e421d0ee6814f01adfb98f5"
+        },
+        {
+          "name": "ISharedV4Swap",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "4ce79a4ce4fafc937b63edff739ffa1b081fff6e22abce1032b2ac00ab3d5b97"
+        },
+        {
+          "name": "CachedTokenSwap",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a01c894684e193e228a17c09980efc8e3467eb0ec49896f8b557a40c4c626eb8"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/reference/PinnedMarketPricing.sol",
+      "declarations": [
+        {
+          "name": "IUsdBackedPrice",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "f5a2687078382943d6c0ee59b93a844e3ebbcbcd51b6223e6f5b24d77deaddba"
+        },
+        {
+          "name": "PinnedMarketPricing",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "0593dbdf5a83c3997e95583549560177b4a4617ca2b16ecc4cb072828046e71b"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/reference/PinnedReferencePrice.sol",
+      "declarations": [
+        {
+          "name": "IPinnedPriceSource",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "fcbf4ec151f17deb7cf15b8e18ee2524129d34ce6f7f152e127a2c271ec07c76"
+        },
+        {
+          "name": "PinnedReferencePrice",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "73c5970425bb6c9c19680014e45b520c958d4d1794f94702c4e901285d1445b3"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/reference/SharedPoolReader.sol",
+      "declarations": [
+        {
+          "name": "ISharedPonsInspector",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "015577cb218f05871d01199ce66f537cbbf633f44cff058ae5b15d1527ad1d33"
+        },
+        {
+          "name": "SharedPoolReader",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "aa32bdd8f9b6fcb13b5d9e7e45c5a460a199ae8c25a4fd3d567d34805d32b1a1"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/reference/UsdQuoteFeed.sol",
+      "declarations": [
+        {
+          "name": "IUsdAggregatorV3",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "80529b93894db04968ab871105ab35b182c5a6e567795a6f142d40a056290d9f"
+        },
+        {
+          "name": "UsdQuoteFeed",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "0c03440c9bc63895212e27e22183be7b2c1123ebcd0257e33dacea6ddac5fa68"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/reference/V2StateReader.sol",
+      "declarations": [
+        {
+          "name": "IV2Identity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "5b96c8911c7b9c712f47ec4953d72f3cac9a7b668e694b59de74daf95a1fb30d"
+        },
+        {
+          "name": "IV2FactoryIdentity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "8e5d532849288308aea058ad88ca27f22de6307b0eb5709816d0f82c3e29b73a"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/reference/V3StateReader.sol",
+      "declarations": [
+        {
+          "name": "IV3PoolIdentity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a645bf7acd81a6bba22663e14a0ea12e0b3536426d98f480ddd0a20244a03514"
+        },
+        {
+          "name": "IV3FactoryIdentity",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "c1c092df085b910c69e2c4f212ddba2e680b03cd8ba5c2d775606bfa975379cb"
+        }
+      ]
+    },
+    {
+      "path": "contracts/fees/contracts/reference/V4StateReader.sol",
+      "declarations": [
+        {
+          "name": "IV4ExternalStorage",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "3dc290fc6e09aa99313d28b5b196683576b76760cfdad980ad7f42bcdae41c4f"
+        },
+        {
+          "name": "V4StateReader",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "2216125de1a4fc76110ba6b6176c5ce5a64329e9d8ec00cc4f60bb43d94258a7"
+        }
+      ]
+    },
+    {
+      "path": "contracts/distribution/contracts/mainnet-v2/MainnetFeeDistribution.sol",
+      "declarations": [
+        {
+          "name": "MainnetFeeDistribution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a88ad37cddaf4be0ca81d273bec4a9979e40a2836d06dd7823b51d0367bbca01"
+        }
+      ]
+    },
+    {
+      "path": "contracts/distribution/contracts/mainnet-v2/MainnetSharedFeeDistribution.sol",
+      "declarations": [
+        {
+          "name": "MainnetSharedFeeDistribution",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "5f49ddd589494010a44978253ab813dc987d3a1cc3f6cb3c75779ccda9b42c32"
+        }
+      ]
+    },
+    {
+      "path": "contracts/burn/Bridge.sol",
+      "declarations": [
+        {
+          "name": "IDeferredBurnFunds",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "a000cbc4a77938be81313191be3191aa8d60436fb80131e043bcd3ab76f3565a"
+        },
+        {
+          "name": "IDeferredBurnModule",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "65c859e8406e4b4a944394d42da5f2e1af540b3fe466e792a4635359e8d694dd"
+        },
+        {
+          "name": "MainnetDeferredBurnBridge",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "e37e65a474846c1ded8c47240ee50a9f32cb9447bb1037dda17d50ff92221bba"
+        }
+      ]
+    },
+    {
+      "path": "contracts/gas/ProtocolDualGasTreasury.sol",
+      "declarations": [
+        {
+          "name": "ProtocolDualGasTreasury",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "b0794e2dd76a6631d2a73d93ff3da6f424ae307bb06cfeaf2f33ebd82c89340d"
+        }
+      ]
+    },
+    {
+      "path": "contracts/gas/contracts/mainnet/ProtocolGasTreasury.sol",
+      "declarations": [
+        {
+          "name": "IProtocolGasFunds",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "894fbfade51fa926f196389eaae6ded808e8dab232939a35a0d46389b9fd1097"
+        },
+        {
+          "name": "ProtocolGasTreasury",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "ca0c1224d5b5784277afee633473e7f99844787716695769c59fc0cc00ef38d1"
+        }
+      ]
+    },
+    {
+      "path": "contracts/proxy/modular/ModuleProxy.sol",
+      "declarations": [
+        {
+          "name": "ModuleProxy",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "280160e7593ce290cd6ef1eb55cc4146689521be9e8ada3de1eeea22b160b65b"
+        },
+        {
+          "name": "UninstalledModule",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "2b258f4a738722d243d6ab35a3bf47f2db3d353f3b40cceaf044dea1156306b3"
+        },
+        {
+          "name": "ModuleInstaller",
+          "nodeType": "ContractDefinition",
+          "semanticAstSha256": "977d3326b149cb616863623d4c0b1d01fa58ebd212c37efa1f4ce9854bc674bf"
+        }
+      ]
+    }
+  ]
+}

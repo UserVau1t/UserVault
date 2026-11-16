@@ -1,0 +1,1714 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "chain",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "admin",
+        "type": "address"
+      },
+      {
+        "internalType": "contract PinnedMarketPricing",
+        "name": "p",
+        "type": "address"
+      },
+      {
+        "internalType": "contract V2NativeQuoteAdapter",
+        "name": "adapter",
+        "type": "address"
+      },
+      {
+        "internalType": "contract InternalSettlementPolicy",
+        "name": "policy",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "proxyConsumer",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "AlreadyInitialized",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "AssetTransfer",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "CapacityExceeded",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ClosedEpoch",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "CreationBelowMinimum",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ExecutionLimit",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "FeeAttributionError",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InsufficientEntitlement",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidAmount",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidMarket",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidRatio",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidRequest",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "n",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "d",
+        "type": "uint256"
+      }
+    ],
+    "name": "LimitPricePreview",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OutputBelowMinimum",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Paused",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "PositionBelowMinimum",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "PriceContextCallFailed",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "PriceNotAdmitted",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Reentrancy",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "SafeERC20FailedOperation",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Unauthorized",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "UnsupportedRoute",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "input",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "output",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "grossInput",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "exactOutput",
+        "type": "uint256"
+      }
+    ],
+    "name": "BuyQuoteConverted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "positionId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "gross",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "net",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fee",
+        "type": "uint256"
+      }
+    ],
+    "name": "Claimed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "positionId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "positionAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "matchedGross",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "output",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "refund",
+        "type": "uint256"
+      }
+    ],
+    "name": "CreateProcessed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "baseToken",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "canonicalQuote",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum IUserVaultExecution.Side",
+        "name": "side",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "grossInputUsed",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "netOutput",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inputRefund",
+        "type": "uint256"
+      }
+    ],
+    "name": "DirectExecuted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "epochId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inventoryUsed",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "proceeds",
+        "type": "uint256"
+      }
+    ],
+    "name": "EpochFilled",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "positionId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "epochId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "PositionOpened",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "payer",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "asset",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "ProtocolFeeAttributed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "cashbackEligible",
+        "type": "bool"
+      }
+    ],
+    "name": "ProtocolFeeEligibility",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "processorKey",
+        "type": "bytes32"
+      }
+    ],
+    "name": "ProtocolFeeExported",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "input",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "output",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "inputUsed",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "grossOutput",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fee",
+        "type": "uint256"
+      }
+    ],
+    "name": "QuoteConverted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "positionId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "retainedRoundingReserve",
+        "type": "uint256"
+      }
+    ],
+    "name": "Withdrawn",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "BASE_CAPACITY_USD18",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "asset",
+        "type": "address"
+      }
+    ],
+    "name": "accounted",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "liabilities",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "fees",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "administrator",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "quote",
+        "type": "address"
+      },
+      {
+        "internalType": "enum IUserVaultExecution.Side",
+        "name": "activeSide",
+        "type": "uint8"
+      }
+    ],
+    "name": "availableLiquidity",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "eid",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "inventory",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract MainnetFeeProcessing",
+        "name": "processor",
+        "type": "address"
+      }
+    ],
+    "name": "bindFeeProcessor",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "gross",
+        "type": "uint256"
+      }
+    ],
+    "name": "claim",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "parents",
+        "type": "address[]"
+      }
+    ],
+    "name": "configureFeeParents",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "chainId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "baseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "canonicalQuote",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "inputAsset",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IUserVaultExecution.Side",
+            "name": "side",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGrossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minGrossInputFilled",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minNetOutput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowCrossQuote",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IUserVaultExecution.DirectRequest",
+        "name": "",
+        "type": "tuple"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "createCrossBuyPosition",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "grossInputUsed",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "netOutput",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "inputRefund",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct IUserVaultExecution.Result",
+            "name": "trade",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "positionId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "positionAmount",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct SameQuoteCreateVault.CreateResult",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "chainId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "baseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "canonicalQuote",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "inputAsset",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IUserVaultExecution.Side",
+            "name": "side",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGrossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minGrossInputFilled",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minNetOutput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowCrossQuote",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IUserVaultExecution.DirectRequest",
+        "name": "",
+        "type": "tuple"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "createCrossSellPosition",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "grossInputUsed",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "netOutput",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "inputRefund",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct IUserVaultExecution.Result",
+            "name": "trade",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "positionId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "positionAmount",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct SameQuoteCreateVault.CreateResult",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "chainId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "baseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "canonicalQuote",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "inputAsset",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IUserVaultExecution.Side",
+            "name": "side",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGrossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minGrossInputFilled",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minNetOutput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowCrossQuote",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IUserVaultExecution.DirectRequest",
+        "name": "",
+        "type": "tuple"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "createPosition",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "grossInputUsed",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "netOutput",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "inputRefund",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct IUserVaultExecution.Result",
+            "name": "trade",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "positionId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "positionAmount",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct SameQuoteCreateVault.CreateResult",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "quote",
+        "type": "address"
+      },
+      {
+        "internalType": "enum SharedVault.Side",
+        "name": "side",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "matched",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "output",
+        "type": "uint256"
+      }
+    ],
+    "name": "creditCreation",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "currentFeeCashbackEligible",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "currentFeePayer",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "dustEligible",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "entitlement",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "inventory",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "proceeds",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "epoch",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bytes32",
+            "name": "market",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "enum SharedVault.Side",
+            "name": "side",
+            "type": "uint8"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "inventory",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "shares",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "index",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "proceedsReceived",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "proceedsClaimed",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "inventoryReserve",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "closed",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct VaultAccounting.Epoch",
+            "name": "ledger",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct SharedVault.EpochInfo",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "eid",
+        "type": "uint256"
+      }
+    ],
+    "name": "epochCarry",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "incoming",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "incomingFraction",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "outgoing",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "outgoingFraction",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "chainId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "baseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "canonicalQuote",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "inputAsset",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IUserVaultExecution.Side",
+            "name": "side",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGrossInput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minGrossInputFilled",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minNetOutput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "allowCrossQuote",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IUserVaultExecution.DirectRequest",
+        "name": "q",
+        "type": "tuple"
+      },
+      {
+        "internalType": "bytes",
+        "name": "referenceHints",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "conversionHints",
+        "type": "bytes"
+      }
+    ],
+    "name": "executeDirect",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "grossInputUsed",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "netOutput",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "inputRefund",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct IUserVaultExecution.Result",
+        "name": "r",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "exportFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "feeParentHash",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "feeParentsConfigured",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "feeProcessor",
+    "outputs": [
+      {
+        "internalType": "contract MainnetFeeProcessing",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "internalSettlementPolicy",
+    "outputs": [
+      {
+        "internalType": "contract InternalSettlementPolicy",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "quote",
+        "type": "address"
+      }
+    ],
+    "name": "marketId",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "nextPaidFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "paidFees",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "payer",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "asset",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "exported",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "cashbackEligible",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "position",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "epochId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "shares",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "checkpoint",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "accrued",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fractionalAccrued",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deposited",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "withdrawn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "claimed",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct VaultAccounting.Position",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "payer",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "permission",
+        "type": "bytes"
+      }
+    ],
+    "name": "prepareLimitToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "base",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "quote",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "permission",
+        "type": "bytes"
+      }
+    ],
+    "name": "previewLimitPrice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "priceContextPricing",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "pricing",
+    "outputs": [
+      {
+        "internalType": "contract PinnedMarketPricing",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "quoteAdapter",
+    "outputs": [
+      {
+        "internalType": "contract V2NativeQuoteAdapter",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "value",
+        "type": "bool"
+      }
+    ],
+    "name": "setPaused",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes[]",
+        "name": "",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "name": "withPriceSources",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdraw",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdrawAll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "receive"
+  }
+]

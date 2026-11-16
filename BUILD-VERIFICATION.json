@@ -1,0 +1,280 @@
+{
+  "schema": 1,
+  "compiler": "0.8.30+commit.73712a01",
+  "scope": "Publication source correspondence and local compilation; no deployment changes",
+  "sourceBodies": {
+    "files": 109,
+    "declarations": 189,
+    "allUnchanged": true
+  },
+  "templateComparison": {
+    "normalization": "Replace Solidity 0.8.30 IPFS CBOR metadata blocks with zero bytes, including metadata embedded in child creation code. No other bytes are masked. Runtime templates are compared before deployment-time immutable substitution and library linking.",
+    "contracts": [
+      {
+        "unit": "core",
+        "name": "FeeVaultMath",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "61a4804e21ab169f5b3c7115795c232b4a54e985a632ef0422e3ad8f0bc9ad62",
+        "runtimeBytes": 5799
+      },
+      {
+        "unit": "core",
+        "name": "CreateGroupMath",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "5fafcf64c1c28ff6886edba66037eed75db4c638a0c10f3f9ce5227e2cd21edc",
+        "runtimeBytes": 8230
+      },
+      {
+        "unit": "core",
+        "name": "PassiveCrossMath",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "a0410058605f4ab306c78ab6c43bc2cc418ed9c56522c379a13c6a602a8043a0",
+        "runtimeBytes": 6086
+      },
+      {
+        "unit": "core",
+        "name": "SharedPoolReader",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "7336859c22e196d85e57511a87fa02ce2dcb1aa64034324fa572c8ec45125afe",
+        "runtimeBytes": 7314
+      },
+      {
+        "unit": "core",
+        "name": "InternalSettlementPolicy",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "771b61debbe504ac3ca75bcba365480f7fd5c4eaf658dbfda0c318c00e827119",
+        "runtimeBytes": 3991
+      },
+      {
+        "unit": "core",
+        "name": "CachedTokenPricing",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "47f199d39bf4fa798ca55137c610ab56af892516e1d185309c185121e5db96bf",
+        "runtimeBytes": 10529
+      },
+      {
+        "unit": "core",
+        "name": "FeeAwareGroupedVault",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "f1450df5297036477ccda4d48c16a2571de7950204d83d4c8af7aa69d13f6f4a",
+        "runtimeBytes": 20819
+      },
+      {
+        "unit": "core",
+        "name": "FeeAwareSameExecution",
+        "runtimeCodeMatches": false,
+        "creationCodeMatches": false,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "40ebedfb71d9ad2df770db126667c882b1ff05b61aecde114e141da5e7e729ae",
+        "runtimeBytes": 12584
+      },
+      {
+        "unit": "core",
+        "name": "FeeAwareCrossExecution",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "991f8ab38b35788bbd5afa4c7d81fd1618907c4fc123aa378fc2629ef8ec88ba",
+        "runtimeBytes": 11900
+      },
+      {
+        "unit": "core",
+        "name": "SharedCreateModule",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "d45a756fabec600eb018766fc41cebf98018ccbb14184a6044560ba370f6c05c",
+        "runtimeBytes": 24530
+      },
+      {
+        "unit": "core",
+        "name": "PriceContextQuery",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "8b12c8e5e3b76868883e50918643f09441ffeaf3c3fbff801cdedf183cb23d29",
+        "runtimeBytes": 1002
+      },
+      {
+        "unit": "range",
+        "name": "FeeAwareMarketLimitManager",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "1a40da70c5bda4107a9c5be41cf482b6593aeb1784829de5506a11736df51d96",
+        "runtimeBytes": 22189
+      },
+      {
+        "unit": "range",
+        "name": "MainnetMarketLiquiditySnapshot",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "97e64bd73fb48928bda1127dbfcf1240e3f9660e6719d80e1e873ce79761c1fd",
+        "runtimeBytes": 11243
+      },
+      {
+        "unit": "range",
+        "name": "AggregateRangeAccounting",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "c135d260757b930589cd1ff788c2df29016310ed974a3cc88a31ded255b2b87a",
+        "runtimeBytes": 13477
+      },
+      {
+        "unit": "range",
+        "name": "RangeInternalExecution",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "968c6e54d530c8ed96ae53526d3bcc872c222c83f33a63fdd5dfb12c07c239ac",
+        "runtimeBytes": 17083
+      },
+      {
+        "unit": "fees",
+        "name": "CachedTokenSwap",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "70719d41b50cff164fd8310be6a06025f7a80f7e5803f2fdaf2dcff3f22ffc9d",
+        "runtimeBytes": 9681
+      },
+      {
+        "unit": "fees",
+        "name": "CachedFeeRoute",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "1b45d0fc0107d799468ae43b1e5c5521653cb28dc98c2d1cb4d7935fce5c1801",
+        "runtimeBytes": 8882
+      },
+      {
+        "unit": "fees",
+        "name": "CachedFeeProcessor",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "5e97cb665585ef01a39a25b68a5741f006fc554b68e4755897390138532ee33e",
+        "runtimeBytes": 8791
+      },
+      {
+        "unit": "distribution",
+        "name": "MainnetSharedFeeDistribution",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "d44dc95e88aa20fc7009b012d1e1f96df8e0e63f570145254a96bb39089589f3",
+        "runtimeBytes": 7710
+      },
+      {
+        "unit": "burn",
+        "name": "MainnetDeferredBurnBridge",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "1f2415dea323dc32cd03cd3fcc97454c55a915a5b459e68e4a36e64ca8fb72bd",
+        "runtimeBytes": 3123
+      },
+      {
+        "unit": "gas",
+        "name": "ProtocolDualGasTreasury",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "23a48528d3d7a2cc339393524583e344e654b6d42547470271ce2b628c119a66",
+        "runtimeBytes": 3643
+      },
+      {
+        "unit": "proxy",
+        "name": "ModuleProxy",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "47691eb19d9142732d58c56e7bd50bf499e071f4566a9dd21bbc0aa3f6c399a3",
+        "runtimeBytes": 291
+      },
+      {
+        "unit": "proxy",
+        "name": "ModuleInstaller",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "75b92868b7b5740f211d52d6de37c4e507de1dc20b3a165859fb1d2ed73532f4",
+        "runtimeBytes": 6102
+      },
+      {
+        "unit": "proxy",
+        "name": "UpgradeableBeacon",
+        "runtimeCodeMatches": true,
+        "creationCodeMatches": true,
+        "abiMatches": true,
+        "storageLayoutMatches": true,
+        "normalizedRuntimeSha256": "35d49734307163e496499a2d9f8a896c6adcfeccc5d2b5d8f2743b77c7b26df4",
+        "runtimeBytes": 599
+      }
+    ],
+    "allMatch": false
+  },
+  "exception": {
+    "contract": "FeeAwareSameExecution",
+    "executableTemplateMatches": false,
+    "originalFullInputRebuildMatches": true,
+    "originalRuntimeBytes": 12700,
+    "publicationRuntimeBytes": 12584,
+    "explanation": "Removing unused compiler inputs changes compiler identifiers and optimized output. Retained Solidity declaration ASTs, ABI and storage layout match the deployment sources; this cleaned build is not claimed to be a byte-identical reproduction of this implementation. No deployed contract was replaced."
+  },
+  "localChecks": {
+    "rangeTests": 5,
+    "failed": 0,
+    "scope": "Synthetic local EVM against freshly compiled aggregate accounting: both directions, proportional ownership, unauthorized exits, atomic reverts, 32 positions with 128 levels, claims and withdrawals, price boundaries. This is not a complete independent audit of the protocol.",
+    "testSourcePublished": false
+  },
+  "cleanInstall": {
+    "command": "npm ci --ignore-scripts --no-audit --no-fund",
+    "packages": 10,
+    "passed": true
+  },
+  "cleanBuild": {
+    "units": 7,
+    "targets": 24,
+    "passed": true
+  }
+}

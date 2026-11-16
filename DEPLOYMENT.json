@@ -1,0 +1,1037 @@
+{
+  "schema": 1,
+  "chainId": 4663,
+  "anchor": {
+    "number": "0x6e4e946",
+    "hash": "0x4f3244cdda52530502e3ed0a7e8cd55188cca3e02b4ae2944b3e3e65de3b08a8",
+    "timestamp": "0x6afacf87"
+  },
+  "modules": [
+    {
+      "role": "feeMath",
+      "name": "FeeVaultMath",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/core/contracts/mainnet-candidate/FeeVaultMath.sol",
+      "proxy": "0xc1264b8eb2d1211638533f346e1319dece8de42c",
+      "beacon": "0x7de098b6396e23bd112ec322225543f83638067c",
+      "implementation": "0x4ec00a0565f180ca5237b3f31eb06dab3129c4f4",
+      "expectedRuntimeHash": "0xbd740b34af3c3029680cd15c98600984c86019a28f3bf8e956b7d7afddbb3bcd",
+      "independentBeaconUpgrade": true,
+      "bindings": [],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0x4ec00a0565f180ca5237b3f31eb06dab3129c4f4",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0xbd740b34af3c3029680cd15c98600984c86019a28f3bf8e956b7d7afddbb3bcd",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "core"
+    },
+    {
+      "role": "groupMath",
+      "name": "CreateGroupMath",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/core/contracts/mainnet-candidate/CreateGroupMath.sol",
+      "proxy": "0x5da1f10ac423c7b259107f5fe9e9054db6e19975",
+      "beacon": "0xbf219ef1c544e8f647e75a0d501b243bd753dcc4",
+      "implementation": "0x6520888895158b601d03c19685757e1cc4ccbdb0",
+      "expectedRuntimeHash": "0x445c44523a472f12be245651f0ffcfcf3df19b295215780c7e36b3f0862bc647",
+      "independentBeaconUpgrade": true,
+      "bindings": [],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0x6520888895158b601d03c19685757e1cc4ccbdb0",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x445c44523a472f12be245651f0ffcfcf3df19b295215780c7e36b3f0862bc647",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "core"
+    },
+    {
+      "role": "crossMath",
+      "name": "PassiveCrossMath",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/core/contracts/mainnet-candidate/PassiveCrossMath.sol",
+      "proxy": "0x4272a1f86e18589bbd8e662acfa4122ae8ac8563",
+      "beacon": "0x43367e1c834dc5a66a2e8e865b83ac3409f738de",
+      "implementation": "0xa1525a6d169d1d3c9855c82e13b8518ec437da96",
+      "expectedRuntimeHash": "0xb56b4b444d2767127b82f4d935ae469b2afa2be27b6dc867df5c8d59b7892213",
+      "independentBeaconUpgrade": true,
+      "bindings": [],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0xa1525a6d169d1d3c9855c82e13b8518ec437da96",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0xb56b4b444d2767127b82f4d935ae469b2afa2be27b6dc867df5c8d59b7892213",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "core"
+    },
+    {
+      "role": "reader",
+      "name": "SharedPoolReader",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/core/contracts/reference/SharedPoolReader.sol",
+      "proxy": "0x879b32d0e9b89f3985be0a7772791483d5213f4e",
+      "beacon": "0xd94f4a8d8baf22c0880f992a03b28d806bf32940",
+      "implementation": "0xf983d1b21acd3f7ce4129d66519d6230c72f6f65",
+      "expectedRuntimeHash": "0xb6187895873208ae2a7d3cd89fe9a369bf655cb3a85f012082ed680b0cc07bf4",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "roots.v2",
+          "address": "0x8bceaa40b9acdfaedf85adf4ff01f5ad6517937f",
+          "runtimeHash": "0xbab145d02e7005f0d84c6c1639d39b799b0ea16df99ebbdaf5a14d9da820b4e0",
+          "moduleRole": null,
+          "contract": true
+        },
+        {
+          "getter": "roots.v3",
+          "address": "0x1f7d7550b1b028f7571e69a784071f0205fd2efa",
+          "runtimeHash": "0xec72b1abd1f2faee020cfea9c646bd8994f9fb389054f6e574f103a895091739",
+          "moduleRole": null,
+          "contract": true
+        },
+        {
+          "getter": "roots.manager",
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "runtimeHash": "0xbd3881180b547f5fe817545743cfb4343e96b1bc6640dcd70c106b0066e95626",
+          "moduleRole": null,
+          "contract": true
+        },
+        {
+          "getter": "roots.ponsHook",
+          "address": "0xe5e702641ea86f4ae6cc3cdaed2b886f976be044",
+          "runtimeHash": "0xc21b1e6c1b45403e81a581f22ed6d9c747997af1cfdac1b1dc9f4b1d346a10db",
+          "moduleRole": null,
+          "contract": true
+        },
+        {
+          "getter": "roots.ponsInspector",
+          "address": "0xb3c1ef55dea16427fb8c36b16871050afb28ba77",
+          "runtimeHash": "0xfc4313595d1c68a2bbf8d8dcb6fc2f6f58e5e812a8d6133898a6b42cc6b352b9",
+          "moduleRole": null,
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0xf983d1b21acd3f7ce4129d66519d6230c72f6f65",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0xb6187895873208ae2a7d3cd89fe9a369bf655cb3a85f012082ed680b0cc07bf4",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "core"
+    },
+    {
+      "role": "policy",
+      "name": "InternalSettlementPolicy",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/core/contracts/mainnet-candidate/InternalSettlementPolicy.sol",
+      "proxy": "0x2f961145206afb25993433feb3dfb9f44e9c48f9",
+      "beacon": "0x8a7c185104ddbf09a447e02f47423382bcd14718",
+      "implementation": "0x2710019b9ddf66c4cef85f0bb0b7447690f2d648",
+      "expectedRuntimeHash": "0x4847bbfdb921436c83d98fee222f861e8b0780f0c7327e938cf6098e3bfc401e",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "createModule",
+          "address": "0x87e7b17d98caa2dbdd5a69d6cf3d1e6a7904bb23",
+          "runtimeHash": "0x2cb215729090b7a0300bb99e1775b032973c3e6a40ef843a32b3962aa659a0ae",
+          "moduleRole": "createModule",
+          "contract": true
+        },
+        {
+          "getter": "createSnapshot",
+          "address": "0x75f7f507a9ef6a4a1a834e2557b33940227ce67d",
+          "runtimeHash": "0x61a7c47937a3f8045dec43ba2a61ad6c0120b7557515775b9f1941b1f2cf2a70",
+          "moduleRole": "snapshot",
+          "contract": true
+        },
+        {
+          "getter": "crossMath",
+          "address": "0x4272a1f86e18589bbd8e662acfa4122ae8ac8563",
+          "runtimeHash": "0xe5d7ae0ce0c5f7a433d8cd9bf8a3c1c5fd89fa8e09e4596def7f2625a0f66697",
+          "moduleRole": "crossMath",
+          "contract": true
+        },
+        {
+          "getter": "groupMath",
+          "address": "0x5da1f10ac423c7b259107f5fe9e9054db6e19975",
+          "runtimeHash": "0x75b0ec34f49e9e05a17a19226560ae572125c7fb963e7183884ab0bc07ea570d",
+          "moduleRole": "groupMath",
+          "contract": true
+        },
+        {
+          "getter": "manager",
+          "address": "0x599dd12ecf935f9e1d36ce713dfa6290436a63d8",
+          "runtimeHash": "0xc5e5deda2d8147af31ba495d0c138464f4218ce4a5331eded077bf2336b820fc",
+          "moduleRole": "manager",
+          "contract": true
+        },
+        {
+          "getter": "math",
+          "address": "0xc1264b8eb2d1211638533f346e1319dece8de42c",
+          "runtimeHash": "0x0e813392d7bf8b9c61f86f75f6807a8e119f6698cb5d94016a3299f41b18b1ba",
+          "moduleRole": "feeMath",
+          "contract": true
+        },
+        {
+          "getter": "pricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "vault",
+          "address": "0x706c8a48a6c1230a18be9eff2c961dc5b9e3ffaa",
+          "runtimeHash": "0x327cd05520af4bfc89933a04ff75273e1d5d4c3d1fcf0d5a7801cbff5ff55b5c",
+          "moduleRole": "vault",
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0x2710019b9ddf66c4cef85f0bb0b7447690f2d648",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x4847bbfdb921436c83d98fee222f861e8b0780f0c7327e938cf6098e3bfc401e",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "core"
+    },
+    {
+      "role": "pricing",
+      "name": "CachedTokenPricing",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/core/cached/CachedTokenPricing.sol",
+      "proxy": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+      "beacon": "0xd62e087bb36b2452b2492ade71e512f159f84524",
+      "implementation": "0x46d1ecd1f138ba64c4043af841839ee3414259bf",
+      "expectedRuntimeHash": "0xaec554a11e439c6427d58d464c07a0ec8b98a38b6c30653146ebc26d7b852a40",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "consumer",
+          "address": "0x706c8a48a6c1230a18be9eff2c961dc5b9e3ffaa",
+          "runtimeHash": "0x327cd05520af4bfc89933a04ff75273e1d5d4c3d1fcf0d5a7801cbff5ff55b5c",
+          "moduleRole": "vault",
+          "contract": true
+        },
+        {
+          "getter": "ethFeed",
+          "address": "0xc1c6fe638372e8e352e192262419b9dd1ae614e8",
+          "runtimeHash": "0x465a29877388d412c041780669f13aeaa48cf0a5d2d524fb55f164f91dfc0876",
+          "moduleRole": null,
+          "contract": true
+        },
+        {
+          "getter": "reader",
+          "address": "0x879b32d0e9b89f3985be0a7772791483d5213f4e",
+          "runtimeHash": "0xcbf54a51dc98fed6bf9dec2525ba6c436b52852e4e02b5a9db801671f05fafeb",
+          "moduleRole": "reader",
+          "contract": true
+        },
+        {
+          "getter": "usdg",
+          "address": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+          "runtimeHash": "0x864cc9ad53b338b82da1f7cab85ab0b3d5c8861acb422b6fec63cf36234f36a6",
+          "moduleRole": null,
+          "contract": true
+        },
+        {
+          "getter": "usdgFeed",
+          "address": "0x364814fd8e9f1f5cedef28f60e7f04a51015e759",
+          "runtimeHash": "0xb12be9d076e82b16bec986f5a3c00bf866fbe49b5e993034ae4194275e013874",
+          "moduleRole": null,
+          "contract": true
+        },
+        {
+          "getter": "wrappedNative",
+          "address": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+          "runtimeHash": "0x5706be52f64875fee65a2cec0d80e47a23d8793cbe85d214b48445e2d05f5353",
+          "moduleRole": null,
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0x46d1ecd1f138ba64c4043af841839ee3414259bf",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0xaec554a11e439c6427d58d464c07a0ec8b98a38b6c30653146ebc26d7b852a40",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "core"
+    },
+    {
+      "role": "vault",
+      "name": "FeeAwareGroupedVault",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/core/contracts/mainnet-candidate/MainnetFeeCollectors.sol",
+      "proxy": "0x706c8a48a6c1230a18be9eff2c961dc5b9e3ffaa",
+      "beacon": "0xf597477817a36c79790eb0529c2ae2a12255bf6b",
+      "implementation": "0x526e197ce9998492fb984d2f4947a307ed8f3938",
+      "expectedRuntimeHash": "0x8358b03919861875bd7789398dafc8592d9ae41932bc3b8b17be4e439e3cff45",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "feeProcessor",
+          "address": "0x09802c8d32167699c58627d1d544c33a63588e97",
+          "runtimeHash": "0x9d3a561a214b426707bd1e062211866ba147a4eb31d03144c16fe968ad1e30de",
+          "moduleRole": "processor",
+          "contract": true
+        },
+        {
+          "getter": "internalSettlementPolicy",
+          "address": "0x2f961145206afb25993433feb3dfb9f44e9c48f9",
+          "runtimeHash": "0x4f1b8864b9f6d3985c4a6b1987d62b4580f813abb8b414cdde93876dab388fe8",
+          "moduleRole": "policy",
+          "contract": true
+        },
+        {
+          "getter": "priceContextPricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "pricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "quoteAdapter",
+          "address": "0xcc57940b920ece52843de988335e610eef1b4560",
+          "runtimeHash": "0x472a0bfae436fbca232dee3e8bc51d75319f5e878675cb6d79955fe38672ce6a",
+          "moduleRole": null,
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0x526e197ce9998492fb984d2f4947a307ed8f3938",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x8358b03919861875bd7789398dafc8592d9ae41932bc3b8b17be4e439e3cff45",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "core"
+    },
+    {
+      "role": "same",
+      "name": "FeeAwareSameExecution",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/core/contracts/mainnet-candidate/MainnetFeeCollectors.sol",
+      "proxy": "0x5f6e818acb51d342141c3d843973fab63668a139",
+      "beacon": "0xef5e1c9dc9c86340263566b1d36ab7e2f7f5a262",
+      "implementation": "0xd2c2a43826c3cb9f84088486344142ad51c842af",
+      "expectedRuntimeHash": "0x998293d3a49bc80f4f1409628449f2aa284e76b4428596c2e4844e772a5be8ff",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "feeProcessor",
+          "address": "0x09802c8d32167699c58627d1d544c33a63588e97",
+          "runtimeHash": "0x9d3a561a214b426707bd1e062211866ba147a4eb31d03144c16fe968ad1e30de",
+          "moduleRole": "processor",
+          "contract": true
+        },
+        {
+          "getter": "liquidity",
+          "address": "0x75f7f507a9ef6a4a1a834e2557b33940227ce67d",
+          "runtimeHash": "0x61a7c47937a3f8045dec43ba2a61ad6c0120b7557515775b9f1941b1f2cf2a70",
+          "moduleRole": "snapshot",
+          "contract": true
+        },
+        {
+          "getter": "priceContextPricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0xd2c2a43826c3cb9f84088486344142ad51c842af",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x998293d3a49bc80f4f1409628449f2aa284e76b4428596c2e4844e772a5be8ff",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "core"
+    },
+    {
+      "role": "cross",
+      "name": "FeeAwareCrossExecution",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/core/contracts/mainnet-candidate/MainnetFeeCollectors.sol",
+      "proxy": "0xe6d329c73d5adcdb15f3bccc330da7c3b5758c12",
+      "beacon": "0xae30106dc01db6fd77887442b5143d856d63688c",
+      "implementation": "0x65985d43591760dc37e88cf0bdcc6991af431441",
+      "expectedRuntimeHash": "0x45a04c2da7a61011d81a09540c28ebde7e8f3e1268378f23b2a1029e21be32fc",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "adapter",
+          "address": "0xcc57940b920ece52843de988335e610eef1b4560",
+          "runtimeHash": "0x472a0bfae436fbca232dee3e8bc51d75319f5e878675cb6d79955fe38672ce6a",
+          "moduleRole": null,
+          "contract": true
+        },
+        {
+          "getter": "coordinator",
+          "address": "0x5f6e818acb51d342141c3d843973fab63668a139",
+          "runtimeHash": "0x85a808eb4c2f16433e3e26d3b6a44cca5413607dd1cb9034031bc902aceffacd",
+          "moduleRole": "same",
+          "contract": true
+        },
+        {
+          "getter": "feeProcessor",
+          "address": "0x09802c8d32167699c58627d1d544c33a63588e97",
+          "runtimeHash": "0x9d3a561a214b426707bd1e062211866ba147a4eb31d03144c16fe968ad1e30de",
+          "moduleRole": "processor",
+          "contract": true
+        },
+        {
+          "getter": "priceContextPricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "usdg",
+          "address": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+          "runtimeHash": "0x864cc9ad53b338b82da1f7cab85ab0b3d5c8861acb422b6fec63cf36234f36a6",
+          "moduleRole": null,
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0x65985d43591760dc37e88cf0bdcc6991af431441",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x45a04c2da7a61011d81a09540c28ebde7e8f3e1268378f23b2a1029e21be32fc",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "core"
+    },
+    {
+      "role": "createModule",
+      "name": "SharedCreateModule",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/core/contracts/mainnet-candidate/SharedCreateModule.sol",
+      "proxy": "0x87e7b17d98caa2dbdd5a69d6cf3d1e6a7904bb23",
+      "beacon": "0xf3b289f7e873673792170f3e55316ca7b932f141",
+      "implementation": "0xc50cc28dceea708f23e5603b944117a7b63bdfad",
+      "expectedRuntimeHash": "0xa0a018c676bd7f340171d0cd42261053d45e51c212933ef0567e618adabbcc2e",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "feeProcessor",
+          "configured": false
+        },
+        {
+          "getter": "group",
+          "address": "0x75f7f507a9ef6a4a1a834e2557b33940227ce67d",
+          "runtimeHash": "0x61a7c47937a3f8045dec43ba2a61ad6c0120b7557515775b9f1941b1f2cf2a70",
+          "moduleRole": "snapshot",
+          "contract": true
+        },
+        {
+          "getter": "host",
+          "address": "0x706c8a48a6c1230a18be9eff2c961dc5b9e3ffaa",
+          "runtimeHash": "0x327cd05520af4bfc89933a04ff75273e1d5d4c3d1fcf0d5a7801cbff5ff55b5c",
+          "moduleRole": "vault",
+          "contract": true
+        },
+        {
+          "getter": "internalSettlementPolicy",
+          "address": "0x2f961145206afb25993433feb3dfb9f44e9c48f9",
+          "runtimeHash": "0x4f1b8864b9f6d3985c4a6b1987d62b4580f813abb8b414cdde93876dab388fe8",
+          "moduleRole": "policy",
+          "contract": true
+        },
+        {
+          "getter": "pricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "quoteAdapter",
+          "address": "0xcc57940b920ece52843de988335e610eef1b4560",
+          "runtimeHash": "0x472a0bfae436fbca232dee3e8bc51d75319f5e878675cb6d79955fe38672ce6a",
+          "moduleRole": null,
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0xc50cc28dceea708f23e5603b944117a7b63bdfad",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0xa0a018c676bd7f340171d0cd42261053d45e51c212933ef0567e618adabbcc2e",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "core"
+    },
+    {
+      "role": "query",
+      "name": "PriceContextQuery",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/core/cached/PriceContextQuery.sol",
+      "proxy": "0xe13906fcd47fc294a562dc520cc9e10f8cbbfd5d",
+      "beacon": "0x0759d98b5aad79e85462a3013a0dd67e5d72d8a9",
+      "implementation": "0x728ab0698171993306c24d926d77ac928fe90524",
+      "expectedRuntimeHash": "0x64488cc04e34c612cdf27217bd445b62ab7164d03cf0ab00093265d496b4a576",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "pricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0x728ab0698171993306c24d926d77ac928fe90524",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x64488cc04e34c612cdf27217bd445b62ab7164d03cf0ab00093265d496b4a576",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "core"
+    },
+    {
+      "role": "manager",
+      "name": "FeeAwareMarketLimitManager",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/range/contracts/mainnet-candidate/FeeAwareMarketLimitManager.sol",
+      "proxy": "0x599dd12ecf935f9e1d36ce713dfa6290436a63d8",
+      "beacon": "0x20459f8d752b7f50f7278198ff047a33d6c762f3",
+      "implementation": "0x61f8428bb03d0f35a6e0ff01e05bbd9b1f37448b",
+      "expectedRuntimeHash": "0x554987296888360dd96a1876e83d516c67921a75ffc48ff22664e51f3af8f655",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "feeProcessor",
+          "address": "0x09802c8d32167699c58627d1d544c33a63588e97",
+          "runtimeHash": "0x9d3a561a214b426707bd1e062211866ba147a4eb31d03144c16fe968ad1e30de",
+          "moduleRole": "processor",
+          "contract": true
+        },
+        {
+          "getter": "internalExecutionModule",
+          "address": "0x8ec62a8f91ee9536a3673f818f4c21b45768f668",
+          "runtimeHash": "0xa73979b4382379d6f33a5a38bb4ac3e54fc7f0d3b065d1943328386c4fc91438",
+          "moduleRole": "rangeExecution",
+          "contract": true
+        },
+        {
+          "getter": "priceContextPricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "pricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "vault",
+          "address": "0x706c8a48a6c1230a18be9eff2c961dc5b9e3ffaa",
+          "runtimeHash": "0x327cd05520af4bfc89933a04ff75273e1d5d4c3d1fcf0d5a7801cbff5ff55b5c",
+          "moduleRole": "vault",
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0x61f8428bb03d0f35a6e0ff01e05bbd9b1f37448b",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x554987296888360dd96a1876e83d516c67921a75ffc48ff22664e51f3af8f655",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "range"
+    },
+    {
+      "role": "snapshot",
+      "name": "MainnetMarketLiquiditySnapshot",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/range/contracts/mainnet-candidate/MainnetMarketLiquiditySnapshot.sol",
+      "proxy": "0x75f7f507a9ef6a4a1a834e2557b33940227ce67d",
+      "beacon": "0xeffc76d74b3c3011a63848b5339781b936a66bd0",
+      "implementation": "0xb6c216f20e6c1ee29c4432bf42a07c5311830370",
+      "expectedRuntimeHash": "0x74fd4c4777a52b8326f46c559a74e41948e2e923a3361cf5a765a9bb465c8db8",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "pricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "vault",
+          "address": "0x706c8a48a6c1230a18be9eff2c961dc5b9e3ffaa",
+          "runtimeHash": "0x327cd05520af4bfc89933a04ff75273e1d5d4c3d1fcf0d5a7801cbff5ff55b5c",
+          "moduleRole": "vault",
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0xb6c216f20e6c1ee29c4432bf42a07c5311830370",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x74fd4c4777a52b8326f46c559a74e41948e2e923a3361cf5a765a9bb465c8db8",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "range"
+    },
+    {
+      "role": "rangeAccounting",
+      "name": "AggregateRangeAccounting",
+      "kind": "LINKED_LIBRARY",
+      "source": "contracts/range/aggregate/AggregateRangeAccounting.sol",
+      "proxy": null,
+      "beacon": null,
+      "implementation": "0x0f90433fc71f7a0b444acb8dd9df00f4f3a0959d",
+      "expectedRuntimeHash": "0xb831012476b0e3ee9312615c0ef30e432df72c83947038028a3009b645f50b5f",
+      "independentBeaconUpgrade": false,
+      "bindings": [],
+      "runtimeHash": "0xb831012476b0e3ee9312615c0ef30e432df72c83947038028a3009b645f50b5f",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "range"
+    },
+    {
+      "role": "rangeExecution",
+      "name": "RangeInternalExecution",
+      "kind": "EXECUTION_MODULE",
+      "source": "contracts/range/aggregate/RangeInternalExecution.sol",
+      "proxy": null,
+      "beacon": null,
+      "implementation": "0x8ec62a8f91ee9536a3673f818f4c21b45768f668",
+      "expectedRuntimeHash": "0xa73979b4382379d6f33a5a38bb4ac3e54fc7f0d3b065d1943328386c4fc91438",
+      "independentBeaconUpgrade": false,
+      "bindings": [
+        {
+          "getter": "feeProcessor",
+          "configured": false
+        },
+        {
+          "getter": "host",
+          "address": "0x599dd12ecf935f9e1d36ce713dfa6290436a63d8",
+          "runtimeHash": "0xc5e5deda2d8147af31ba495d0c138464f4218ce4a5331eded077bf2336b820fc",
+          "moduleRole": "manager",
+          "contract": true
+        },
+        {
+          "getter": "priceContextPricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "pricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "vault",
+          "address": "0x706c8a48a6c1230a18be9eff2c961dc5b9e3ffaa",
+          "runtimeHash": "0x327cd05520af4bfc89933a04ff75273e1d5d4c3d1fcf0d5a7801cbff5ff55b5c",
+          "moduleRole": "vault",
+          "contract": true
+        }
+      ],
+      "runtimeHash": "0xa73979b4382379d6f33a5a38bb4ac3e54fc7f0d3b065d1943328386c4fc91438",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "range"
+    },
+    {
+      "role": "swapper",
+      "name": "CachedTokenSwap",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/fees/contracts/reference/CachedTokenSwap.sol",
+      "proxy": "0x6ce1ffca62bbe284203ccc0849283b430df90b5c",
+      "beacon": "0x3940a3eed5f257555f19c259ee0efdaf4a5182b3",
+      "implementation": "0x03bcf70b0358dedb6c52b9bb143915fa5c58b06c",
+      "expectedRuntimeHash": "0xed2c04012b8c7b89e9e0ebb867cbabfec3a175448265db2c3ea047f39f3b0fea",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "manager",
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "runtimeHash": "0xbd3881180b547f5fe817545743cfb4343e96b1bc6640dcd70c106b0066e95626",
+          "moduleRole": null,
+          "contract": true
+        },
+        {
+          "getter": "pricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0x03bcf70b0358dedb6c52b9bb143915fa5c58b06c",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0xed2c04012b8c7b89e9e0ebb867cbabfec3a175448265db2c3ea047f39f3b0fea",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "fees"
+    },
+    {
+      "role": "route",
+      "name": "CachedFeeRoute",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/fees/cached/CachedFeeRoute.sol",
+      "proxy": "0xd42909410f3e3f55c69fddb1a0a82a6e9a899883",
+      "beacon": "0x72e3ca6d0be6a07243054c35d29f410b74e73974",
+      "implementation": "0x361f8a8210b952529505a004e5c2f5b87cce4b01",
+      "expectedRuntimeHash": "0x2ae2dbb4dc8b6969d00ac412829450904be72dfdc0e33fefa3a1fd9a4865dcd4",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "priceContextPricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "pricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        },
+        {
+          "getter": "quoteAdapter",
+          "address": "0xcc57940b920ece52843de988335e610eef1b4560",
+          "runtimeHash": "0x472a0bfae436fbca232dee3e8bc51d75319f5e878675cb6d79955fe38672ce6a",
+          "moduleRole": null,
+          "contract": true
+        },
+        {
+          "getter": "swapper",
+          "address": "0x6ce1ffca62bbe284203ccc0849283b430df90b5c",
+          "runtimeHash": "0xe6e529013cded4f2240d1ec899236afe304519b49c10cbed886d9d38430e5c8e",
+          "moduleRole": "swapper",
+          "contract": true
+        },
+        {
+          "getter": "usdg",
+          "address": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+          "runtimeHash": "0x864cc9ad53b338b82da1f7cab85ab0b3d5c8861acb422b6fec63cf36234f36a6",
+          "moduleRole": null,
+          "contract": true
+        },
+        {
+          "getter": "wrappedNative",
+          "address": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+          "runtimeHash": "0x5706be52f64875fee65a2cec0d80e47a23d8793cbe85d214b48445e2d05f5353",
+          "moduleRole": null,
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0x361f8a8210b952529505a004e5c2f5b87cce4b01",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x2ae2dbb4dc8b6969d00ac412829450904be72dfdc0e33fefa3a1fd9a4865dcd4",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "fees"
+    },
+    {
+      "role": "processor",
+      "name": "CachedFeeProcessor",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/fees/cached/CachedFeeProcessor.sol",
+      "proxy": "0x09802c8d32167699c58627d1d544c33a63588e97",
+      "beacon": "0x798506ddb5419772e550b9bfe6b121051a8ae977",
+      "implementation": "0x3388e8e091308269d1b54940bc7b4684b5b6861b",
+      "expectedRuntimeHash": "0x35180779205074276df2157d7fd3d33fbc8be7daa5168c9022e5a0f14fdca589",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "converter",
+          "address": "0xd42909410f3e3f55c69fddb1a0a82a6e9a899883",
+          "runtimeHash": "0x4d31d68dc4ee98ddbc73e2323958d4e7232d6a7ea12f77fa764ceb800115823d",
+          "moduleRole": "route",
+          "contract": true
+        },
+        {
+          "getter": "distribution",
+          "address": "0x619bcb0aaf0ebfeb0205fd0cbd20cac6e0ed4493",
+          "runtimeHash": "0xe0d75ba2a3d4bf0fd22007f2f37b04dbde6b2038f6caf9cbb0fd4f493e8e2191",
+          "moduleRole": "distribution",
+          "contract": true
+        },
+        {
+          "getter": "policy",
+          "address": "0xd42909410f3e3f55c69fddb1a0a82a6e9a899883",
+          "runtimeHash": "0x4d31d68dc4ee98ddbc73e2323958d4e7232d6a7ea12f77fa764ceb800115823d",
+          "moduleRole": "route",
+          "contract": true
+        },
+        {
+          "getter": "priceContextPricing",
+          "address": "0xcf4da6edf1e21a252764491f7ac8e583bb1db23b",
+          "runtimeHash": "0x1a4da52ffbd1381180e1dad1a6978df4ef3f8932a6ee5a7c250e899549682065",
+          "moduleRole": "pricing",
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0x3388e8e091308269d1b54940bc7b4684b5b6861b",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x35180779205074276df2157d7fd3d33fbc8be7daa5168c9022e5a0f14fdca589",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "fees"
+    },
+    {
+      "role": "distribution",
+      "name": "MainnetSharedFeeDistribution",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/distribution/contracts/mainnet-v2/MainnetSharedFeeDistribution.sol",
+      "proxy": "0x619bcb0aaf0ebfeb0205fd0cbd20cac6e0ed4493",
+      "beacon": "0x1dca05eb9c06ff121eb0304da47e31474bc35dac",
+      "implementation": "0xadfdae54260e9d581b503eec026d5ddea9c0e720",
+      "expectedRuntimeHash": "0x333e7b05fddfd92eda6a5017a84b804bdd92fab42e797f1c32458a6585654de7",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "burnTreasury",
+          "address": "0xc1ea9477bd1c2608021121fefe3319de155801ee",
+          "runtimeHash": "0x57288d43d0797101e7e838e01a86c7ad1f9ceb9433319f6d4b9f538e2f4dfc85",
+          "moduleRole": "burn",
+          "contract": true
+        },
+        {
+          "getter": "controller",
+          "address": "0xc1ea9477bd1c2608021121fefe3319de155801ee",
+          "runtimeHash": "0x57288d43d0797101e7e838e01a86c7ad1f9ceb9433319f6d4b9f538e2f4dfc85",
+          "moduleRole": "burn",
+          "contract": true
+        },
+        {
+          "getter": "settlementSource",
+          "address": "0x09802c8d32167699c58627d1d544c33a63588e97",
+          "runtimeHash": "0x9d3a561a214b426707bd1e062211866ba147a4eb31d03144c16fe968ad1e30de",
+          "moduleRole": "processor",
+          "contract": true
+        },
+        {
+          "getter": "treasury",
+          "addressPublished": false,
+          "reason": "Operator identity omitted from public source package."
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0xadfdae54260e9d581b503eec026d5ddea9c0e720",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x333e7b05fddfd92eda6a5017a84b804bdd92fab42e797f1c32458a6585654de7",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "distribution"
+    },
+    {
+      "role": "burn",
+      "name": "MainnetDeferredBurnBridge",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/burn/Bridge.sol",
+      "proxy": "0xc1ea9477bd1c2608021121fefe3319de155801ee",
+      "beacon": "0x574f19b3c0a702fb1626920a39c3942cd71fbb42",
+      "implementation": "0xe35c774977d9c84f710fe2eae58786ee25a6f16f",
+      "expectedRuntimeHash": "0x93a46612d1be3a9d4c8a71424d4b259da18ce7b57f6e0fe711cde05849653c79",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "controller",
+          "configured": false
+        },
+        {
+          "getter": "settlementSource",
+          "address": "0x09802c8d32167699c58627d1d544c33a63588e97",
+          "runtimeHash": "0x9d3a561a214b426707bd1e062211866ba147a4eb31d03144c16fe968ad1e30de",
+          "moduleRole": "processor",
+          "contract": true
+        },
+        {
+          "getter": "treasury",
+          "address": "0x619bcb0aaf0ebfeb0205fd0cbd20cac6e0ed4493",
+          "runtimeHash": "0xe0d75ba2a3d4bf0fd22007f2f37b04dbde6b2038f6caf9cbb0fd4f493e8e2191",
+          "moduleRole": "distribution",
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0xe35c774977d9c84f710fe2eae58786ee25a6f16f",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0x93a46612d1be3a9d4c8a71424d4b259da18ce7b57f6e0fe711cde05849653c79",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "burn"
+    },
+    {
+      "role": "gas",
+      "name": "ProtocolDualGasTreasury",
+      "kind": "BEACON_MODULE",
+      "source": "contracts/gas/ProtocolDualGasTreasury.sol",
+      "proxy": "0xc046a0c8a7732de12610a03be48683943eb35243",
+      "beacon": "0x80d61711e1fc0e620dd81f8227c91fa8a5cc46a5",
+      "implementation": "0xc9847057e0d5550683b4ece6220df196a5c3e238",
+      "expectedRuntimeHash": "0xdb8e237e53b2c7345064fa9f55a701e0ee398f04ac4f02c195904665f61136b3",
+      "independentBeaconUpgrade": true,
+      "bindings": [
+        {
+          "getter": "distribution",
+          "address": "0x619bcb0aaf0ebfeb0205fd0cbd20cac6e0ed4493",
+          "runtimeHash": "0xe0d75ba2a3d4bf0fd22007f2f37b04dbde6b2038f6caf9cbb0fd4f493e8e2191",
+          "moduleRole": "distribution",
+          "contract": true
+        }
+      ],
+      "proxyMatches": true,
+      "beaconMatches": true,
+      "expectedImplementation": "0xc9847057e0d5550683b4ece6220df196a5c3e238",
+      "implementationMatches": true,
+      "beaconOwnerMatches": true,
+      "runtimeHash": "0xdb8e237e53b2c7345064fa9f55a701e0ee398f04ac4f02c195904665f61136b3",
+      "runtimeMatches": true,
+      "compiledArtifactMatches": true,
+      "buildUnit": "gas"
+    }
+  ],
+  "installer": {
+    "address": "0xb9ecaed476520da6334de4cda1128c97487143ee",
+    "runtimeMatches": true,
+    "sealed": true
+  },
+  "externalDependencies": [
+    {
+      "name": "usdg",
+      "address": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+      "runtimeHash": "0x864cc9ad53b338b82da1f7cab85ab0b3d5c8861acb422b6fec63cf36234f36a6",
+      "expectedRuntimeHash": "0x864cc9ad53b338b82da1f7cab85ab0b3d5c8861acb422b6fec63cf36234f36a6",
+      "codePresent": true,
+      "runtimeMatches": true
+    },
+    {
+      "name": "wrappedNative",
+      "address": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+      "runtimeHash": "0x5706be52f64875fee65a2cec0d80e47a23d8793cbe85d214b48445e2d05f5353",
+      "expectedRuntimeHash": "0x5706be52f64875fee65a2cec0d80e47a23d8793cbe85d214b48445e2d05f5353",
+      "codePresent": true,
+      "runtimeMatches": true
+    },
+    {
+      "name": "ethFeed",
+      "address": "0xc1c6fe638372e8e352e192262419b9dd1ae614e8",
+      "runtimeHash": "0x465a29877388d412c041780669f13aeaa48cf0a5d2d524fb55f164f91dfc0876",
+      "expectedRuntimeHash": "0x465a29877388d412c041780669f13aeaa48cf0a5d2d524fb55f164f91dfc0876",
+      "codePresent": true,
+      "runtimeMatches": true
+    },
+    {
+      "name": "usdgFeed",
+      "address": "0x364814fd8e9f1f5cedef28f60e7f04a51015e759",
+      "runtimeHash": "0xb12be9d076e82b16bec986f5a3c00bf866fbe49b5e993034ae4194275e013874",
+      "expectedRuntimeHash": "0xb12be9d076e82b16bec986f5a3c00bf866fbe49b5e993034ae4194275e013874",
+      "codePresent": true,
+      "runtimeMatches": true
+    },
+    {
+      "name": "quoteAdapter",
+      "address": "0xcc57940b920ece52843de988335e610eef1b4560",
+      "runtimeHash": "0x472a0bfae436fbca232dee3e8bc51d75319f5e878675cb6d79955fe38672ce6a",
+      "expectedRuntimeHash": "0x472a0bfae436fbca232dee3e8bc51d75319f5e878675cb6d79955fe38672ce6a",
+      "codePresent": true,
+      "runtimeMatches": true
+    },
+    {
+      "name": "external.reactor",
+      "address": "0x000000007a1c8e570011eedf86a2a35593013cba",
+      "runtimeHash": "0x6a7a6b6d3c80f8541a9bc42b1b3802bce779906d2d769b268988866ca7c0cca6",
+      "expectedRuntimeHash": "0x6a7a6b6d3c80f8541a9bc42b1b3802bce779906d2d769b268988866ca7c0cca6",
+      "codePresent": true,
+      "runtimeMatches": true
+    },
+    {
+      "name": "external.manager",
+      "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+      "runtimeHash": "0xbd3881180b547f5fe817545743cfb4343e96b1bc6640dcd70c106b0066e95626",
+      "expectedRuntimeHash": "0xbd3881180b547f5fe817545743cfb4343e96b1bc6640dcd70c106b0066e95626",
+      "codePresent": true,
+      "runtimeMatches": true
+    },
+    {
+      "name": "external.permit2",
+      "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+      "runtimeHash": "0x5208783f52488f7d3493e5e38311ab707c1d75457fe472a19b0b4d57d66a7fca",
+      "expectedRuntimeHash": "0x5208783f52488f7d3493e5e38311ab707c1d75457fe472a19b0b4d57d66a7fca",
+      "codePresent": true,
+      "runtimeMatches": true
+    }
+  ],
+  "rangePaused": false,
+  "aggregation": {
+    "ready": true,
+    "cursor": "1",
+    "end": "1"
+  },
+  "contextualRead": {
+    "method": "InternalSettlementPolicy.settlementSnapshot()",
+    "result": "Requires msg.sender to be the configured manager. The diagnostic call without that sender reverted as required. createSnapshot(), manager(), compiled code and runtime hashes were verified."
+  },
+  "outsidePublicationScope": [
+    {
+      "role": "external",
+      "name": "ExternalOrderExecutor",
+      "proxy": "0x78ff006f957a7349f30f2aff7fbac0c328e2f2e1",
+      "beacon": "0xffe4440688cfaf1fa9e699274dd68ca82e5ef832",
+      "implementation": "0x893b00b10f43084bcf5510843f5a0d2360ac8aaf",
+      "runtimeHash": "0xde17ab8a5ddbccc377b4a39482447c9058c010c48b346b0a492da49a51b7d234",
+      "reason": "Separate external-order filler executor; outside the Vault-only source package."
+    }
+  ]
+}

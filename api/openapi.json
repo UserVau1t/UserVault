@@ -1,0 +1,225 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "UserVault public filler API",
+    "version": "1.0.0",
+    "description": "Open access; no API key or filler registration. Inventory belongs to position owners. An independent filler pays its own input, receives output at its chosen recipient, and receives unused input back. Quotes are short-lived simulations, not liquidity reservations. This API does not sign or broadcast transactions. The first API version quotes direct Vault token/ETH and token/USDG trades; an external solver can compose those legs itself. WETH must be unwrapped/wrapped by the caller when using a native ETH leg. No automatic AMM remainder is included."
+  },
+  "servers": [
+    {
+      "url": "https://uservault.fun"
+    }
+  ],
+  "security": [],
+  "paths": {
+    "/api/v1/fillers": {
+      "get": {
+        "operationId": "getFillerIntegration",
+        "responses": {
+          "200": {
+            "description": "Current contract addresses, supported assets and access rules.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/fillers/liquidity": {
+      "get": {
+        "operationId": "getVaultLiquidity",
+        "parameters": [
+          {
+            "name": "baseToken",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^0x[0-9a-fA-F]{40}$"
+            }
+          },
+          {
+            "name": "quote",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^0x[0-9a-fA-F]{40}$"
+            },
+            "description": "Zero address for native ETH, or configured USDG address."
+          },
+          {
+            "name": "side",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "BUY",
+                "SELL"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Opposite-side inventory at the identified canonical block. Amount is raw token units; not a reservation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid market or input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RPC or canonical state unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/fillers/quote": {
+      "post": {
+        "operationId": "getVaultExecutionQuote",
+        "description": "The taker is the address that will call the Vault, including a filler contract. For ERC20 input it must already have funds and approve the Vault before simulation; the Vault never pulls from an arbitrary owner. For ETH it must fund maxGrossInput. First read available liquidity and integration metadata to prepare this allowance. The quote simulates the complete price-proof wrapper twice at one canonical block, including the final minimum output. A contract caller must embed transaction.data in its own transaction; transaction.from is not an authorization to impersonate that address. Before submitting, re-simulate and estimate gas. Renew the quote after its deadline or a material state change. Do not retry an ambiguously submitted transaction without reconciliation.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "baseToken",
+                  "quote",
+                  "side",
+                  "taker",
+                  "recipient",
+                  "maxGrossInput",
+                  "minGrossInputFilled",
+                  "slippageBps"
+                ],
+                "properties": {
+                  "baseToken": {
+                    "type": "string",
+                    "pattern": "^0x[0-9a-fA-F]{40}$"
+                  },
+                  "quote": {
+                    "type": "string",
+                    "pattern": "^0x[0-9a-fA-F]{40}$"
+                  },
+                  "side": {
+                    "type": "string",
+                    "enum": [
+                      "BUY",
+                      "SELL"
+                    ]
+                  },
+                  "taker": {
+                    "type": "string",
+                    "pattern": "^0x[0-9a-fA-F]{40}$"
+                  },
+                  "recipient": {
+                    "type": "string",
+                    "pattern": "^0x[0-9a-fA-F]{40}$"
+                  },
+                  "maxGrossInput": {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]{0,77})$"
+                  },
+                  "minGrossInputFilled": {
+                    "type": "string",
+                    "pattern": "^(0|[1-9][0-9]{0,77})$"
+                  },
+                  "slippageBps": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "SIMULATED_QUOTE with calldata, msg.value, token allowance, minimum output, partial fill, refund, block and expiry. Amounts are decimal strings in raw units.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid or extra input fields.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Execution reverted: check taker funds, allowance, fill limits and market state.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Source preparation, capacity, RPC or canonical-state check unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-contract-execution": {
+    "outer": "withPriceSources(bytes[] proofs, bytes data)",
+    "inner": "executeDirect(DirectRequest request, bytes referenceHints, bytes conversionHints)",
+    "priceProofs": "Signed short-lived pool-source descriptors obtained by the API from the same catalog as the protocol.",
+    "protectedByContract": [
+      "input collected only from msg.sender",
+      "minimum filled input",
+      "minimum output",
+      "deadline",
+      "admitted pool price",
+      "reentrancy guard",
+      "position owner withdrawal rights"
+    ],
+    "walletKeysExposed": false
+  }
+}

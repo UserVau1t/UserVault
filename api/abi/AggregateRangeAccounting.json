@@ -1,0 +1,52 @@
+[
+  {
+    "inputs": [],
+    "name": "IndexOverflow",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Ineligible",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InsufficientInventory",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidAccounting",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidAmount",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidBucket",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidOrder",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidRatio",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidTree",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "MissingLevel",
+    "type": "error"
+  }
+]
