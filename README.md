@@ -1,8 +1,12 @@
 # UserVault
 
-### Reference-priced, on-chain P2P trading on Robinhood Chain
+### On-chain P2P trading without price impact on Vault liquidity
 
-**UserVault lets users exchange tokens against other users' deposited liquidity without moving the traded token along an AMM price curve.** The Vault reads an external reference price and settles against available BUY and SELL positions at that price. Trade size determines how much inventory is consumed, rather than how far the price moves.
+**UserVault was created to enable trading without price impact on exchanges settled against Vault inventory. This is the project's core purpose and main advantage.** A larger Vault trade consumes more available liquidity without pushing the traded token's execution price up or down along an AMM curve.
+
+The Vault reads the reference price on-chain from an external liquidity pool, then exchanges assets deposited by users at that price. The traded token is exchanged inside the Vault rather than swapped through the reference pool, so the Vault trade itself does not move that pool's price. Available inventory determines how much can be exchanged; trade size does not set the reference price.
+
+UserVault follows the external market price while separating pricing from settlement. Protocol fees still apply, and the reference price can change with the external market. The no-price-impact property applies to the base-token exchange against Vault inventory; separate AMM conversion legs and the Market tab's Uniswap swaps retain their own price impact.
 
 Economically, this resembles an automated P2P or OTC-style market: users supply the assets, and smart contracts coordinate pricing, matching and settlement. There is no need to find a counterparty manually or negotiate a separate price with each depositor.
 
