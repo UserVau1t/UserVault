@@ -1,0 +1,272 @@
+{
+  "compiler": "0.8.30+commit.73712a01.Emscripten.clang",
+  "uniswap": {
+    "v4-core": "59d3ecf53afa9264a16bba0e38f4c5d2231f80bc",
+    "v4-periphery": "c6e4754dab11bd38c6f08ac51c3c868569e93d64"
+  },
+  "sources": {
+    "@openzeppelin/contracts/interfaces/IERC1363.sol": {
+      "sha256": "9c3a75a925a6dac9e88b03cddc58d42fe3131b0aaaad84408521f3f7af2f991b",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/interfaces/IERC165.sol": {
+      "sha256": "dfb3f56fa928a7c6cae41a7ce2c86b9210fa18d33fa26389099d66a0fa790368",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/interfaces/IERC1967.sol": {
+      "sha256": "c4e901318ab6d4963582c62c62ce988a34c68dbae71846b67decacde79e9a317",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/interfaces/IERC20.sol": {
+      "sha256": "0158e2d3e0e28bedd99eec13dcf1a8aa3a70a5b7e4bb2ad709609c95fcc740d1",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol": {
+      "sha256": "58c5b19893bf3d7f9e1aa0edc5b908b915eb7af4381800deb425a6e5331f4432",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/proxy/Proxy.sol": {
+      "sha256": "5f5081378d4bc82b814b0d64990b7f7b9c69697593b73a3341f4a269940ba540",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/proxy/beacon/IBeacon.sol": {
+      "sha256": "c1c9726bbb0ec4c540c7c98059dcded69a8586b46c168036672381033ee76239",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "sha256": "01b6f5c4fa45fd38822b286ecef6daf983d27306dd6362496fa71b3e4600b72c",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "sha256": "ac1fd9fa99b194a8db8dfa9ae8e3ff44feaa8f16668241fd2b66ae8b47d7c082",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/utils/Address.sol": {
+      "sha256": "f1a9255dbc40cf9ae7c786abed3b022691a9d24bca0c7f05dc60e63421d405ab",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/utils/Errors.sol": {
+      "sha256": "0704b9d6c032cca8512a3bc3f30f49f86f1f03102d2896a3d23e794b82efea66",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/utils/Panic.sol": {
+      "sha256": "270fc8401c1a13fae6a7a4a2dd6e381b95d658896701e51f0d3e2688acab3dec",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/utils/StorageSlot.sol": {
+      "sha256": "75704538dcb223239280c6726d9a31cf769a7816718517c997fc7d63bdb70778",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/utils/Strings.sol": {
+      "sha256": "2db7d21151644c57f75ed3ab55e87f3cf7fbf587a65345650fd740e2cfd50be3",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+      "sha256": "0964ddd02f4a7a8cf9ba130e3aeead588ca3d425d5bc13cc4221358c69108ed0",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol": {
+      "sha256": "936a89f512d5da84b0896b66d2398f2bea9eefdf2afa788af5265fcd74302693",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "sha256": "9055c2994b37dea1a41b7b7926dcb510f05dbe2540b0aafc5fbee9558fffd0ca",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/utils/math/Math.sol": {
+      "sha256": "92fee281fd46a1b058b190cf21d6b1a528f0433a907850ae1c9bcf36c5c0cd98",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/utils/math/SafeCast.sol": {
+      "sha256": "9769274bf53f26a7c7896c526ea1980dc9bea5bf5c2a5fd04870008c4afc1de9",
+      "lineEndings": "LF"
+    },
+    "@openzeppelin/contracts/utils/math/SignedMath.sol": {
+      "sha256": "1ed50b1056af886752f0fb48a0165d381e69bb4a4b18b893b066dc144a7e08d7",
+      "lineEndings": "LF"
+    },
+    "@uniswap/v4-core/src/libraries/BitMath.sol": {
+      "sha256": "605881f9a885ad979c4227307a7dc8fc30590710841d51895e117b8582fc45fa",
+      "lineEndings": "CRLF"
+    },
+    "@uniswap/v4-core/src/libraries/CustomRevert.sol": {
+      "sha256": "37e29017b642c2a48141190fe33bdf0fa8a4cc8a5c04bfb12946058e8f4a062b",
+      "lineEndings": "CRLF"
+    },
+    "@uniswap/v4-core/src/libraries/FixedPoint96.sol": {
+      "sha256": "914b7742f6c509ed81454cc1da9cb2155676901396f7e9bdc3ca96847fc649a7",
+      "lineEndings": "CRLF"
+    },
+    "@uniswap/v4-core/src/libraries/FullMath.sol": {
+      "sha256": "93961daac1c813c688d85a8d841d7c12362e27ddb72dd0ceeea6240af4817aea",
+      "lineEndings": "CRLF"
+    },
+    "@uniswap/v4-core/src/libraries/SafeCast.sol": {
+      "sha256": "bb05bea447c1eb5c4df6830e34ebea69537946edd7e61fd8ee0165ed7d68fd67",
+      "lineEndings": "CRLF"
+    },
+    "@uniswap/v4-core/src/libraries/SqrtPriceMath.sol": {
+      "sha256": "f01d4cdb7d765f069c62c4a71ddff4ba00daafa5e8e268a754f92ea0dfb39668",
+      "lineEndings": "CRLF"
+    },
+    "@uniswap/v4-core/src/libraries/TickMath.sol": {
+      "sha256": "1c56df8ed9780b235453b3fa910577583e23782d0604183e721506156119d974",
+      "lineEndings": "CRLF"
+    },
+    "@uniswap/v4-core/src/libraries/UnsafeMath.sol": {
+      "sha256": "92824decdf53750ebb3568c1c11cec60d03fc116be07fab04d4e79eb9755ee85",
+      "lineEndings": "CRLF"
+    },
+    "@uniswap/v4-periphery/src/libraries/LiquidityAmounts.sol": {
+      "sha256": "954d078ff3bc8a449275b991bc7a153ea106ade75e47e7e1b69eaac201c323e6",
+      "lineEndings": "CRLF"
+    },
+    "contracts/LiquidityControllerV2.sol": {
+      "sha256": "e2486769d4202b5231e9587cce9c5a4b21025d0eb717ee29de5529a5cca94528",
+      "lineEndings": "LF"
+    },
+    "contracts/LiquidityDepositFee.sol": {
+      "sha256": "84f470108e9823222e9301c73a31787e064a4af5c58aaad8037fdf1158cb6d34",
+      "lineEndings": "LF"
+    },
+    "contracts/LiquidityExecutionV2.sol": {
+      "sha256": "b6c63078a0d127d1709813d1052cca0ff189a0f4851fbb4677f3845795c328bc",
+      "lineEndings": "LF"
+    },
+    "contracts/LiquidityFeeVault.sol": {
+      "sha256": "d7ebb8c57d215bfc816102448b5ddac9bda462bcd6f7c5a8de14ef60a3f3105d",
+      "lineEndings": "LF"
+    },
+    "contracts/LiquidityMath.sol": {
+      "sha256": "ad1c1625b17fa45ca78d43ad8c190d3e41fe73904827bb700a244298ffaa5958",
+      "lineEndings": "LF"
+    },
+    "contracts/LiquidityPermitAllowance.sol": {
+      "sha256": "27be3187fe6ca8f50c5f28ded6ff6d6c493227b807baf8bc0d2bcae82ddb00f2",
+      "lineEndings": "LF"
+    },
+    "contracts/LiquidityPositionLedger.sol": {
+      "sha256": "62b3b8b9536a2c353849bc1b9204c6076f9232a5d5eb26e33b8bf69672a49697",
+      "lineEndings": "LF"
+    },
+    "contracts/LiquiditySwapPlan.sol": {
+      "sha256": "3b93e0ba84998b839bd09b9826302a755056a8ba3b78d17e0ac3aecb0e7e9a61",
+      "lineEndings": "LF"
+    },
+    "contracts/next/GasReimbursement.sol": {
+      "sha256": "acbdb4cf2a21c92de2002e02d800fe379bcae65b55d35fbe514645e1446a1449",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionCompoundController.sol": {
+      "sha256": "e0e6e6a47dc4873661f0f02629e0fde32c327fde7a6113b5377523168e628841",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionDeployment.sol": {
+      "sha256": "0082dd4bc7dc738a1bb0a4d84b6bd1ec4963f5891d4e19ed74d2a89bcec549a9",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionFeeSwap.sol": {
+      "sha256": "8ba16343cb832f8427aff29691e089ae450fc7bcd262b771854e0df2d8b788bb",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionFunding.sol": {
+      "sha256": "084eb2d40ce0ee89722965a6df62b92ff14b8281eb00abc4b1d256d6d47cc425",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionKeeperGas.sol": {
+      "sha256": "e888e7980be8b224bc9751f1737fbafb7908957a97620a9ec878d76fecdef752",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionModuleProxy.sol": {
+      "sha256": "29084f4b8a1661417c808fb90ef61aecfac505e02af2fadf791d15fa503c2466",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionObserver.sol": {
+      "sha256": "70e45bc74bb0e256f4efcaa4059936c264c6605743dfbf6beee7d94e8e7b88c8",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionPayment.sol": {
+      "sha256": "34ec67cdd267a4fce03124eeeb51c73b0a786cff9e9ae453a8221654b0e444f3",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionPayout.sol": {
+      "sha256": "119d7a8385e873325b88cfbc3d1558e0fc1c685b4bfc181631c5e8b301eaf06b",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionPayoutHandler.sol": {
+      "sha256": "3f8f30417ffbe88f18658cf37c31756705f4d0385d823459ab8de0dffd1d51e1",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionRangeExecution.sol": {
+      "sha256": "57de37d63de9d747a519ddf4ab343bce55fbe321b278d75e7f73060dcd7c7924",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionRangeFunding.sol": {
+      "sha256": "1013003b0a922f2825b03cd2fb6100017952aa4a9f24f3f2bc607e7018e8abc5",
+      "lineEndings": "LF"
+    },
+    "contracts/next/PositionStrategyController.sol": {
+      "sha256": "7992a17db906e52d5bd130f3522c379e95bfbf5507fe9c445788ea711dcd999d",
+      "lineEndings": "LF"
+    }
+  },
+  "units": {
+    "PositionDeployment": {
+      "entry": "contracts/next/PositionDeployment.sol",
+      "runs": 200,
+      "creationSha256": "e52c1f428c62abf98f19e6d92322bded62e25513b89859bbaa2a25e20086412a",
+      "runtimeTemplateSha256": "31b6c8fdb389ddc39c5e0859504dd0d03fd29f42602806520800e2e282a36881",
+      "exact": true
+    },
+    "PositionObserver": {
+      "entry": "contracts/next/PositionObserver.sol",
+      "runs": 200,
+      "creationSha256": "364448ad12d7a78627b756f1fc325584409c68e2824925236c46a15158dcc94e",
+      "runtimeTemplateSha256": "7b3f604ad86b914c739de007b2f5cecae0cf028e7ee7bfd5ba725869c46817c4",
+      "exact": true
+    },
+    "PositionModuleProxy": {
+      "entry": "contracts/next/PositionModuleProxy.sol",
+      "runs": 200,
+      "creationSha256": "bb9929335fe2be12944bf9a8a300d400b28633d8a0d3efb62921de050c4f8f35",
+      "runtimeTemplateSha256": "3ccb4d3c6fcbfa4111470b83d25e82e550703d73978985fc1935b5c04a9f531e",
+      "exact": true
+    },
+    "PositionRangeExecution": {
+      "entry": "contracts/next/PositionRangeExecution.sol",
+      "runs": 200,
+      "creationSha256": "b298a55ed9cd1c7beb4eeb92874fc2f31b11f3759e320c6dad310e1e89404415",
+      "runtimeTemplateSha256": "e26493262b2b9aac714df86104cfd4d7f1885bbe52417b7d597a5530cce5d124",
+      "exact": true
+    },
+    "PositionRangeFunding": {
+      "entry": "contracts/next/PositionRangeFunding.sol",
+      "runs": 200,
+      "creationSha256": "bdbe2415948d15d697d81465d190c09dc83531049a6ff08c1b77bdc123afe331",
+      "runtimeTemplateSha256": "0321f52f066db4a2101211740b7978f5ecfa99562b9e5c41b324a6a2d0804213",
+      "exact": false,
+      "releaseMetadata": "a26469706673582212207f37c5cf5e3fab860f1bc5ca5759c4933eb35f242d04823b62a39d35a0bbe9fb64736f6c634300081e0033"
+    },
+    "PositionKeeperGas": {
+      "entry": "contracts/next/PositionKeeperGas.sol",
+      "runs": 200,
+      "creationSha256": "4f57bf48c7abd4ae93ddc0d3431eebb093306b43e5c7e999182fcf2146a977a0",
+      "runtimeTemplateSha256": "b544ad18050407e4f4de23385c61ef25399f206ba5cb7d773df13320af10e98a",
+      "exact": true
+    },
+    "PositionStrategyController": {
+      "entry": "contracts/next/PositionStrategyController.sol",
+      "runs": 50,
+      "creationSha256": "40f9ec0a0cf2974fe47158996f588dbf9bc226a5a755959e847166230d9ae187",
+      "runtimeTemplateSha256": "58057ae140ab53254a02bb6aba849247beebe19f685adecc01ece16e83498814",
+      "exact": true
+    },
+    "PositionPayoutHandler": {
+      "entry": "contracts/next/PositionPayoutHandler.sol",
+      "runs": 50,
+      "creationSha256": "5b20a9d1d4e36d02a7bccc9bd65f7f278f851303577c786871ee3deb808ffc8f",
+      "runtimeTemplateSha256": "b6f0220fb17cbfa61ed99a4ee4e48858de0d96d0af58addc55fa4c52b44ae23b",
+      "exact": true
+    }
+  }
+}

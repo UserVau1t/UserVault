@@ -14,6 +14,54 @@ Economically, this resembles an automated P2P or OTC-style market: users supply 
 
 This description covers the current implementation and published application configuration reviewed on **16 November 2026**. UserVault runs on **Robinhood Mainnet, chain ID 4663**, with ETH used for network gas. Configuration and available features can change as the project develops.
 
+## Liquidity Manager
+
+Liquidity Manager creates and manages concentrated-liquidity positions on Uniswap v4 on Robinhood Chain (4663). Each position is an NFT held by its owner. You can also enable automation on an eligible NFT you already own, including one created through Uniswap.
+
+```mermaid
+flowchart TD
+    A[Owner wallet] -->|Create or enroll a position| B[Uniswap v4 position NFT]
+    A -->|Authorize settings for this NFT| C[Strategy controller]
+    D[Pool and position events] --> K[Keeper and quote reviewer]
+    K -->|Submit reviewed action| C
+    C -->|Reinvest| F[Add earned fees to liquidity]
+    C -->|Auto-claim| P[Pay owner in ETH, USDG or pool tokens]
+    C -->|Rebalance| R[Mint replacement NFT to owner]
+    R -->|Settle accrued fees using the fee mode| A
+```
+
+### Managing a position
+
+1. **Choose a pair and range.** Select two currencies, a pool fee and lower and upper market caps. The app uses the primary market as a price reference. The price in the destination pool and your chosen range determine how much of each token the deposit needs. A position outside the range can require just one token.
+2. **Authorize the position.** Confirm the deposit or select Edit automation on an existing position. You choose how this NFT handles fees and whether it rebalances. You can change or disable those settings from the position card. Your wallet signs the settings and any required approvals.
+3. **Evaluate and execute.** The Keeper watches relevant pool and position events. The primary pool selection is cached for an hour. When the strategy conditions are met, the Keeper submits a reviewed transaction. The controller checks the position, authorization, deadline and execution limits before the funding, range or payout module settles the action.
+4. **Check the result.** Open Log on the position card to see confirmed deposits, auto-claims, reinvestments and rebalances with their timestamps and USD values. Fees reinvested tracks fees automatically put back into liquidity. Wallet payouts are recorded separately.
+
+### Automation
+
+- **Auto-reinvest.** Once newly accrued fees reach the configured USD threshold, the Keeper can add eligible fees to liquidity. After settlement the next standalone reinvestment waits for new accrual.
+- **Auto-claim.** Choose ETH, USDG or Pair. ETH and USDG convert the collected fees into the selected currency. Pair sends each accrued pool currency to your wallet. Auto-claim and auto-reinvest are mutually exclusive. The minimum threshold offered by the app is $10.
+- **Auto-rebalance.** Enable this independently of the fee mode. When the reference price leaves the range, the Keeper can replace the NFT with one at the new bounds in the same pool. Rebalance now lets the owner request this while still in range. The replacement NFT belongs to the same wallet.
+
+### Liquidity Manager fees
+
+| Action | Protocol fee | Basis |
+| --- | --- | --- |
+| Fresh wallet capital | 0% | Applies to the new wallet funds used to create or add liquidity. |
+| Manual claim in pool tokens | 0% | The owner receives the collected tokens and pays network gas for the wallet transaction. |
+| Standalone reinvestment | 1% | Calculated per token on accrued fees actually put back into liquidity. |
+| Standalone auto-claim | 1% | Calculated on the realized payout after conversion, if any, and gas reimbursement. Pair applies the rate separately to each distributed token. |
+| Rebalance | 0.1% | Calculated on each currency moved from the old position. With reinvestment enabled, accrued fees move with the liquidity under this rate. |
+| Fee payout during rebalance | 1% for ETH or USDG | Even below the standalone claim threshold, the accrued fees convert to the selected currency. The rate applies only to that converted amount. If fees are returned in the original pair, the rebalance has no separate payout fee on those returned tokens. |
+
+For example, if a standalone ETH auto-claim realizes 0.0100 ETH after its gas reimbursement, the protocol receives 0.0001 ETH and the owner receives 0.0099 ETH. The USD threshold is evaluated on accrued fees, so the net wallet payout can be below that threshold.
+
+The Pool fee (%) field sets the trading fee of the Uniswap pool. LPs earn a share of pool fees while their liquidity is active. The protocol charges above apply when Liquidity Manager performs the corresponding action. Swaps used for conversion or rebalancing can also incur pool fees and price impact.
+
+The Keeper pays network gas up front. On a successful automated action the position reimburses it in ETH or an eligible token equivalent. The app sets ceilings of 0.0005 ETH per operation and 0.001 ETH across the authorized budget. The gas module bills four fifths of measured gas units at the transaction gas price, subject to those ceilings and the remaining budget. The wallet pays network gas for transactions it submits itself.
+
+[Contract sources and build instructions](liquidity-manager/) · [Liquidity Manager user guide](https://uservault.fun/docs#liquidity-manager)
+
 ## Vault and Market are different trading mechanisms
 
 | | UserVault | Market tab |
