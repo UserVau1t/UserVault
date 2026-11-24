@@ -6,7 +6,7 @@
 
 The Vault reads the reference price on-chain from an external liquidity pool, then exchanges assets deposited by users at that price. The traded token is exchanged inside the Vault rather than swapped through the reference pool, so the Vault trade itself does not move that pool's price. Available inventory determines how much can be exchanged; trade size does not set the reference price.
 
-UserVault follows the external market price while separating pricing from settlement. Protocol fees still apply, and the reference price can change with the external market. The no-price-impact property applies to the base-token exchange against Vault inventory; separate AMM conversion legs and the Market tab's Uniswap swaps retain their own price impact.
+UserVault follows the external market price while separating pricing from settlement. Protocol fees still apply, and the reference price can change with the external market. The no-price-impact property applies to the base-token exchange against Vault inventory. Separate AMM conversion legs can incur price impact.
 
 Economically, this resembles an automated P2P or OTC-style market: users supply the assets, and smart contracts coordinate pricing, matching and settlement. There is no need to find a counterparty manually or negotiate a separate price with each depositor.
 
@@ -61,18 +61,6 @@ The Pool fee (%) field sets the trading fee of the Uniswap pool. LPs earn a shar
 The Keeper pays network gas up front. On a successful automated action the position reimburses it in ETH or an eligible token equivalent. The app sets ceilings of 0.0005 ETH per operation and 0.001 ETH across the authorized budget. The gas module bills four fifths of measured gas units at the transaction gas price, subject to those ceilings and the remaining budget. The wallet pays network gas for transactions it submits itself.
 
 [Contract sources and build instructions](liquidity-manager/) · [Liquidity Manager user guide](https://uservault.fun/docs#liquidity-manager)
-
-## Vault and Market are different trading mechanisms
-
-| | UserVault | Market tab |
-|---|---|---|
-| Liquidity | Assets deposited into users' Vault positions | External liquidity accessed through the Uniswap integration |
-| Price formation | An external reference price applied to eligible inventory | The quote and execution mechanism of the external route |
-| Effect of trade size | Consumes available inventory without a Vault pricing curve | Can produce AMM price impact depending on pools and route |
-| User participation | Create BUY/SELL positions, trade against them, claim proceeds and withdraw unused assets | Request and execute a swap from the connected wallet |
-| Main purpose | Exchange at a reference price without size-driven repricing of the base token | Provide conventional access to external swap liquidity |
-
-The Vault's absence of AMM price impact is its core design property. The **Market tab is a separate Uniswap integration**; the Vault's pricing model does not apply to its external swaps.
 
 ## Why Vault trades have no AMM price impact
 
@@ -165,8 +153,6 @@ There are several ways to consume the same eligible liquidity:
 
 **External order filling.** A UniswapX-compatible filler and atomic executor are implemented, alongside the internal keeper. The executor can combine internal Vault legs, supported Uniswap V2/V3/V4 routes and ETH/WETH wrapping. The signed order's required outputs must be delivered for the transaction to succeed. Order availability, route validity, funding and execution economics determine whether an order is filled; integration does not guarantee continuous volume.
 
-The Market tab's user swap flow and the external filler are distinct: the former is the user's external swap interface, while the latter can bring external orders to Vault liquidity.
-
 ## Where the reference price comes from
 
 UserVault obtains its reference price from **on-chain liquidity pools**. The system analyzes available pools, selects a price source and reads the price from that pool's current state on the blockchain.
@@ -184,7 +170,6 @@ The current standard fee setting is **50 basis points (0.5%)**, but its basis de
 | Direct Vault exchange | Standard execution fee on the input actually used; unused returned input is not a completed trade |
 | Passive position proceeds | Standard claim fee on gross proceeds that have not already had the corresponding claim fee paid |
 | Creator/internal position matching | No separate matching fee; each side's proceeds retain their applicable claim-fee treatment |
-| Market swap | The current integration charges 0.5% on output, in addition to the external route's economics and network gas |
 
 The active trader's execution fee and a passive position owner's claim fee are distinct accounting events. Internal matching must not be described as an extra fee-free claim. Contract accounting tracks already-paid portions to avoid charging the same claim entitlement twice.
 
@@ -200,7 +185,7 @@ The remaining fee proceeds are allocated under configured treasury/module rules,
 |---|---|
 | **UserVault** | Browse available Vault liquidity, choose a side, create positions and trade against eligible inventory |
 | **Positions** | Review owned Current, Limit and Range positions, remaining amounts, claimable proceeds and exits |
-| **Market** | Swap through the Uniswap integration, with its quote, fee, slippage and wallet-confirmation flow |
+| **Liquidity Manager** | Create Uniswap v4 liquidity positions and manage their automation |
 | **Burn** | Reserved interface for USER burn-and-claim functionality when a valid deployment is connected |
 | **Wallet / cashback controls** | Inspect supported fee entitlements and submit claims |
 
@@ -213,7 +198,7 @@ The remaining fee proceeds are allocated under configured treasury/module rules,
 3. Use **UserVault** for reference-priced trading or to create a BUY/SELL position. Choose Current, Limit or Range according to when you want the position to participate.
 4. Check the asset addresses, quote asset, amount, price conditions and transaction preview. An ERC-20 approval authorizes spending; it is separate from creating or executing the position.
 5. Confirm the intended transaction in the wallet. A submitted transaction and a completed exchange are different states.
-6. Use **Positions** to claim executed proceeds or withdraw unspent principal. Use **Market** when you want an external Uniswap swap instead.
+6. Use **Positions** to claim executed proceeds or withdraw unspent principal.
 
 The application header menu links back to the start page and documentation. Prices and position views use event-driven services and caches. A stale or unavailable UI view does not itself prove that funds were lost or a position was filled; the transaction receipt and contract state determine execution.
 
@@ -237,7 +222,7 @@ Third-party dependencies are installed separately and retain their own licenses,
 
 ## Current Vault source package
 
-This repository contains the current Vault contract architecture, its required libraries and interfaces, public ABI files and integration documentation. It includes the aggregate Limit/Range implementation activated on 16 November 2026. Production services, website source, operator tools, standalone external-order execution and the Market tab's separate swap contracts are outside this package.
+This repository contains the current Vault contract architecture, its required libraries and interfaces, public ABI files and integration documentation. It includes the aggregate Limit/Range implementation activated on 16 November 2026. Production services, website source, operator tools and standalone external-order execution are outside this package.
 
 [Contract map and build instructions](CONTRACTS.md) · [Deployment manifest](DEPLOYMENT.json) · [Source manifest](SOURCE-MANIFEST.json) · [Build verification](BUILD-VERIFICATION.json)
 

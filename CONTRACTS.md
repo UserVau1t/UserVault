@@ -60,7 +60,7 @@ AggregateRangeAccounting is a linked library. RangeInternalExecution is a separa
 
 ## Exclusions
 
-Superseded Limit/Range manager and snapshot deployment targets, earlier aggregate prototypes, one-shot deployment factories, synthetic upgrade fixtures, unused executors, website/admin/operator interfaces, production service configuration, operational scripts and vendored dependencies are not publication targets. Required inherited or type dependencies are retained. The standalone external filler executor and separate Market swap integration are active but outside the requested Vault-only scope.
+Superseded Limit/Range manager and snapshot deployment targets, earlier aggregate prototypes, one-shot deployment factories, synthetic upgrade fixtures, unused executors, website/admin/operator interfaces, production service configuration, operational scripts and vendored dependencies are not publication targets. Required inherited or type dependencies are retained. The standalone external filler executor is outside the scope of the Vault source package.
 
 ## Licensing
 
