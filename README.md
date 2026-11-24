@@ -52,7 +52,6 @@ flowchart TD
 | Standalone reinvestment | 1% | Calculated per token on accrued fees actually put back into liquidity. |
 | Standalone auto-claim | 1% | Calculated on the realized payout after conversion, if any, and gas reimbursement. Pair applies the rate separately to each distributed token. |
 | Rebalance | 0.1% | Calculated on each currency moved from the old position. With reinvestment enabled, accrued fees move with the liquidity under this rate. |
-| Fee payout during rebalance | 1% for ETH or USDG | Even below the standalone claim threshold, the accrued fees convert to the selected currency. The rate applies only to that converted amount. If fees are returned in the original pair, the rebalance has no separate payout fee on those returned tokens. |
 
 For example, if a standalone ETH auto-claim realizes 0.0100 ETH after its gas reimbursement, the protocol receives 0.0001 ETH and the owner receives 0.0099 ETH. The USD threshold is evaluated on accrued fees, so the net wallet payout can be below that threshold.
 
