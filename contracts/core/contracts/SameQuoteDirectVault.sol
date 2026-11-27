@@ -51,7 +51,7 @@ abstract contract SameQuoteDirectVault is SharedVault {
         _send(q.side==E.Side.Buy?q.baseToken:q.canonicalQuote,q.recipient,r.netOutput);
     }
     function plan(E.DirectRequest memory q,uint256 inventory,P.Ratio memory rate) internal view virtual returns(uint256 gross,uint256 net,uint256 output){
-        uint256 bps=_s().feeBps;
+        uint256 bps=30;
         uint256 available=q.maxGrossInput-Math.mulDiv(q.maxGrossInput,bps,10000);
         if(q.side==E.Side.Buy){
             P.Ratio memory inverse=P.Ratio(rate.d,rate.n);

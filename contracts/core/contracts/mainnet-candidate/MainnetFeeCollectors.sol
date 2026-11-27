@@ -32,7 +32,7 @@ contract FeeAwareVaultCore is MainnetGroupedV2Vault,FeeAttributedCollector {
     }
     function _checkCapacityAmounts(uint256[3] memory amounts,P.Ratio[3] memory rates) internal view override {feeVaultMath.checkCapacity(amounts,rates);}
     function _fingerprint(address base) internal view override returns(bytes32){return feeVaultMath.fingerprint(pricing,base,_s().usdg);}
-    function plan(E.DirectRequest memory q,uint256 inventory,P.Ratio memory rate) internal view virtual override returns(uint256,uint256,uint256){if(address(internalSettlementPolicy).codehash!=internalPolicyHash)revert E.InvalidRequest();return feeVaultMath.plan(q,inventory,rate,internalSettlementPolicy.feeBpsFor(msg.sender,_s().feeBps));}
+    function plan(E.DirectRequest memory q,uint256 inventory,P.Ratio memory rate) internal view virtual override returns(uint256,uint256,uint256){if(address(internalSettlementPolicy).codehash!=internalPolicyHash)revert E.InvalidRequest();return feeVaultMath.plan(q,inventory,rate,internalSettlementPolicy.feeBpsFor(msg.sender,30));}
     function _feePayer(address caller) internal view override returns(address){return _resolveFeePayer(caller);}
     function _recordProtocolFee(address asset,uint256 amount,address payer) internal override {
         super._recordProtocolFee(asset,amount,payer);_capturePaidFee(payer,asset,amount);

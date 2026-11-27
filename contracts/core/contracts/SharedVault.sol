@@ -36,7 +36,7 @@ abstract contract SharedVault {
     function _initializeAccounting(address usdg) internal {
         VaultStorage storage s=_s();if(s.initialized)revert AlreadyInitialized();
         if(usdg==address(0)||usdg.code.length==0)revert InvalidMarket();
-        s.initialized=true;s.usdg=usdg;s.feeBps=50;
+        s.initialized=true;s.usdg=usdg;s.feeBps=30;
     }
     function marketId(address base,address quote) public pure returns(bytes32){return keccak256(abi.encode(base,quote));}
     function position(uint256 id) external view virtual returns(A.Position memory){return _s().positions[id];}
@@ -81,7 +81,7 @@ abstract contract SharedVault {
     function claim(uint256 id,uint256 gross) public virtual nonReentrant {
         VaultStorage storage s=_s();A.Position storage p=s.positions[id];if(p.owner!=msg.sender)revert Unauthorized();
         EpochInfo storage e=s.epochs[p.epochId];_claimProceeds(id,gross);
-        (,address asset)=_assets(e);uint256 fee=Math.mulDiv(gross,s.feeBps,10000);
+        (,address asset)=_assets(e);uint256 fee=Math.mulDiv(gross,30,10000);
         s.liabilities[asset]-=gross;_recordProtocolFee(asset,fee,msg.sender);_send(asset,msg.sender,gross-fee);
         emit Claimed(id,gross,gross-fee,fee);
 

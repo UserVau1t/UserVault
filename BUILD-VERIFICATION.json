@@ -27,7 +27,7 @@
         "creationCodeMatches": true,
         "abiMatches": true,
         "storageLayoutMatches": true,
-        "normalizedRuntimeSha256": "5fafcf64c1c28ff6886edba66037eed75db4c638a0c10f3f9ce5227e2cd21edc",
+        "normalizedRuntimeSha256": "4483b2e31a981c5f73ba706c1a5b237be8f4060a393f4f7772c20e53d31ab6be",
         "runtimeBytes": 8230
       },
       {
@@ -77,8 +77,8 @@
         "creationCodeMatches": true,
         "abiMatches": true,
         "storageLayoutMatches": true,
-        "normalizedRuntimeSha256": "f1450df5297036477ccda4d48c16a2571de7950204d83d4c8af7aa69d13f6f4a",
-        "runtimeBytes": 20819
+        "normalizedRuntimeSha256": "e95ba0b01d074742258810422f437fbee332b7ea57c2f5e5966da61db1346513",
+        "runtimeBytes": 20880
       },
       {
         "unit": "core",
@@ -87,7 +87,7 @@
         "creationCodeMatches": false,
         "abiMatches": true,
         "storageLayoutMatches": true,
-        "normalizedRuntimeSha256": "40ebedfb71d9ad2df770db126667c882b1ff05b61aecde114e141da5e7e729ae",
+        "normalizedRuntimeSha256": "f64e6449eafdd57a6ebe1c7d1ff9d9a2603a8fbbea507ac91cfd6b1616ffa395",
         "runtimeBytes": 12584
       },
       {
@@ -97,14 +97,14 @@
         "creationCodeMatches": true,
         "abiMatches": true,
         "storageLayoutMatches": true,
-        "normalizedRuntimeSha256": "991f8ab38b35788bbd5afa4c7d81fd1618907c4fc123aa378fc2629ef8ec88ba",
-        "runtimeBytes": 11900
+        "normalizedRuntimeSha256": "1b9698c8c3cf7d51db042220a49147615c54288a6717469c6dafb99a9ffb45db",
+        "runtimeBytes": 10845
       },
       {
         "unit": "core",
         "name": "SharedCreateModule",
         "runtimeCodeMatches": true,
-        "creationCodeMatches": true,
+        "creationCodeMatches": false,
         "abiMatches": true,
         "storageLayoutMatches": true,
         "normalizedRuntimeSha256": "d45a756fabec600eb018766fc41cebf98018ccbb14184a6044560ba370f6c05c",
@@ -127,7 +127,7 @@
         "creationCodeMatches": true,
         "abiMatches": true,
         "storageLayoutMatches": true,
-        "normalizedRuntimeSha256": "1a40da70c5bda4107a9c5be41cf482b6593aeb1784829de5506a11736df51d96",
+        "normalizedRuntimeSha256": "02c4311cf976697a130230063501eb21b431fe23d55a806371446720a09351f2",
         "runtimeBytes": 22189
       },
       {
@@ -157,7 +157,7 @@
         "creationCodeMatches": true,
         "abiMatches": true,
         "storageLayoutMatches": true,
-        "normalizedRuntimeSha256": "968c6e54d530c8ed96ae53526d3bcc872c222c83f33a63fdd5dfb12c07c239ac",
+        "normalizedRuntimeSha256": "98ebaaf0a01ebd2789bf559816c08a96c55a92457846bebae0fa6efdce6891b0",
         "runtimeBytes": 17083
       },
       {
@@ -259,7 +259,7 @@
     "originalFullInputRebuildMatches": true,
     "originalRuntimeBytes": 12700,
     "publicationRuntimeBytes": 12584,
-    "explanation": "Removing unused compiler inputs changes compiler identifiers and optimized output. Retained Solidity declaration ASTs, ABI and storage layout match the deployment sources; this cleaned build is not claimed to be a byte-identical reproduction of this implementation. No deployed contract was replaced."
+    "explanation": "Removing unused compiler inputs changes the optimized bytecode. The retained Solidity declarations, ABI and storage layout match the deployment sources."
   },
   "localChecks": {
     "rangeTests": 5,
@@ -288,5 +288,16 @@
     "runtimeBytes": 8498,
     "dependencyFiles": 4,
     "scope": "Exact creation bytecode, runtime template and ABI compared with the artifact used for the recorded deployment. No chain transactions or production changes."
+  },
+  "feeCorrection": {
+    "confirmedBlock": 124516427,
+    "sourceFilesChecked": 8,
+    "unitsRebuilt": [
+      "core",
+      "range"
+    ],
+    "routeCases": 24,
+    "releaseTestsPassed": 35,
+    "retainedCreateModule": "SharedCreateModule retains its deployed implementation. The public build matches its normalized runtime template and differs in creation bytecode."
   }
 }

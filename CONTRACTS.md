@@ -1,6 +1,6 @@
 # Current Vault contracts
 
-Chain ID: **4663**. Deployment snapshot block: **115665222**, hash `0x4f3244cdda52530502e3ed0a7e8cd55188cca3e02b4ae2944b3e3e65de3b08a8`.
+Robinhood chain ID **4663**. The original deployment snapshot is recorded at block **115665222**, hash `0x4f3244cdda52530502e3ed0a7e8cd55188cca3e02b4ae2944b3e3e65de3b08a8`. The fee upgrade was confirmed through block **124516427**. Vault and Limit charge 30 basis points on executed input, including fills that require ETH ↔ USDG conversion.
 
 The source package contains 19 beacon-managed Vault components, two aggregate Range helper components, proxy/installer infrastructure, and the interfaces and libraries needed by those targets. Contract addresses are public identifiers; no operator wallets or credentials are included.
 
@@ -22,7 +22,7 @@ The source package contains 19 beacon-managed Vault components, two aggregate Ra
 | FeeAwareMarketLimitManager | Limit/Range custody, aggregate matching, claims and withdrawals | `0x599dd12ecf935f9e1d36ce713dfa6290436a63d8` | Independent beacon implementation |
 | MainnetMarketLiquiditySnapshot | Current and aggregate Limit/Range liquidity snapshots | `0x75f7f507a9ef6a4a1a834e2557b33940227ce67d` | Independent beacon implementation |
 | AggregateRangeAccounting | Linked aggregate price-level and share accounting | `0x0f90433fc71f7a0b444acb8dd9df00f4f3a0959d` | Redeploy helper and rebind through compatible manager implementation |
-| RangeInternalExecution | Range internal settlement execution | `0x8ec62a8f91ee9536a3673f818f4c21b45768f668` | Redeploy helper and rebind through compatible manager implementation |
+| RangeInternalExecution | Range internal settlement execution | `0xe1d9853b9057e064ee938e44d5790457cd63fccb` | Redeploy helper and rebind through compatible manager implementation |
 | CachedTokenSwap | Conversion of collected fee assets | `0x6ce1ffca62bbe284203ccc0849283b430df90b5c` | Independent beacon implementation |
 | CachedFeeRoute | Fee conversion route coordination | `0xd42909410f3e3f55c69fddb1a0a82a6e9a899883` | Independent beacon implementation |
 | CachedFeeProcessor | Fee attribution, conversion and forwarding | `0x09802c8d32167699c58627d1d544c33a63588e97` | Independent beacon implementation |
@@ -30,7 +30,7 @@ The source package contains 19 beacon-managed Vault components, two aggregate Ra
 | MainnetDeferredBurnBridge | Deferred Burn reserve bridge | `0xc1ea9477bd1c2608021121fefe3319de155801ee` | Independent beacon implementation |
 | ProtocolDualGasTreasury | Protocol gas-funding treasury | `0xc046a0c8a7732de12610a03be48683943eb35243` | Independent beacon implementation |
 
-DEPLOYMENT.json records each proxy, beacon, current implementation, code hash and verified bindings. A proxy address is the calling address; an implementation address is not a substitute for it. The separate external-order executor is recorded as an active out-of-scope integration, not as a retired contract.
+In DEPLOYMENT.json, `modules` records the original snapshot. For the six components changed by the fee upgrade, `feeCorrection.implementations` records the replacement addresses, runtime hashes and transactions. Call the proxy for beacon-managed components. The separate external-order executor is documented as an integration.
 
 ## Build
 

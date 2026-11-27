@@ -16,7 +16,7 @@ contract MainnetProRataExecution is ReentrancyGuard {
     }
     S public immutable liquidity;
     bytes32 private immutable snapshotHash;
-    uint16 public constant FEE_BPS=50;
+    uint16 public constant FEE_BPS=30;
     mapping(address=>uint256) public fees;
     error InvalidRequest();error BudgetTooSmall();error SettlementMismatch();error StateChanged();
     event Settled(address indexed caller,address indexed recipient,address indexed base,address quote,E.Side side,

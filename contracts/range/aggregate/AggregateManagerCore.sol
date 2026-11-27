@@ -33,7 +33,7 @@ PassiveCrossMath internal immutable passiveCrossMath;
 V2NativeQuoteAdapter internal immutable internalQuoteAdapter;
 bytes32 internal immutable internalQuoteAdapterHash;
 uint256 public immutable configuredChainId;
-uint16 public constant FEE_BPS=50;
+uint16 public constant FEE_BPS=30;
 bool public paused;
 uint256 public nextOrder;
 bool public internalPositionExecution;

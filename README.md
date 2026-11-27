@@ -160,13 +160,14 @@ The Vault uses this reference price to calculate exchanges between users. Its ow
 
 ## Fees, proceeds and cashback
 
-The current standard fee setting is **50 basis points (0.5%)**, but its basis depends on the operation:
+Vault and Limit charge a standard execution fee of **30 basis points (0.30%)** on the input actually traded. From the 27 November 2026 upgrade, this rate also covers trades that convert part or all of their input or proceeds between ETH and USDG.
 
 | Operation | Fee treatment |
 |---|---|
 | Deposit / opening principal | No separate deposit fee; any exchange performed during creation follows the matching rules |
 | Withdraw unspent principal | No protocol withdrawal fee |
-| Direct Vault exchange | Standard execution fee on the input actually used; unused returned input is not a completed trade |
+| Direct Vault or Limit exchange | 0.30% on the filled input. Any refunded input is excluded. |
+| ETH ↔ USDG conversion within an exchange | The Vault conversion surcharge is zero. The underlying AMM can still charge its own fee and move the execution price. |
 | Passive position proceeds | Standard claim fee on gross proceeds that have not already had the corresponding claim fee paid |
 | Creator/internal position matching | No separate matching fee; each side's proceeds retain their applicable claim-fee treatment |
 

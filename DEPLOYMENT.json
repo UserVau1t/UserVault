@@ -1055,5 +1055,54 @@
       "upgradeable": false,
       "stateScope": "Observed at deployment verification; token and treasury can each be bound once later."
     }
-  ]
+  ],
+  "feeCorrection": {
+    "confirmedBlock": 124516427,
+    "executionFeeBps": 30,
+    "conversionSurchargeBps": 0,
+    "implementations": [
+      {
+        "role": "vault",
+        "implementation": "0x8e2ee8dd8629a6ea7f4217366947ebe5e4f5f3ff",
+        "runtimeHash": "0x2857efa11b1db0e2ba4e66ac2fb7bfe51aa9375e4f7b5efda3b088eb39551229",
+        "deployTransaction": "0xc1f3915f100d2e59a80efd4edf0f1e2cb485f80b69d624dff10d8073c4143844",
+        "activationTransaction": "0x5b6bb1cee2ca0b69eb55ab75e85b23a66a593158d9d79246ae7a81d51e6828df"
+      },
+      {
+        "role": "groupMath",
+        "implementation": "0x44b9b535509bbf45ce9c99a80ed2880a3fa024cd",
+        "runtimeHash": "0xd0ede6618efda0de11ab3719661a7bfab8f7db4581c1dcf335c3d07c01f67361",
+        "deployTransaction": "0xdadb108f1c29cd0e92fed6d42bc94f221c462eb9ec1fad3eab34764adef28ad5",
+        "activationTransaction": "0x908c0f66d4c2bb047d789cdd93c9457845e785843391c64f016b39093217a829"
+      },
+      {
+        "role": "same",
+        "implementation": "0x2e4692b904505393e829d08c4d6b737b3b2216f0",
+        "runtimeHash": "0xffcbd24cdd63b9adca7b74b7ce55cc9577174786e3257f2aa787f777346f0b80",
+        "deployTransaction": "0xa5f8e4b30a00e8d705e21255d54d072f1f9e63c097c0cd5eb091a7689762b680",
+        "activationTransaction": "0x60106a0ef42c07f7b22a2b291a52450f4bb49d8cbe04f65074a159c9952b2711"
+      },
+      {
+        "role": "cross",
+        "implementation": "0xc5a9a5f4c71f9d7b5196595192a0a580a417d29b",
+        "runtimeHash": "0xb4c4bc5c2b664e03ada9af9b3d591fb379bd9d1f9ec3da07ef799d00e6e6ca39",
+        "deployTransaction": "0xb7d873c80991b75a40c8c56bc049e0d823de6355d993db7d819f1655504c77e7",
+        "activationTransaction": "0xe817f6aa2158b06da49cb66e7f94f05a1e1eb31fc2a161a853b1741b0ca0163b"
+      },
+      {
+        "role": "rangeExecution",
+        "implementation": "0xe1d9853b9057e064ee938e44d5790457cd63fccb",
+        "runtimeHash": "0x0aa6a54aaca7f64024a1fa482821e9d3d5d752028aba304b6e76fe0a7776e98f",
+        "deployTransaction": "0x36e350b606ab71043e33f62015fdd89f87d2e2bd6a370b9f0a483f5fdcb3bd18",
+        "activationTransaction": "0xa0dbd778264693e4336669a1345ce457de47bc1a3dfc7df1a8631f4cdaebd894"
+      },
+      {
+        "role": "manager",
+        "implementation": "0x38bcaa343f0669b9fe3c4d01c2e3ee16ef75ff84",
+        "runtimeHash": "0x8844eca2e9d17e61bc73f2a57b8278a92001be13689451add55bd1130a0f8246",
+        "deployTransaction": "0x7734b0662fcf745056d1a5d3291b110c70fa001b4b353fb4eff698cccffd0141",
+        "activationTransaction": "0xa0dbd778264693e4336669a1345ce457de47bc1a3dfc7df1a8631f4cdaebd894"
+      }
+    ]
+  }
 }

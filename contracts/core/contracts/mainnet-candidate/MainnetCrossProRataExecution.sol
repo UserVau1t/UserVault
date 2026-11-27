@@ -2,7 +2,6 @@ pragma solidity ^0.8.30;
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
-import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
 import {MainnetProRataExecution as C} from "./MainnetProRataExecution.sol";
 import {MainnetLiquiditySnapshot as S} from "./MainnetLiquiditySnapshot.sol";
 import {V2NativeQuoteAdapter as A} from "../adapters/V2NativeQuoteAdapter.sol";
@@ -16,7 +15,7 @@ contract MainnetCrossProRataExecution is ReentrancyGuard {
     address public immutable usdg;
     mapping(address=>uint256) public fees;
     struct Targets {uint256 first;uint256 second;uint256 minConverted;}
-    struct State {C.Plan first;C.Plan second;bool crossed;uint256 conversionFee;}
+    struct State {C.Plan first;C.Plan second;bool crossed;}
     error InvalidRequest();error FirstNotExhausted();error SettlementMismatch();error StateChanged();
     event Settled(address indexed caller,address indexed base,address quote,E.Side side,uint256 grossInput,uint256 output,uint256 refund,uint256 conversionFee);
     constructor(C execution,A conversion){
@@ -54,37 +53,32 @@ contract MainnetCrossProRataExecution is ReentrancyGuard {
             else _sellSecond(q,leg,targets,s,r);
         }
         if(r.grossInputUsed<q.minGrossInputFilled||r.netOutput<q.minNetOutput||r.inputRefund!=q.maxGrossInput-r.grossInputUsed
-            ||_balance(output)-beforeOut!=r.netOutput+(q.side==E.Side.Sell?s.conversionFee:0))revert SettlementMismatch();
-        _recordCoordinatorFee(q.side==E.Side.Buy?q.inputAsset:output,s.conversionFee);
+            ||_balance(output)-beforeOut!=r.netOutput)revert SettlementMismatch();
         _send(output,q.recipient,r.netOutput);_send(q.inputAsset,msg.sender,r.inputRefund);
-        uint256 inputFee=q.side==E.Side.Buy?s.conversionFee:0;
-        uint256 outputFee=q.side==E.Side.Sell?s.conversionFee:0;
-        if(_balance(q.inputAsset)!=beforeIn+inputFee||_balance(output)!=beforeOut+outputFee)revert SettlementMismatch();
+        if(_balance(q.inputAsset)!=beforeIn||_balance(output)!=beforeOut)revert SettlementMismatch();
         _verify(q.baseToken,q.canonicalQuote,q.side,s.first);
         if(s.crossed)_verify(q.baseToken,_other(q.canonicalQuote),q.side,s.second);
-        emit Settled(msg.sender,q.baseToken,q.canonicalQuote,q.side,r.grossInputUsed,r.netOutput,r.inputRefund,s.conversionFee);
+        emit Settled(msg.sender,q.baseToken,q.canonicalQuote,q.side,r.grossInputUsed,r.netOutput,r.inputRefund,0);
         _endFeeExecution();
     }
     function _beginFeeExecution() internal virtual {}
     function _endFeeExecution() internal virtual {}
     function _recordCoordinatorFee(address asset,uint256 amount) internal virtual {fees[asset]+=amount;}
     function _buySecond(E.DirectRequest calldata q,E.DirectRequest memory leg,Targets calldata t,State memory s,E.Result memory r) private {
-        uint256 budget=r.inputRefund;uint256 maxNet=budget-Math.mulDiv(budget,50,10000);
-        leg.maxGrossInput=adapter.quoteExactInput(q.canonicalQuote==address(0),maxNet);
+        uint256 budget=r.inputRefund;
+        leg.maxGrossInput=adapter.quoteExactInput(q.canonicalQuote==address(0),budget);
         s.second=coordinator.preview(leg,t.second);
         if(s.second.grossInput==0||s.second.output==0)revert InvalidRequest();
         uint256 beforeIn=_balance(q.inputAsset);uint256 beforeOut=_balance(leg.inputAsset);
-        if(q.inputAsset!=address(0))IERC20(q.inputAsset).forceApprove(address(adapter),maxNet);
-        uint256 used=adapter.swapExactOutput{value:q.inputAsset==address(0)?maxNet:0}(q.inputAsset==address(0),s.second.grossInput,maxNet,q.deadline);
+        if(q.inputAsset!=address(0))IERC20(q.inputAsset).forceApprove(address(adapter),budget);
+        uint256 used=adapter.swapExactOutput{value:q.inputAsset==address(0)?budget:0}(q.inputAsset==address(0),s.second.grossInput,budget,q.deadline);
         if(q.inputAsset!=address(0))IERC20(q.inputAsset).forceApprove(address(adapter),0);
         if(beforeIn-_balance(q.inputAsset)!=used||_balance(leg.inputAsset)-beforeOut!=s.second.grossInput)revert SettlementMismatch();
-        uint256 gross=used==maxNet?budget:Math.mulDiv(used-1,10000,9950)+1;
-        if(gross>budget||gross-Math.mulDiv(gross,50,10000)!=used)revert SettlementMismatch();
-        s.conversionFee=gross-used;
+        if(used==0||used>budget)revert SettlementMismatch();
         leg.maxGrossInput=s.second.grossInput;
         E.Result memory second=_execute(leg,t.second,s.second);
         if(second.inputRefund!=0||_balance(leg.inputAsset)!=beforeOut)revert SettlementMismatch();
-        r.grossInputUsed+=gross;r.inputRefund-=gross;r.netOutput+=second.netOutput;
+        r.grossInputUsed+=used;r.inputRefund-=used;r.netOutput+=second.netOutput;
     }
     function _sellSecond(E.DirectRequest calldata q,E.DirectRequest memory leg,Targets calldata t,State memory s,E.Result memory r) private {
         leg.maxGrossInput=r.inputRefund;if(t.minConverted==0)revert InvalidRequest();
@@ -100,8 +94,7 @@ contract MainnetCrossProRataExecution is ReentrancyGuard {
         uint256 converted=adapter.swapExactInput{value:leg.canonicalQuote==address(0)?second.netOutput:0}(leg.canonicalQuote==address(0),second.netOutput,quoted,q.deadline);
         if(leg.canonicalQuote!=address(0))IERC20(leg.canonicalQuote).forceApprove(address(adapter),0);
         if(_balance(leg.canonicalQuote)!=beforeOther||_balance(q.canonicalQuote)-beforeOut!=converted)revert SettlementMismatch();
-        s.conversionFee=Math.mulDiv(converted,50,10000);
-        r.grossInputUsed+=second.grossInputUsed;r.inputRefund=second.inputRefund;r.netOutput+=converted-s.conversionFee;
+        r.grossInputUsed+=second.grossInputUsed;r.inputRefund=second.inputRefund;r.netOutput+=converted;
     }
     function _execute(E.DirectRequest memory q,uint256 target,C.Plan memory p) private returns(E.Result memory r){
         if(p.grossInput==0)return E.Result(0,0,q.maxGrossInput);

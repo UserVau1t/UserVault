@@ -13,7 +13,7 @@ contract CreateGroupMath {
     }
     error InvalidPlan();
     function _gross(uint256 net,uint256 feeBps) private pure returns(uint256) {
-        return feeBps==0?net:net==0?0:Math.mulDiv(net-1,10000,9950)+1;
+        return feeBps==0?net:net==0?0:Math.mulDiv(net-1,10000,9970)+1;
     }
     function _size(uint256 wanted,uint256 inventory,E.Side side,P.Ratio memory rate,uint256 feeBps)
         private pure returns(uint256 gross,uint256 net,uint256 output) {
@@ -30,7 +30,7 @@ contract CreateGroupMath {
         gross=_gross(net,feeBps);
     }
     function plan(E.DirectRequest calldata q,S.Source[] memory sources,P.Ratio memory rate,P.Ratio memory usd)
-        public pure returns(Plan memory p) {return _plan(q,sources,rate,usd,50);}
+        public pure returns(Plan memory p) {return _plan(q,sources,rate,usd,30);}
     function planPassive(E.DirectRequest calldata q,S.Source[] memory sources,P.Ratio memory rate,P.Ratio memory usd)
         public pure returns(Plan memory p) {return _plan(q,sources,rate,usd,0);}
     function _plan(E.DirectRequest calldata q,S.Source[] memory sources,P.Ratio memory rate,P.Ratio memory usd,uint256 feeBps)

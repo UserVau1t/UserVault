@@ -18,7 +18,7 @@ contract MainnetPinnedV2Vault is PinnedVaultAdmission,V2ConversionVault {
         administrator=admin;
     }
     function setPaused(bool value) external virtual nonReentrant {if(msg.sender!=administrator)revert Unauthorized();_setPaused(value);}
-    function _conversionFeeBps() internal view virtual override returns(uint16){return _s().feeBps;}
+    function _conversionFeeBps() internal pure virtual override returns(uint16){return 0;}
     function _admitV2Conversion(address input,address output,bool,uint256 maxInput,uint256 outputLimit,uint256 deadline)
         internal view override returns(bool) {
         if(block.timestamp>deadline || maxInput==0 || outputLimit==0
